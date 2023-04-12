@@ -1,0 +1,1973 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20221109\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-19 17:51+0000\n"
+"PO-Revision-Date: 2022-12-19 17:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "<strong>/HR/Form 003</strong>"
+msgstr "استمارة الموارد البشرية 003"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "<strong>HR/Form 001</strong>"
+msgstr "استمارة الموارد البشرية 001"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "<strong>Manpower Planning Form</strong>"
+msgstr "نموذج تخطيط القوى العاملة"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "<strong>Request for Policy/Procedure Amendment</strong>"
+msgstr "طلب تعديل السياسة / الإجراء"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__policy_request__policy_procedure__added
+#: model:ir.model.fields.selection,name:hr_custom.selection__position_request__policy_procedure__added
+msgid "Added"
+msgstr "مضاف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__additional
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__additional
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Additional"
+msgstr "اضافي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__adv_estimated_cost
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__adv_estimated_cost
+msgid "Adv Estimated Cost"
+msgstr "التكلفة المقدرة للاعلان"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__computer_software_packages_line__proficiency_level__advanced
+msgid "Advanced"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__advertisement
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__advertisement
+msgid "Advertisement"
+msgstr "إعلان"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__age
+msgid "Age"
+msgstr "العمر"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__agency_estimated_cost
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__agency_estimated_cost
+msgid "Agency Estimated Cost"
+msgstr "التكلفة المقدرة للوكالة"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__policy_request__policy_procedure__amended
+#: model:ir.model.fields.selection,name:hr_custom.selection__position_request__policy_procedure__amended
+msgid "Amended"
+msgstr "معدل"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__annual_cost
+msgid "Annual Cost"
+msgstr "التكلفة السنوية"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_annual_departmental_manpower_planning
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_annual_departmental_manpower_planning
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Annual Departmental Manpower Planning"
+msgstr "التخطيط السنوي للقوى العاملة في الإدارات"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_annual_manpower_planning
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_annual_manpower_planning
+msgid "Annual Manpower Planning"
+msgstr "تخطيط القوى العاملة السنوي"
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_hr_applicant
+msgid "Applicant"
+msgstr "المتقدم"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Approved by:"
+msgstr "تمت الموافقة عليه من قبل:"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__attach_copy_of_budget_plan
+msgid "Attach a Copy Of Budget Plan"
+msgstr "إرفاق نسخة من خطة الميزانية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__attach_envisaged_job_escription
+msgid "Attach envisaged Job Description"
+msgstr "ارفاق الوصف الوظيفي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__attributes
+msgid "Attributes"
+msgstr "صفات"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__interview_evaluation_sheet__scoring_legend__average
+msgid "Average"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__salary_alignment_sheet__highest_qualification__bachelor_degree_
+msgid "Bachelor Degree"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__total_employee_cost_line__item__base_salary_
+msgid "Base Salary "
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__computer_software_packages_line__proficiency_level__basic
+msgid "Basic"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__interview_evaluation_sheet__scoring_legend__below_average
+msgid "Below Average"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__broad_roles_responsibilities
+msgid "Broad Roles & Responsibilities"
+msgstr "أدوار ومسؤوليات واسعة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__business_profession
+msgid "Business Profession"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__candidate_name
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__candidate_name
+msgid "Candidate Name"
+msgstr "أسم المرشح"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__cpability
+msgid "Capability"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__chapter_reference
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Chapter reference"
+msgstr "مرجع الفصل"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__city
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__city
+msgid "City"
+msgstr "المدينة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__company
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__company
+msgid "Comapny"
+msgstr "الشركة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__commencement_date
+msgid "Commencement Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__comments
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__comments
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__comments
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__comments
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__comments
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__comments
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__comments
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__comments1
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__comments
+#: model_terms:ir.ui.view,arch_db:hr_custom.total_employee_cost_form
+msgid "Comments"
+msgstr "تعليقات"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Comments:"
+msgstr "التعليقات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__company_id
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__company_id
+msgid "Company"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.salary_alignment_sheet_form
+msgid "Comparable incumben"
+msgstr "قابلة للمقارنة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__compensation_and_joining_details_id
+msgid "Compensation And Joining Details"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__compensation_and_joining_details_lines_ids
+msgid "Compensation And Joining Details Lines"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__compensation_offer_details_id
+#: model_terms:ir.ui.view,arch_db:hr_custom.salary_alignment_sheet_form
+msgid "Compensation Offer Details"
+msgstr "تفاصيل عرض التعويض"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__compensation_offer_details_lines_ids
+msgid "Compensation Offer Details Lines"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.interview_evaluation_sheet_form
+msgid "Compensation and Joining Details"
+msgstr "تفاصيل الالتحاق والتعويضات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__computer_software_packages_id
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Computer Software Packages"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__computer_software_packages_line_ids
+msgid "Computer Software Packages Line"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_non_executive_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__contact_number
+msgid "Contact Number"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__compensation_joining_details_line__employment_type__contract
+msgid "Contract"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.annual_departmental_manpower_planning_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.annual_manpower_planning_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.interview_evaluation_sheet_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.payroll_authorization_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisitio_non_executive_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisitio_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_request_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.position_request_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.salary_alignment_sheet_view_tree
+#: model_terms:ir.ui.view,arch_db:hr_custom.total_employee_cost_view_tree
+msgid "Contract Type"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__course_programme_mame
+msgid "Course / Programme Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__course_training_name
+msgid "Course/Training Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__courses_attended_id
+msgid "Courses Attended"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__courses_attended_line_ids
+msgid "Courses Attended Line"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Courses Attended and Special Training"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__courses_programmes_id
+msgid "Courses Programmes"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__courses_programmes_line_ids
+msgid "Courses Programmes Line"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Courses/Programmes Currently Pursuing"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__create_uid
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__create_date
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__currency_id
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__currency_id
+msgid "Currency"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__current
+msgid "Current"
+msgstr "حالي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__current_annual_incentives
+msgid "Current Annual Incentives"
+msgstr "الحوافز السنوية الحالية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__current_basic_salary
+msgid "Current Basic Salary (Per Month)"
+msgstr "الراتب الأساسي الحالي (شهريًا)"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__current_designation
+msgid "Current Designation"
+msgstr "التعيين الحالي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__current_employer
+msgid "Current Employer"
+msgstr "صاحب العمل الحالي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__current_other_allowances
+msgid "Current Other Allowances (Per Month) "
+msgstr "البدلات الأخرى الحالية (شهريا)"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__current_residence_address
+msgid "Current Residence Address"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__current_salary_currency
+msgid "Current Salary Currency"
+msgstr "عملة الراتب الحالية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__date
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__date
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__date_of_birth
+msgid "Date of Birth"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__date_of_interview
+msgid "Date of Interview"
+msgstr "تاريخ المقابلة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__date_of_request
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__date_of_request
+msgid "Date of Request"
+msgstr "تاريخ الطلب"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Date:"
+msgstr "التاريخ"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__policy_request__policy_procedure__deleted
+#: model:ir.model.fields.selection,name:hr_custom.selection__position_request__policy_procedure__deleted
+msgid "Deleted"
+msgstr "تم الحذف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__demobilisation_to
+msgid "Demobilisation To"
+msgstr "التسريح ل"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__department
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__department
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__department
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__department
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__department
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__department
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__department
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Department Manager’s Signature"
+msgstr "توقيع مدير القسم"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Department:"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__department_first
+msgid "DepartmentFirst"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__state__deputy_general_manager
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__state__deputy_general_manager
+msgid "Deputy General Manager"
+msgstr "نائب المدير العام"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_non_executive_form
+msgid "Deputy General Manager Confirm"
+msgstr "تأكيد نائب المدير العام "
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__description
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__description
+msgid "Description"
+msgstr "وصف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__description
+msgid "Description of the issue"
+msgstr "وصف المشكلة"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Description of the issue:"
+msgstr "وصف المشكلة:"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__display_name
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__distance
+msgid "Distance"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__salary_alignment_sheet__highest_qualification__doctorate_degree
+msgid "Doctorate Degree"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__state__done
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__state__done
+msgid "Done"
+msgstr "تم"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__employee_department
+msgid "Employee Department"
+msgstr "قسم الموظفين"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__employee_designation
+msgid "Employee Designation "
+msgstr "تعيين الموظف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__employee_grade
+msgid "Employee Grade "
+msgstr "درجة الموظف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__employee_name
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__employee_name
+msgid "Employee Name"
+msgstr "أسم الموظف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__employer_name
+msgid "Employer Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__employment_type
+msgid "Employment Type"
+msgstr "نوع الوظيفة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__evaluation_id
+#: model_terms:ir.ui.view,arch_db:hr_custom.interview_evaluation_sheet_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.payroll_authorization_form
+msgid "Evaluation"
+msgstr "التقييم"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__evaluation_lines_ids
+msgid "Evaluation Lines"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__interview_evaluation_sheet__scoring_legend__excellent_
+msgid "Excellent"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__expected
+msgid "Expected"
+msgstr "متوقع"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__expected_joining_date
+msgid "Expected Joining Date"
+msgstr "تاريخ الالتحاق المتوقع"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__expected_to_current
+msgid "Expected to Current % Diff."
+msgstr "متوقع إلى الحالي٪ Diff"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__experience
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__experience
+msgid "Experience"
+msgstr "الخبرة"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__languages_line__rating__fair
+msgid "Fair"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__hr_applicant__gender__female
+msgid "Female"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__first_name
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "First Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__languages_line__rating__fluent
+msgid "Fluent"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid ""
+"For New Positions, submit “New Position Request Form”, Job Descriptions and any\n"
+"                                other relevant supporting documentation\n"
+"                                # Provide relevant supporting justification"
+msgstr "بالنسبة للوظائف الجديدة ، أرسل "نموذج طلب الوظيفة الجديدة" ووصف الوظائف وأي مستندات داعمة أخرى ذات صلة. # تقديم مبرر داعم ذي صلة"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Form No"
+msgstr "رقم الاستمارة"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Form Title"
+msgstr "عنوان الاستمارة"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__total_employee_cost_line__item__fuel_allowance
+msgid "Fuel Allowance"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__full_time
+msgid "Full Time"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__total_employee_cost_line__item__gosi
+msgid "GOSI"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__gender
+msgid "Gender"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__state__general_manager_approval
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__state__general_manager_approval
+msgid "General Manager Approval"
+msgstr "موافقة المدير العام"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_non_executive_form
+msgid "General Manager Approval Confirm"
+msgstr "تأكيد موافقة المدير العام"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__interview_evaluation_sheet__scoring_legend__good
+#: model:ir.model.fields.selection,name:hr_custom.selection__languages_line__rating__good
+msgid "Good"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__grade
+msgid "Grade"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__gross
+msgid "Gross (PM)"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__gross_to_incumbent
+msgid "Gross to Incumbent % Diff."
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__state__hr_director_approval
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__state__hr_director_approval
+msgid "HR Director Approval"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "HR Manager’s Signature"
+msgstr "توقيع مدير الموارد البشرية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__highest_qualification
+msgid "Highest Qualification"
+msgstr "أعلى المؤهلات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__hobbies_and_interests
+msgid "Hobbies and Interests"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__compensation_joining_details_line__interview_outcome__hold
+msgid "Hold"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_non_executive_form
+msgid "Hr Director Approval Confirm"
+msgstr "تأكيد موافقة مدير الموارد البشرية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__iban_number
+msgid "IBAN Number"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__id
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__id
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__id
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise__id
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade__id
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__id
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__id
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__id
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__id
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__id
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__id
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__id
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__id
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__id
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__id
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__id
+msgid "ID"
+msgstr "رقم"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__id_iqama_passport
+msgid "ID/Iqama / Passport No."
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__id_iqama_passport_valid
+msgid "ID/Iqama / Passport Valid till"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__if_offered_employment_when_will_you_be_available_to_start_work
+msgid "If offered employment, when will you be available to start work? "
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__if_you_are_currently_in_saudi_arabia
+msgid ""
+"If you are currently in Saudi Arabia (SA), do you have a driving license "
+"that is valid in SA?"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__incumbent
+msgid "Incumbent"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Initiated by:"
+msgstr "بدأه:"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__institution_training_provider
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__institution_training_provider
+msgid "Institution/Training provider"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__computer_software_packages_line__proficiency_level__intermediate
+msgid "Intermediate"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.ui.menu,name:hr_custom.menu_interview_evaluation_main
+msgid "Interview Evaluation"
+msgstr "تقييم المقابلة"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_interview_evaluation_sheet
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_interview_evaluation_sheet
+msgid "Interview Evaluation Sheet"
+msgstr "ورقة تقييم المقابلة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__interview_outcome
+msgid "Interview Outcome"
+msgstr "نتيجة المقابلة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__interviewees_limitations_id
+#: model_terms:ir.ui.view,arch_db:hr_custom.interview_evaluation_sheet_form
+msgid "Interviewees Limitations"
+msgstr "تحديد المقابلات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__interviewees_limitations_lines_ids
+msgid "Interviewees Limitations Lines"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__interviewees_strength_id
+msgid "Interviewees Strength"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__interviewees_strength_lines_ids
+msgid "Interviewees Strength Lines"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.interview_evaluation_sheet_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.payroll_authorization_form
+msgid "Interviewees Strengths"
+msgstr "نقاط القوة لمن أجريت معهم المقابلات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__issue_with
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Issue with"
+msgstr "القضية مع"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__item
+msgid "Item"
+msgstr "عناصر"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__job_description_experience_skills
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__job_description_experience_skills
+msgid "Job Description / Experience / Skills"
+msgstr "وصف الوظيفي / الخبرة / المهارات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__job_title
+msgid "Job Title"
+msgstr "العنوان وظيفي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__justification_for_new_position
+msgid "Justification for New Position"
+msgstr "التبرير للوظيفة الجديدة"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__total_employee_cost_line__item__lmra
+msgid "LMRA"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__language
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__language
+msgid "Language"
+msgstr "اللغات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__languages_id
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Languages"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__languages
+msgid "Languages "
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__languages_line_ids
+msgid "Languages Line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_position_request____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_references_line____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost____last_update
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Last Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__last_name
+msgid "Last Name "
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__write_uid
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_joining_details_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_courses_attended_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__write_date
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_limitations_line__limitation
+msgid "Limitation"
+msgstr "تحديد"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__lines_ids
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__lines_ids
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__lines_ids
+#: model_terms:ir.ui.view,arch_db:hr_custom.annual_departmental_manpower_planning_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.annual_manpower_planning_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.total_employee_cost_form
+msgid "Lines"
+msgstr "خطوط"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__hr_applicant__gender__male
+msgid "Male"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.ui.menu,name:hr_custom.menu_annual_manpower_main
+msgid "Manpower"
+msgstr "القوى العاملة"
+
+#. module: hr_custom
+#: model:ir.actions.report,name:hr_custom.report_manpower_planing
+msgid "Manpower Planing Form"
+msgstr "نموذج تخطيط القوى العاملة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__marital_status
+msgid "Marital Status"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__hr_applicant__marital_status__married
+msgid "Married"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__salary_alignment_sheet__highest_qualification__master_degree
+msgid "Master Degree"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__max_points
+msgid "Max Points"
+msgstr "الحد الأقصى للنقاط"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__max_range
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__max_salary
+msgid "Maximum Salary"
+msgstr "الحد الأقصى للراتب"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__total_employee_cost_line__item__medical_insurance
+msgid "Medical Insurance"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__middle_name
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Middle Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__min_range
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__min_range
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__min_salary
+msgid "Minimum Salary"
+msgstr "الحد الأدنى للراتب"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__partner_mobile
+msgid "Mobile Number"
+msgstr "رقم الموبايل"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__mobilisation_from
+msgid "Mobilisation From"
+msgstr "التعبئة من"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__monthly_cost
+msgid "Monthly Cost"
+msgstr "التكلفة الشهرية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__max_range
+msgid "Mximum Salary"
+msgstr "الحد الأقصى للراتب"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__new_position__no
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__recruitment_agency__no
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__new_position__no
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__recruitment_agency__no
+msgid "NO"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__name
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__new_position
+msgid "Name for New Position"
+msgstr "اسم الوظيفة الجديدة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_advertise__names
+#: model:ir.model.fields,field_description:hr_custom.field_hr_grade__names
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__names
+msgid "Names"
+msgstr "الاسم"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__nationality
+msgid "Nationality"
+msgstr ""
+
+#. module: hr_custom
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/annual_manpower.py:0
+#: code:addons/hr_custom/models/interview_evaluation_sheet.py:0
+#: code:addons/hr_custom/models/interview_evaluation_sheet.py:0
+#: code:addons/hr_custom/models/interview_evaluation_sheet.py:0
+#: code:addons/hr_custom/models/interview_evaluation_sheet.py:0
+#: code:addons/hr_custom/models/payroll_authorization.py:0
+#: code:addons/hr_custom/models/payroll_authorization.py:0
+#: code:addons/hr_custom/models/payroll_authorization.py:0
+#: code:addons/hr_custom/models/payroll_authorization.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/personnel_requisition.py:0
+#: code:addons/hr_custom/models/policy_request.py:0
+#: code:addons/hr_custom/models/policy_request.py:0
+#: code:addons/hr_custom/models/policy_request.py:0
+#: code:addons/hr_custom/models/policy_request.py:0
+#: code:addons/hr_custom/models/salary_alignment_sheet.py:0
+#: code:addons/hr_custom/models/salary_alignment_sheet.py:0
+#: code:addons/hr_custom/models/salary_alignment_sheet.py:0
+#: code:addons/hr_custom/models/salary_alignment_sheet.py:0
+#: code:addons/hr_custom/models/total_employee_cost.py:0
+#: code:addons/hr_custom/models/total_employee_cost.py:0
+#: code:addons/hr_custom/models/total_employee_cost.py:0
+#: code:addons/hr_custom/models/total_employee_cost.py:0
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__state__draft
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__state__draft
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__new_position
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__new_position
+msgid "New Position"
+msgstr "موقع جديد"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__hr_applicant__if_you_are_currently_in_saudi_arabia__no
+msgid "No"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_courses_programmes_line__notes
+msgid "Notes"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.total_employee_cost_form
+msgid "One Off"
+msgstr "مرة واحدة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__department
+msgid "Originating Department"
+msgstr "القسم المنشئ"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__package
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__package
+msgid "Package"
+msgstr "صفقة"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__position__part-time
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__position__part-time
+msgid "Part-time"
+msgstr "دوام جزئي"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_payroll_authorization
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization_attributes__payroll_authorization
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_payroll_authorization
+#: model:ir.ui.menu,name:hr_custom.menu_payroll_authorization_main
+msgid "Payroll Authorization"
+msgstr "إذن كشف المرتبات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__period_from
+msgid "Period From"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__period_to
+msgid "Period To"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__compensation_joining_details_line__employment_type__permanent
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__position__permanent
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__position__permanent
+msgid "Permanent"
+msgstr "دائم"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_personnel_requisition
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_personnel_requisition
+#: model:ir.ui.menu,name:hr_custom.menu_personnel_requisition_main
+msgid "Personnel Requisition"
+msgstr "استدعاء الأفراد"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_personnel_requisition_non_executive
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_personnel_requisition_non_executive
+msgid "Personnel Requisition Non Executive"
+msgstr "طلب أفراد غير إجرائي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__plan_id
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__plan_id
+msgid "Plan"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__please_provide_any_other_information_that_you_identify_as_being_pertinent_to_this_application
+msgid ""
+"Please provide any other information that you identify as being pertinent to"
+" this application?"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__policy_request__issue_with__policy
+msgid "Policy"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.actions.report,name:hr_custom.policy_request_report
+msgid "Policy Reqeust Report"
+msgstr "تقرير طلب الشرطة"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_policy_request
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_policy_request
+msgid "Policy Request"
+msgstr "طلب السياسة"
+
+#. module: hr_custom
+#: model:ir.ui.menu,name:hr_custom.menu_policy_and_procedure_main
+msgid "Policy and Procedure"
+msgstr "السياسة والإجراءات"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__policy_procedure
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__policy_procedure
+msgid "Policy/Procedure "
+msgstr "السياسة / الإجراء"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__interview_evaluation_sheet__scoring_legend__poor
+msgid "Poor"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__position
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__position
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Position"
+msgstr "الموقع"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__position_applied_for
+msgid "Position Applied for"
+msgstr "المنصب المفدم له"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__position_location
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__position_location
+msgid "Position Location"
+msgstr "موقع البلد"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_position_request
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_position_request
+msgid "Position Request"
+msgstr "طلب الوظيفة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__position_title
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__position_title
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__position_title
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__position_title
+msgid "Position Title"
+msgstr "المسمى الوظيفي"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__position_held
+msgid "Position held"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__previous_employment_id
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Previous Employment"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__previous_employment_line_ids
+msgid "Previous Employment Line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__policy_request__issue_with__procedure
+msgid "Procedure"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_computer_software_packages_line__proficiency_level
+msgid "Proficiency Level"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__promote
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__promote
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Promote"
+msgstr "ترقية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__proposed
+msgid "Proposed"
+msgstr "مقترح"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__proposed_grade
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__proposed_grade
+msgid "Proposed Grade"
+msgstr "الدرجة المقترحة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__proposed_max_salary
+msgid "Proposed Maximum Salary"
+msgstr "الحد الأقصى المقترح للراتب"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__proposed_min_salary
+msgid "Proposed Minimum Salary"
+msgstr "الحد الأدنى المقترح للراتب"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__proposed_position
+msgid "Proposed Position"
+msgstr "الوظيفة المقترحة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__proposed_to_current
+msgid "Proposed to Current % Diff."
+msgstr "مقترح للنسبة الحالية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__proposed_to_expected
+msgid "Proposed to Expected % Diff."
+msgstr "مقترح لنسبة الفرق المتوقعة"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_non_executive_form
+msgid "QUALIFICATIONS AND SKILLS REQUIREMENTS"
+msgstr "المهارات والمؤهلات المطلوبة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__qualification_title
+msgid "Qualification Title"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__qualifications
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__qualifications
+msgid "Qualifications"
+msgstr "المؤهلات"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "Qualifications Acquired"
+msgstr "المؤهلات المكتسبة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__qualifications_acquired_line_ids
+msgid "Qualifications Acquired Line"
+msgstr "المؤهلات المكتسبة"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_form
+#: model_terms:ir.ui.view,arch_db:hr_custom.personnel_requisition_non_executive_form
+msgid "RECRUITMENT METHODS"
+msgstr "أساليب التوظيف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_languages_line__rating
+msgid "Rating"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__rationale_for_hange
+msgid "Rationale for Change"
+msgstr "الأساس المنطقي للتغيير"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__languages_line__cpability__read
+msgid "Read"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_previous_employment_line__reason_for_leaving
+msgid "Reason for leaving"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__recruitment_agency
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__recruitment_agency
+msgid "Recruitment Agency"
+msgstr "وكالة توظيف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning__name
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning__name
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__name
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__name
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__name
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__name
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__name
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__name
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__name
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__name
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Reference Number"
+msgstr "متسلسل"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_references_line__references_id
+#: model_terms:ir.ui.view,arch_db:hr_custom.employment_application_form_inh
+msgid "References"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__references_line_ids
+msgid "References Line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__compensation_joining_details_line__interview_outcome__reject
+msgid "Reject"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__replacement
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__replacement
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Replacement"
+msgstr "استبدال"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__replacement_for
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__replacement_for
+msgid "Replacement Fsor"
+msgstr "استبدال ل"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__reporting_to
+msgid "Reporting To"
+msgstr "تقديم التقارير إلى"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__reports_to
+msgid "Reports to"
+msgstr "تقارير ل"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__retrench
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__retrench
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Retrench"
+msgstr "تقليص"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Reviewed by:"
+msgstr "تمت مراجعته من قبل:"
+
+#. module: hr_custom
+#: model:ir.ui.menu,name:hr_custom.menu_salary_alignment_main
+msgid "Salary Alignment"
+msgstr "محاذاة الراتب"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_salary_alignment_sheet
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_salary_alignment_sheet
+msgid "Salary Alignment Sheet"
+msgstr "ورقة محاذاة الراتب"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_line__score
+msgid "Score"
+msgstr "نتيجة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interview_evaluation_sheet__scoring_legend
+msgid "Scoring Legend"
+msgstr "أسطورة التهديف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__section_no
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__section_no
+msgid "Section No."
+msgstr "رقم القسم"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__compensation_joining_details_line__interview_outcome__select
+msgid "Select"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__compensation_joining_details_line__interview_outcome__shortlist
+msgid "Shortlist"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__hr_applicant__marital_status__single
+msgid "Single"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__languages_line__cpability__speak
+msgid "Speak"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__total_employee_cost_line__item__special_allowance
+msgid "Special Allowance"
+msgstr ""
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Start Date"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_payroll_authorization__starting_date
+msgid "Starting Date"
+msgstr "تاريخ البدء"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__state
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__state
+msgid "Status"
+msgstr "الحاله"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_interviewees_strength_line__strength
+msgid "Strength"
+msgstr "قوة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__subject_reference
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Subject reference"
+msgstr "مرجع الموضوع"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__suggested_solution
+msgid "Suggested solution"
+msgstr "الحل المقترح"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.policy_req_temp
+msgid "Suggested solution:"
+msgstr "الحل المقترح:"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__partner_phone
+msgid "Telephone Number"
+msgstr "رقم هاتف"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__position__temporary
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__position__temporary
+msgid "Temporary"
+msgstr "مؤقت"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__total
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__total
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Total"
+msgstr "المجموع"
+
+#. module: hr_custom
+#: model:ir.actions.act_window,name:hr_custom.action_total_employee_cost
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__total_employee_cost_id
+#: model:ir.ui.menu,name:hr_custom.hr_menu_action_total_employee_cost
+#: model:ir.ui.menu,name:hr_custom.menu_total_employee_cost_main
+msgid "Total Employee Cost"
+msgstr "إجمالي تكلفة الموظف"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__total_experience
+msgid "Total Experience"
+msgstr "عدد سنوات الخبرة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_compensation_offer_details_line__total_gross_salary
+msgid "Total Gross Salary"
+msgstr "إجمالي الراتب"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost_line__total_tec
+msgid "Total TEC"
+msgstr "مجموع التكلفة"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_annual_departmental_manpower_planning_line__transfer
+#: model:ir.model.fields,field_description:hr_custom.field_annual_manpower_planning_line__transfer
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "Transfer"
+msgstr "نقل"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__total_employee_cost_line__item__transportation_allowance
+msgid "Transportation Allowance"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__update_date
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__update_date
+msgid "Update Date"
+msgstr "تاريخ التحديث"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_policy_request__update_no
+#: model:ir.model.fields,field_description:hr_custom.field_position_request__update_no
+msgid "Update No"
+msgstr "رقم التحديث"
+
+#. module: hr_custom
+#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
+msgid "VP’s Signature"
+msgstr "توقيع VP"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_total_employee_cost__visa_cost
+msgid "Visa Cost"
+msgstr "تكلفة التأشيرة"
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__languages_line__cpability__write
+msgid "Write"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_salary_alignment_sheet__year_of_passing
+msgid "Year of Passing"
+msgstr "سنه الاجتياز"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__year_from
+msgid "Years From"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__year_to
+msgid "Years To"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields.selection,name:hr_custom.selection__hr_applicant__if_you_are_currently_in_saudi_arabia__yes
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__new_position__yes
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition__recruitment_agency__yes
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__new_position__yes
+#: model:ir.model.fields.selection,name:hr_custom.selection__personnel_requisition_non_executive__recruitment_agency__yes
+msgid "Yes"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_annual_departmental_manpower_planning
+msgid "annual.departmental.manpower.planning"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_annual_departmental_manpower_planning_line
+msgid "annual.departmental.manpower.planning.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_annual_manpower_planning
+msgid "annual.manpower.planning"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_annual_manpower_planning_line
+msgid "annual.manpower.planning.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__attach_copy_of_budget_plan
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__attach_copy_of_budget_plan
+msgid "attach a copy of budget plan"
+msgstr "إرفاق نسخة من خطة الميزانية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__attach_copy_of_draft_advertisement_and_estimated_cost
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__attach_copy_of_draft_advertisement_and_estimated_cost
+msgid "attach copy of draft advertisement and estimated cost"
+msgstr "إرفاق نسخة من مسودة الإعلان والتكلفة التقديرية"
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition__attach_copy_of_estimated_cost
+#: model:ir.model.fields,field_description:hr_custom.field_personnel_requisition_non_executive__attach_copy_of_estimated_cost
+msgid "attach copy of estimated cost"
+msgstr "إرفاق نسخة من التكلفة التقديرية"
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_compensation_joining_details_line
+msgid "compensation.joining.details.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_compensation_offer_details_line
+msgid "compensation.offer.details.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_computer_software_packages_line
+msgid "computer.software.packages.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_courses_attended_line
+msgid "courses.attended.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_courses_programmes_line
+msgid "courses.programmes.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_evaluation_attributes
+msgid "evaluation.attributes"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_evaluation_line
+msgid "evaluation.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_hr_advertise
+msgid "hr.advertise"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_hr_grade
+msgid "hr.grade"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_interview_evaluation_sheet
+msgid "interview.evaluation.sheet"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_interviewees_limitations_line
+msgid "interviewees.limitations.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_interviewees_strength_line
+msgid "interviewees.strength.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_languages_line
+msgid "languages.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_payroll_authorization
+msgid "payroll.authorization"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_payroll_authorization_attributes
+msgid "payroll.authorization.attributes"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_personnel_requisition
+msgid "personnel.requisition"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_personnel_requisition_non_executive
+msgid "personnel.requisition.non.executive"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_evaluation_attributes__points
+msgid "points"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_policy_request
+msgid "policy.request"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_position_request
+msgid "position.request"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_previous_employment_line
+msgid "previous.employment.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_qualifications_acquired_line
+msgid "qualifications.acquired.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model.fields,field_description:hr_custom.field_qualifications_acquired_line__applicants_id
+msgid "qualifications_acquired_line_ids"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_references_line
+msgid "references.line"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_salary_alignment_sheet
+msgid "salary.alignment.sheet"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_total_employee_cost
+msgid "total.employee.cost"
+msgstr ""
+
+#. module: hr_custom
+#: model:ir.model,name:hr_custom.model_total_employee_cost_line
+msgid "total.employee.cost.line"
+msgstr ""

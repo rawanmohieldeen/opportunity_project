@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="hr_training_course_form" model="ir.ui.view">
+        <field name="name">hr.training.course.form</field>
+        <field name="model">hr.training.course</field>
+        <field name="arch" type="xml">
+            <form string="HR training course">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="course"/>
+                        <field name="place"/>
+                        <field name="duration"/>
+                        <field name="duration_unit"/>
+                        <field name="fees" widget='monetary'/>
+                        <field name="comments"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_training_course_tree" model="ir.ui.view">
+        <field name="name">hr.training.course.tree</field>
+        <field name="model">hr.training.course</field>
+        <field name="arch" type="xml">
+            <tree string="HR training course">
+                <field name="course"/>
+                <field name="place"/>
+                <field name="duration"/>
+                <field name="duration_unit"/>
+                <field name="fees"/>
+                <field name="comments"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id= "hr_training_course_action" model="ir.actions.act_window">
+        <field name="name">HR training course</field>
+        <field name="res_model">hr.training.course</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="HR training course" sequence="2" id="hr_training_course_menu" parent="training_root" action="hr_training_course_action"/>
+
+</odoo> 

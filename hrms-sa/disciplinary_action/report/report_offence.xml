@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="action_report_offence"> 
+         <t t-call="web.basic_layout">
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page" style="font-size: 24px;font-family:KacstOffice,KacstOne;  ">
+                    <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 26px;">
+                        <t t-foreach="docs" t-as="o">
+                            <table width="100%" dir="rtl" cellpadding="7" border="0">
+                                <tr>
+                                    <td width="35%" align="right">
+                                        <img class="img img-responsive" src="/material_request/static/description/icon.png" style="width:50%;" />
+                                    </td>
+                                    <td width="30%" align="center">
+                                        <center> <h2><b> بسم الله الرحمن الرحيم  </b></h2></center>
+                                        <center> <h2><b> قـــوات الــدعـم الســـريـع  </b></h2></center>
+                                        <center> <h2><b> المكتب التنفيذي</b></h2></center>
+                                    </td>
+                                    <td width="35%" align="left">
+                                        <img class="img img-responsive" src="/material_request/static/description/icon.png" style="width:50%;" />
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 24px;">
+                                <tr>
+                                    <td width="50%" style="font-size:20px; padding:10px;" align="right">
+                                        <table width="100%" dir="rtl" cellpadding="7" border="0">
+                                            <tr><td width="100%" style="border-bottom:1px solid #d6d4d4; padding-top:7px;"><b> رقــــــم المستند  :  </b> <t t-esc="o['document_no']"/></td></tr>
+                                            <tr><td width="100%" style="border-bottom:1px solid #d6d4d4; padding-top:7px;"><b>   الوحدة   :  </b>  <t t-esc="o['department_ids'].name"/></td></tr>                                            
+                                        </table>  
+                                    </td>
+
+                                    <td width="50%" style="font-size:20px; padding:10px;" align="left">
+                                        <table width="100%" dir="rtl" cellpadding="7" border="0">
+                                            <!-- <tr><td width="100%" style="border-bottom:1px solid #d6d4d4; padding-top:7px;"><b>   مقدم الـطـلـب  : </b>  <t t-esc="o['emp_id'].name"/></td></tr>  -->
+                                            <tr><td width="100%" style="border-bottom:1px solid #d6d4d4; padding-top:7px;"><b>  تاريخ المستند  : </b>  <t t-esc="o['date']"/> </td></tr>
+                                        </table>  
+                                    </td> 
+                                </tr>                     
+                            </table> 
+
+
+                            
+                            <tr><td><br /></td></tr> 
+                            <table  width="100%" dir="rtl"  border="1">
+                                <tr style="font-size:18px;">
+                                        <!-- <div style="float:right">
+                                            <bdi style="float:right;">  <b style="float:right;"> :  أسم المستخدم  </b> <b style="float:right;" t-esc="request.env.user.name"></b>
+                                            <br />
+                                            <b>تاريخ الطباعة  : </b> <span t-esc="time.strftime('%Y-%m-%d %H:%M:%S')"/>
+                                            </bdi>
+                                        </div> -->
+                                        <div style="float:left">
+                                            <img t-if="o.qr_code" t-att-src="image_data_uri(o.qr_code)" width="200" height="200"  align="left" />  
+                                        </div>
+                                </tr>
+                            </table> 
+                          
+                        </t>
+                    </table>
+                </div>
+        </t>
+    </template>
+</odoo>

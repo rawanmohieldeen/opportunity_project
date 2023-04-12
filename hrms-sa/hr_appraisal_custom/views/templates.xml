@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+<report
+            id="probation_appraisal_report"
+            model="hr.probation.appraisal"
+            string="Probation Appraisal Form"
+            report_type="qweb-pdf"
+            name="hr_appraisal_custom.probation_appraisal_template"
+            file="hr_appraisal_custom.probation_appraisal_template"
+
+
+        />
+        <report
+            id="confirmation_letter_report"
+            model="hr.probation.appraisal"
+            string="Confirmation Letter"
+            report_type="qweb-pdf"
+            name="hr_appraisal_custom.confirmation_letter_template"
+            file="hr_appraisal_custom.confirmation_letter_template"
+
+
+        />
+
+    </data>
+</odoo>

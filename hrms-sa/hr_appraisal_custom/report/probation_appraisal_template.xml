@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="probation_appraisal_template">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+    <t t-foreach="docs" t-as="object">
+                    <h2  class="text-center">Probation Appraisal Form</h2>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>APPRAISAL DETAILS</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Employee ID</strong>
+                            </td>
+
+
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee_no"/>
+                            </td>
+                            
+                        </tr>   
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Employee Name</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee_id.name"/>
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Job Title</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.job_id"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Department / Project</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.department_id.name"/>
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Date of Joining</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.join_date"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Appraiser Name</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.appraiser_id.name"/>
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Appraiser Job Title</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.appraiser_job.name"/>
+                            </td>
+                            
+                        </tr>
+
+                         <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Scoring Legend </strong>
+                            </td>
+
+                        </tr>
+                         <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                5:Outstanding Performance
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                4:Exceeds Expectations
+                            </td>
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                3:Meets Expectations
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                2:Below Expectation
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                1:Poor
+                            </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>APPRAISAL</strong>
+                            </td>  
+                        </tr>
+
+                         <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>#</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Attributes</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Description</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Score</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Max</strong>
+                            </td>
+                            
+                        </tr>
+                        <t t-foreach="object.appraisal_line" t-as="line">
+                             <tr>
+                                <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.serial"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.attribute"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.description"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.score"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.max_num"/>
+                                </td>
+
+                            </tr>
+                        </t>
+                        <tr>
+                             <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Total</strong>
+                            </td>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;" class="text-center">
+                                <span t-field="object.total_score"/>
+                            </td>
+                            
+                        </tr>
+                         <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>APPRAISAL OUTCOME</strong>
+                            </td>  
+                        </tr>
+                         <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>AOverall Remarks by Line Manager</strong>
+                            </td>  
+                        </tr>
+                        <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <span t-field="object.remarks"/>
+                            </td>  
+                        </tr>
+                         <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Recommendations by Line Manager</strong>
+                            </td>  
+                        </tr>
+                        <tr>
+                            <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <span t-field="object.recommendation"/>
+                            </td>  
+                        </tr>
+
+
+
+                        <tr>
+                            
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Line Manager’s Signature<br/>
+                                <span t-field="object.reciewer_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+
+                            </td>
+                             <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                HR Manager’s Signature<br/>
+                                <span t-field="object.gm_user.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                            
+                        </tr>
+                       
+
+
+
+
+</table>
+    </t>
+     </t>
+    </t>
+</template>
+
+</odoo>

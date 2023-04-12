@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="total_emp_cost_temp">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <table style="width:100%" class="table table-bordered">
+                        <t t-foreach="docs" t-as="o">
+
+                            <tr style="border: 1px solid black !important;">
+                                <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                                <td width="50%" style="border: 1px solid black !important;">
+                                    /HR/Form 010
+                                </td>
+
+                            </tr>
+                            <tr style="border: 1px solid black !important;">
+                                <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                                <td width="50%" style="border: 1px solid black !important;">
+                                    Total Employee Cost (TEC)
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                    <table width="100%" cellpadding="10" cellspacing="10"
+                           style="border: 2px  black  double !important;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Employee’s Name</td>
+                            <td width="25">
+                                <t t-esc="o.employee_name.name"/>
+                            </td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Employees Job Title</td>
+                            <td width="25%">
+                                <t t-esc="o.job_title.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Status</td>
+                            <td width="25%"></td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Commencement Date</td>
+                            <td width="25%">
+                                <t t-esc="o.comments"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="3">
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Item</td>
+                            <td width="25%" style="border: 1px solid black !important;">Monthly cost SR</td>
+                            <td width="25%" style="border: 1px solid black !important;">Annual Cost SR</td>
+                            <td width="25%" style="border: 1px solid black !important;">Total TEC</td>
+                        </tr>
+                        <t t-foreach="o.lines_ids" t-as="line">
+                            <td width="25%" style="border: 1px solid black !important;">
+                                <t t-esc="line.item"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">
+                                <t t-esc="line.monthly_cost"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">
+                                <t t-esc="line.annual_cost"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">
+                                <t t-esc="line.total_tec"/>
+                            </td>
+                        </t>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="3">
+                                One-Off
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Visa Cost</td>
+                            <td width="25">
+                                <t t-esc="o.visa_cost"/>
+                            </td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Mobilisation From</td>
+                            <td width="25%">
+                                <t t-esc="o.mobilisation_from"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Demobilisation To</td>
+                            <td width="25%">
+                                <t t-esc="o.demobilisation_to"/>
+                            </td>
+                        </tr>
+                        <br/>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="4">
+                                Comments :
+                                <br/>
+                                <br/>
+                                <t t-esc="o.comments"/>
+                            </td>
+                        </tr>
+
+                        <tr style="border: 1px solid black double !important;">
+                            <td align="center" colspan="4" style="border: 1px solid black !important;">
+                                Reviewed And Approved
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black double !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Initiated by:</td>
+                            <td width="25%" style="border: 1px solid black !important;">Reviewed by:</td>
+                            <td width="25%" style="border: 1px solid black !important;">Reviewed by:</td>
+                            <td width="25%" style="border: 1px solid black !important;">Approved by:</td>
+                        </tr>
+
+                        <tr style="border: 1px solid black double !important;">
+                            <td rowspan="4" style="border: 1px solid black !important;">
+                                HR Manager’s Signature
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                            <td rowspan="4" style="border: 1px solid black  !important;">
+                                VP’s Signature
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black double !important;">
+                            <td rowspan="4" style="border: 1px solid black !important;">
+                                HRD’s Signature
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                            <td rowspan="4" style="border: 1px solid black  !important;">
+                                GM’s Signature
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

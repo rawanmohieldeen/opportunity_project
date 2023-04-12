@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="hr_offence_form" model="ir.ui.view">
+        <field name="name">hr.offence.form</field>
+        <field name="model">hr.offence</field>
+        <field name="arch" type="xml">
+            <form string="hr Offence">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="action_type"/>
+                        <field name="initail_procedure"/>
+                        <field name="first_time"/>
+                        <field name="second_time"/>
+                        <field name="third_time"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_offence_tree" model="ir.ui.view">
+        <field name="name">hr.offence.tree</field>
+        <field name="model">hr.offence</field>
+        <field name="arch" type="xml">
+            <tree string="hr Offence">
+                <field name="action_type"/>
+                <field name="initail_procedure"/>
+                <field name="first_time"/>
+                <field name="second_time"/>
+                <field name="third_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id= "hr_offence_action" model="ir.actions.act_window">
+        <field name="name">HR Offence</field>
+        <field name="res_model">hr.offence</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    
+    
+    
+
+    <menuitem name="Offence" sequence="4" id="hr_offence_menu" parent="hr.menu_config_employee" action="hr_offence_action"/>
+</odoo>

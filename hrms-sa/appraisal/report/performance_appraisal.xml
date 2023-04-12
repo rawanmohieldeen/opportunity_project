@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--appraisal.leave_application_form -->
+        <record id="report_performance_appraisal" model="ir.actions.report">
+            <field name="name">Performance Appraisal Form</field>
+            <field name="model">leave.application.form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">appraisal.performance_appr_temp</field>
+            <field name="report_file">appraisal.performance_appr_temp</field>
+            <field name="binding_model_id" ref="model_leave_application_form"/>
+            <field name="binding_type">report</field>
+        </record>
+        <template id="performance_appr_temp">
+            <t t-call="web.external_layout">
+                <t t-call="web.html_container">
+                    <div class="page">
+                    </div>
+                    <table style="width:100%" class="table table-bordered">
+                        <t t-foreach="docs" t-as="o">
+                            <caption>
+                                <strong>PERFROMANCE MANAGEMENT DETAILS</strong>
+                            </caption>
+                            <tr>
+                                <th>Form No</th>
+                                <td>
+                                    <strong>KMC/HR/Form 021</strong>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th>Form Title</th>
+                                <td>
+                                    <strong>Performance Appraisal Form</strong>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td></td>
+
+                            </tr>
+                        </t>
+                    </table>
+                    <table style="width:100%" class="table table-bordered">
+                        <t t-foreach="docs" t-as="o">
+                            <caption>Part A. Job Specific Objectives of Past 12 Months</caption>
+                            <tr>
+                                <td>Employee ID</td>
+                                <td>
+                                    <span t-field="o.name"/>
+                                </td>
+                                <td>Review Period</td>
+                                <td>
+                                    <span t-field="o.review_period"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Employee Name
+                                </td>
+                                <td>
+                                    <span t-field="o.employee_name"/>
+                                </td>
+                                <td>Job Title</td>
+                                <td>
+                                    <span t-field="o.job_title"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Department/Project</td>
+                                <td>
+                                    <span t-field="o.department"/>
+                                </td>
+                                <td>Date of Joining</td>
+                                <td>
+                                    <span t-field="o.date_of_joining"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Appraiser Name</td>
+                                <td>
+                                    <span t-field="o.appraiser_name"/>
+                                </td>
+                                <td>Appraiser Job Title</td>
+                                <td>
+                                    <span t-field="o.appraiser_job_title"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                    <table style="width:100%" class="table table-bordered">
+                        <caption>Average Score for Part A:</caption>
+
+                        <tr>
+                            <t t-set="index_raw" t-value="1"/>
+                            <td>#</td>
+                            <td>
+                                <strong>Objectives</strong>
+                            </td>
+                            <td>
+                                <strong>Measure</strong>
+                                <p>How will you know that your objectives have been achieved?</p>
+                            </td>
+                            <td>
+                                <strong>Timescale</strong>
+                                <p>Spread throughout the year</p>
+                            </td>
+                            <td>
+                                <strong>Results</strong>
+                            </td>
+                            <td>
+                                <strong>Score Employee</strong>
+                            </td>
+                            <td>
+                                <strong>Score Appraiser</strong>
+                            </td>
+
+                        </tr>
+                        <t t-foreach="o.line_items_a_ids" t-as="opc">
+                            <tr>
+                                <td>
+                                    <span t-esc="index_raw"/>
+                                </td>
+                                <td>
+                                    <span t-esc="opc.object_job"/>
+                                </td>
+                                <td>
+                                    <span t-esc="opc.jo_a_measure"/>
+                                </td>
+                                <td>
+                                    <span t-esc="opc.jo_a_time"/>
+                                </td>
+                                <td>
+                                    <span t-esc="opc.jo_res"/>
+                                </td>
+                                <td>
+                                    <span t-esc="opc.score_emp"/>
+                                </td>
+                                <td>
+                                    <span t-esc="opc.score_appraiser"/>
+                                </td>
+                            </tr>
+                            <t t-set="index_raw" t-value="index_raw+1"/>
+                        </t>
+                    </table>
+                    <table style="width:100%" class="table table-bordered">
+                        <caption>Comments</caption>
+                        <tr style="background-color:#c3d;">
+                            <td></td>
+                            <td>Scoring Legend:
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Outstanding Performance</td>
+                            <td>4</td>
+                            <td>Exceeds Expectations</td>
+                            <td>3</td>
+                            <td>Meets Expectations</td>
+                            <td>2</td>
+                            <td>Below Expectation</td>
+                            <td>1</td>
+                            <td>Poor</td>
+                        </tr>
+                    </table>
+                    <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
+                        <caption>PartB. Generic Performance Indicators
+                            Scale 1 to 5, where 1 - poor; 2 – unsatisfactory; 3 – good, 4 – very good; 5 - outstanding
+                        </caption>
+                        <t t-foreach="o.line_items_a_ids" t-as="com">
+                            <span t-field="com.comments_a"/>
+                            <tr>
+                            </tr>
+                            <tr></tr>
+                        </t>
+                    </table>
+                    <table width="100%" bgcolor="gray" class="table table-bordered">
+                        <tr>
+                            <t t-set="index_raw" t-value="1"/>
+                            <td>#</td>
+                            <td>
+                                <strong>Attributes</strong>
+                            </td>
+                            <td>
+                                <strong>Description</strong>
+                                <p>How will you know that your objectives have been achieved?</p>
+                            </td>
+                            <td>
+                                <strong>Employee</strong>
+                                <p>Spread throughout the year</p>
+                            </td>
+                            <td>
+                                <strong>Appraiser</strong>
+                            </td>
+                        </tr>
+                        <t t-foreach="o.line_gen_ids" t-as="gen">
+                            <tr>
+                                <td>
+                                    <span t-esc="index_raw"/>
+                                </td>
+                                <td>
+                                    <span t-esc="gen.att_gen"/>
+                                </td>
+                                <td>
+                                    <span t-esc="gen.des_gen"/>
+                                </td>
+                                <td>
+                                    <span t-esc="gen.sco_emp_gen"/>
+                                </td>
+                                <td>
+                                    <span t-esc="gen.sco_appr_gen"/>
+                                </td>
+                            </tr>
+                            <t t-set="index_raw" t-value="index_raw+1"/>
+                        </t>
+                    </table>
+                    <table style="width:100%" class="table table-bordered">
+                        <tr>
+                            <th>
+                                <small>Form No</small>
+                            </th>
+                            <td>
+                                <strong>KMC/HR/Form 021</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th>
+                                <small>Form Title</small>
+                            </th>
+                            <td>
+                                <strong>Performance Appraisal Form</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td></td>
+
+                        </tr>
+                    </table>
+                    <table style="width:100%" class="table table-bordered">
+                        <caption>Average Score for Part B:</caption>
+                        <t t-foreach="docs" t-as="o">
+
+                        <tr>
+                            <t t-set="index_raw" t-value="1"/>
+                            <td>#</td>
+                            <td>
+                                <span>Attitude towards work</span>
+                            </td>
+                            <td>
+                                How much additional workload and responsibilities the employee takes?
+                            </td>
+                            <td>
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+
+                            <tr>
+                                <td>
+                                    <span t-esc="index_raw"/>
+                                </td>
+                                <td>
+<!--                                    <span t-esc="opc.object_job"/>-->
+                                </td>
+                                <td>
+<!--                                    <span t-esc="opc.jo_measure"/>-->
+                                </td>
+                                <td>
+<!--                                    <span t-esc="opc.jo_s_time"/>-->
+                                </td>
+                                <td>
+<!--                                    <span t-esc="opc.jo_res"/>-->
+                                </td>
+                            </tr>
+                            <t t-set="index_raw" t-value="index_raw+1"/>
+                        </t>
+                    </table>
+                    <span><strong>Part C. Job Specific Objectives for the Next 12 Months</strong></span>
+                    <table width="100%" bgcolor="gray" class="table table-bordered">
+                        <tr>
+                            <t t-set="index_raw" t-value="1"/>
+                            <td>#</td>
+                            <td>
+                                <strong>Objective</strong>
+                            </td>
+                            <td>
+                                <strong>Measure</strong>
+                                <p>How will you know that your objectives have been achieved</p>
+                            </td>
+                            <td>
+                                <strong> Timescale </strong>
+                                <p>Spread throughout the year</p>
+                            </td>
+                            <td>
+                                <strong>Training Required</strong>
+                            </td>
+                        </tr>
+                        <t t-foreach="o.line_items_ids" t-as="jo">
+                            <tr>
+                                <td>
+                                    <span t-esc="index_raw"/>
+                                </td>
+                                <td>
+                                    <span t-esc="jo.object_job"/>
+                                </td>
+                                <td>
+                                    <span t-esc="jo.jo_measure"/>
+                                </td>
+                                <td>
+                                    <span t-esc="jo.jo_s_time"/>
+                                </td>
+                                <td>
+                                    <span t-esc="jo.jo_tarin"/>
+                                </td>
+
+                            </tr>
+                            <t t-set="index_raw" t-value="index_raw+1"/>
+                        </t>
+                    </table>
+
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+   <record id="seq_personnel_requisition_non_executive" model="ir.sequence">
+      <field name="name">Personnel Requisition Non Executive Sequence</field>
+      <field name="code">personnel.requisition.non.executive</field>
+      <field name="prefix">PRNE</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <record id="seq_personnel_requisition" model="ir.sequence">
+      <field name="name">Personnel Requisition Sequence</field>
+      <field name="code">personnel.requisition</field>
+      <field name="prefix">PR</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <!-- Manpower -->
+   <record id="seq_annual_departmental_manpower_planning" model="ir.sequence">
+      <field name="name">Annual Departmental Manpower Planning Sequence</field>
+      <field name="code">annual.departmental.manpower.planning</field>
+      <field name="prefix">DM</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <record id="seq_annual_manpower_planning" model="ir.sequence">
+      <field name="name">Annual Manpower Planning Sequence</field>
+      <field name="code">annual.manpower.planning</field>
+      <field name="prefix">DM</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <record id="seq_position_request" model="ir.sequence">
+      <field name="name">Position Request Sequence</field>
+      <field name="code">position.request</field>
+      <field name="prefix">NP</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <!-- Policy -->
+   <record id="seq_policy_request" model="ir.sequence">
+      <field name="name">Policy Request Sequence</field>
+      <field name="code">policy.request</field>
+      <field name="prefix">PA</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <!-- payroll authorization -->
+   <record id="seq_payroll_authorization" model="ir.sequence">
+      <field name="name">Payroll Authorization Sequence</field>
+      <field name="code">payroll.authorization</field>
+      <field name="prefix">NP</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <!-- total_employee_cost -->
+   <record id="seq_total_employee_cost" model="ir.sequence">
+      <field name="name">Total Employee Cost Sequence</field>
+      <field name="code">total.employee.cost</field>
+      <field name="prefix">TC</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+
+   <!-- total_employee_cost -->
+   <record id="seq_interview_evaluation_sheet" model="ir.sequence">
+      <field name="name">Interview Evaluation Sheet Sequence</field>
+      <field name="code">interview.evaluation.sheet</field>
+      <field name="prefix">IE</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+   <!-- salary.alignment.sheet -->
+   <record id="seq_salary_alignment_sheet" model="ir.sequence">
+      <field name="name">Salary Alignment Sheet Sequence</field>
+      <field name="code">salary.alignment.sheet</field>
+      <field name="prefix">SA</field>
+      <field name="padding">5</field>
+      <field eval="1" name="number_next"/>
+      <field eval="1" name="number_increment"/>
+      <field eval="False" name="company_id"/>
+   </record>
+
+
+</data>
+</odoo>

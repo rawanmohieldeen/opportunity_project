@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="appraisal_performance_counselling_form" model="ir.ui.view">
+        <field name="name">appraisal.performance.counselling.form</field>
+        <field name="model">appraisal.performance.counselling</field>
+        <field name="arch" type="xml">
+            <form string="appraisal performance counselling">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                   <button name="action_draft" type="object" string="Draft" states="confirm"/>
+                    <button name="action_confirm" type="object" class="oe_highlight" string="Confirm" states="draft"/>
+                    <button name="action_appraiser_approve" type="object" class="oe_highlight" string="Appraiser Approve" states="confirm" groups='hr.group_hr_manager'/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="deparment_id"  options="{'no_open': True, 'no_create': True}"/>
+                        <field name="job_id"  options="{'no_open': True, 'no_create': True}"/>
+                        <field name="appraiser_employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="appraiser_job_id"  options="{'no_open': True, 'no_create': True}"/>
+                    </group>
+                    <notebook>
+                        <page string="Performance Counselling">
+                            <field name="performance_counselling_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="objectives"/>
+                                    <field name="measure"/>
+                                    <field name="timescale"/>
+                                    <field name="training_required"/>
+                                    <field name="performance_id" invisible="1"/>
+                                </tree>
+                            </field>
+                            
+                        </page>
+                        <page string="Course of Action">
+                            <field name="course_action_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="action"/>
+                                    <field name="performance_id" invisible="1"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="appraisal_performance_counselling_tree" model="ir.ui.view">
+        <field name="name">appraisal.performance.counselling.tree</field>
+        <field name="model">appraisal.performance.counselling</field>
+        <field name="arch" type="xml">
+            <tree string="appraisal performance">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="deparment_id"/>
+                <field name="job_id"/>
+                <field name="appraiser_employee_id"/>
+                <field name="appraiser_job_id"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id= "appraisal_performance_counselling_action" model="ir.actions.act_window">
+        <field name="name">Appraisal Performance Counselling</field>
+        <field name="res_model">appraisal.performance.counselling</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Training Performance Counselling"  sequence="1" id="appraisal_performance_counselling_menu" parent="appraisal_root" action="appraisal_performance_counselling_action"/>
+
+
+</odoo>

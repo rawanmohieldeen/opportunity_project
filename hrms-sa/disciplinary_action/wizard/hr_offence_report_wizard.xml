@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <odoo>
+    <data>
+        <record id="hr_offence_report_wizard" model="ir.ui.view">
+            <field name="name">hr.offence.report.wizard</field>
+            <field name="model">hr.offence.report.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="offence_ids"/>
+                    </group>
+
+                    <footer>
+                        <button name="print_report" string="Print" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hr_offence_report_wizard" model="ir.actions.act_window">
+            <field name="name">Hr Offence Report Wizard</field>
+            <field name="res_model">hr.offence.report.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem name="Reports" sequence="7" id="off_report_root" parent="hr.menu_hr_root"/>
+        <menuitem name="Offense and Penalties" id="offense_report_wizard_menu" parent="off_report_root" action="action_hr_offence_report_wizard"/>
+    </data>
+  </odoo>

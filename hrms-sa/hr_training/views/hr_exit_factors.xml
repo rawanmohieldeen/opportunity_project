@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="hr_exit_factors_form" model="ir.ui.view">
+        <field name="name">hr.exit.factors.form</field>
+        <field name="model">hr.exit.factors</field>
+        <field name="arch" type="xml">
+            <form string="HR Exit Factors">
+                <header>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_exit_factors_tree" model="ir.ui.view">
+        <field name="name">hr.exit.factors.tree</field>
+        <field name="model">hr.exit.factors</field>
+        <field name="arch" type="xml">
+            <tree string="HR Exit Factors">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id= "hr_exit_factors_action" model="ir.actions.act_window">
+        <field name="name">HR Exit Factors</field>
+        <field name="res_model">hr.exit.factors</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="HR Exit Factors" sequence="4" id="hr_exit_factors_menu" parent="hr.menu_config_employee" action="hr_exit_factors_action"/>
+
+</odoo> 

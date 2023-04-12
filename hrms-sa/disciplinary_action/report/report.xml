@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Start Code Dismissal Notice -->
+            <report
+                id="report_action_report_offence"
+                model="internal.note"
+                string="Report Offence"
+                report_type="qweb-pdf"
+                name="disciplinary_action.action_report_offence"
+                file="disciplinary_action.action_report_offence"
+
+            />
+        <!-- End Code Dismissal Notice -->
+
+
+
+         
+    </data>
+</odoo>

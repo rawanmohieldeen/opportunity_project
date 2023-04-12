@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="appraisal_performance_report"> 
+         <t t-call="web.basic_layout">
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page" style="font-size: 14;font-family:KacstOffice,KacstOne;">
+                    <!-- <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 26px;"> -->
+                        <t t-foreach="docs" t-as="o">        
+                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form No</td>
+                                    <td width="45%" style="border: 1px solid black !important;">/ HR / Form 021</td>
+                                    <td width="10%" rowspan="2"></td>
+                                </tr>
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form Title</td>
+                                    <td width="45%" style="border: 1px solid black !important;">Performance Appraisal Form</td>
+                                </tr>
+                                
+                            </table>
+                            <br/> 
+                            <br/> 
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                               <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="7">EMPLOYEE DETAILS</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Employee ID</td>
+                                    <td width="25%"></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Review Period</td>
+                                    <td width="25%"></td>
+                                    
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Employee Name</td>
+                                    <td width="25%"><t t-esc="o.employee_id.name"/></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Job Title</td>
+                                    <td width="25%"><t t-esc="o.job_id.name"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Department/Project</td>
+                                    <td width="25%"><t t-esc="o.deparment_id.name"/></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Date of Joining</td>
+                                    <td width="25%"></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Appraiser name</td>
+                                    <td width="25%"><t t-esc="o.appraiser_employee_id.name"/></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Appraiser Job Title</td>
+                                    <td width="25%"><t t-esc="o.appraiser_job_id.name"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="7">Part A. Job Specific Objectives of Past 12 Months</td>
+                                </tr>
+                                 <tr style="border: 1px solid black !important;">
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">#</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Objectives</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Measure</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Timescale</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Results</td>
+                                    <td width="20%" style="border: 1px solid black !important;">
+                                        Score <br/>
+                                        Employee
+                                    </td>
+                                    <td width="20%" style="border: 1px solid black !important;">
+                                        Score <br/>
+                                        Appraiser
+                                    </td>
+                                </tr>
+                                <t t-set="i" t-value="1" />
+                                <t t-foreach="o.job_objective_past_ids" t-as="line">
+                                    
+                                    
+                                    <tr style="border: 1px solid black !important;">
+                                        <td width="20%" align="center" style="border: 1px solid black !important;">
+                                            <t t-esc="i" />
+                                            <t t-set="i" t-value="i+1"/>
+                                        </td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.objectives"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.measure"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.timescale"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.results"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.employee_score"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.appraiser_score"/></td>
+                                    </tr>
+                                </t>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="7">Average Score for Part A:<br/><div align="center"><t t-esc="o.average_score_a"/></div></td>
+                                </tr>
+                                
+                            </table>
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="10">Scoring Legend:</td>
+                                </tr>
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">5</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Outstanding Performance</td>
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">4</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Exceeds Expectations</td>
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">3</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Meets Expectations</td>
+                                    <td width="20%" align="center" tyle="border: 1px solid black !important;">2</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Below Expectation</td>
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">1</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Poor</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="10" rowspan="3">Comments:<br /><br /></td>
+                                </tr>
+                            </table>
+                            <p style="page-break-after:always;">   </p>
+                            
+                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form No</td>
+                                    <td width="45%" style="border: 1px solid black !important;">/ HR / Form 021</td>
+                                    <td width="10%" rowspan="2"></td>
+                                </tr>
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form Title</td>
+                                    <td width="45%" style="border: 1px solid black !important;">Performance Appraisal Form</td>
+                                </tr>
+                                
+                            </table>
+                            <br/> 
+                            <br/> 
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                                
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">#</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Attributes</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Description</td>
+                                    <td width="20%" style="border: 1px solid black !important;">
+                                        Score <br/>
+                                        Employee
+                                    </td>
+                                    <td width="20%" style="border: 1px solid black !important;">
+                                        Score <br/>
+                                        Appraiser
+                                    </td>
+                                </tr>
+                                <t t-set="i" t-value="1" />
+                                <t t-foreach="o.generic_indicators_ids" t-as="line">
+                                    
+                                    
+                                    <tr style="border: 1px solid black !important;">
+                                        <td width="20%" align="center" style="border: 1px solid black !important;">
+                                            <t t-esc="i" />
+                                            <t t-set="i" t-value="i+1"/>
+                                        </td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.attributes"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.description"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.employee_score"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.appraiser_score"/></td>
+                                    </tr>
+                                </t>
+                                
+                                
+                            </table>
+                            <p style="page-break-after:always;">   </p>
+                            
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">Average Score for Part B:</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">Part C. Job Specific Objectives for the Next 12 Months</td>
+                                </tr>
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">#</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Objective</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Measure</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Timescale</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Training Required</td>
+                                </tr>
+                                <t t-set="i" t-value="1" />
+                                <t t-foreach="o.job_objective_next_ids" t-as="line">
+                                    
+                                    
+                                    <tr style="border: 1px solid black !important;">
+                                        <td width="20%" align="center" style="border: 1px solid black !important;">
+                                            <t t-esc="i" />
+                                            <t t-set="i" t-value="i+1"/>
+                                        </td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.objectives"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.measure"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.timescale"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.training_required"/></td>
+                                    </tr>
+                                </t>
+                                <tr  style="border: 1px solid black double !important;">
+                                    <td align="center" colspan="3" style="border: 1px solid black !important;">
+                                    Employee’s Signature <br /><br />
+                                    Date
+                                    </td>
+                                    <td align="center" colspan="2" style="border: 1px solid black  !important;">
+                                    Appraiser’s Signature <br /><br />
+                                    Date
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                            <br/>
+                            <p>Note: Instructions on how to fill the form:</p>
+                            <p>1.	Actual Performance should be compared against measurable targets</p>
+                            <p>2.	Full Year’s performance should be considered</p>
+                            <p>3.	Specific instances to be noted</p>
+                            <p>4.	The Appraiser should give justification for scores other than 3</p>
+
+                            
+                        </t>
+                </div>
+        </t>
+    </template>
+</odoo>

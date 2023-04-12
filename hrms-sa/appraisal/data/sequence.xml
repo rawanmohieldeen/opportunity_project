@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+      <record id="seq_appraisal_performance" model="ir.sequence">
+         <field name="name">Appraisal Performance</field>
+         <field name="code">appraisal.performance</field>
+         <field name="prefix">PA</field>
+         <field name="padding">6</field>
+         <field eval="False" name="company_id"/>
+      </record>
+
+      <record id="seq_appraisal_performance_counselling" model="ir.sequence">
+         <field name="name">Appraisal Performance Counselling</field>
+         <field name="code">appraisal.performance.counselling</field>
+         <field name="prefix">BC</field>
+         <field name="padding">6</field>
+         <field eval="False" name="company_id"/>
+      </record>
+   </data>
+</odoo>

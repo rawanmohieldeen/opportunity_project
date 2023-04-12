@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+acc_offence.penalty,acc.offence_penalty,model_offence_penalty,,1,1,1,1
+acc_hr.offence,acc.hr_offence,model_hr_offence,,1,1,1,1
+acc_offence.line,acc.offence_line,model_offence_line,,1,1,1,1

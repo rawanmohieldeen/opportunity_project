@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="report_probation_appraisal" model="ir.actions.report">
+            <field name="name">Probation Appraisal Form</field>
+            <field name="model">probation.application.form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">appraisal.prob_appraisal_temp</field>
+            <field name="report_file">appraisal.prob_appraisal_temp</field>
+            <field name="binding_model_id" ref="model_probation_application_form<"/>
+            <field name="binding_type">report</field>
+        </record>
+        <template id="prob_appraisal_temp">
+            <t t-call="web.external_layout">
+                <t t-call="web.html_container">
+                    <div class="page">
+                        <table style="width:100%" class="table table-bordered">
+                            <caption>APPRAISAL DETAILS</caption>
+                            <t t-foreach="docs" t-as="o">
+                                <tr>
+                                    <th>Form No</th>
+                                    <td>
+                                        <strong>/HR/Form 018</strong>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th>Form Title</th>
+                                    <td>
+                                        <strong>Probation Appraisal Form</strong>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+
+                                </tr>
+                            </t>
+                        </table>
+                        <table style="width:100%" class="table table-bordered">
+                            <t t-foreach="docs" t-as="o">
+                                <tr>
+                                    <td>Employee ID</td>
+                                    <td>
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <!--                                        <span t-field="o.review_period"/>-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Employee Name
+                                    </td>
+                                    <td>
+                                        <span t-field="o.employee_name"/>
+                                    </td>
+                                    <td>Job Title</td>
+                                    <td>
+                                        <span t-field="o.job_title"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Department/Project</td>
+                                    <td>
+                                        <span t-field="o.department"/>
+                                    </td>
+                                    <td>Date of Joining</td>
+                                    <td>
+                                        <span t-field="o.date_of_joining"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Appraiser Name</td>
+                                    <td>
+                                        <span t-field="o.appraiser_name"/>
+                                    </td>
+                                    <td>Appraiser Job Title</td>
+                                    <td>
+                                        <span t-field="o.appraiser_job_title"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                        <table style="width:100%" class="table table-bordered">
+                            <caption>APPRAISAL</caption>
+                            <tr style="background-color:#c3d;">
+                                <td></td>
+                                <td>Scoring Legend:
+                                </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Outstanding Performance</td>
+                                <td>4</td>
+                                <td>Exceeds Expectations</td>
+                                <td>3</td>
+                                <td>Meets Expectations</td>
+                                <td>2</td>
+                                <td>Below Expectation</td>
+                                <td>1</td>
+                                <td>Poor</td>
+                            </tr>
+                        </table>
+                        <table width="100%" bgcolor="gray" class="table table-bordered">
+                            <caption>APPRAISAL OUTCOME</caption>
+                            <tr>
+                                <t t-set="index_raw" t-value="1"/>
+                                <td>#</td>
+                                <td>
+                                    <strong>Attributes</strong>
+                                </td>
+                                <td>
+                                    <strong>Description</strong>
+                                    <p>How will you know that your objectives have been achieved?</p>
+                                </td>
+                                <td>
+                                    <strong>Score</strong>
+                                    <p>Spread throughout the year</p>
+                                </td>
+                                <td>
+                                    <strong>Max</strong>
+                                </td>
+                            </tr>
+                            <t t-foreach="o.appraisal_lines_ids" t-as="app">
+                                <tr>
+                                    <td>
+                                        <span t-esc="index_raw"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="app.attributes"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="app.description"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="app.score"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="app.max_points"/>
+                                    </td>
+                                </tr>
+                                <t t-set="index_raw" t-value="index_raw+1"/>
+                            </t>
+                        </table>
+                        <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
+                            <caption>Recommendations by Line Manager</caption>
+                            <tr>
+                                Overall Remarks by Line Manager
+                            </tr>
+                            <tr></tr>
+
+                        </table>
+                        <table class="table table-bordered">
+                            <t t-foreach="docs" t-as="o">
+                                <tr>
+
+                                </tr>
+                                <tr>
+                                    <td style="padding: 30px;">Line Manager’s Signature</td>
+                                    <td style="padding-top: 10px;">HR Manager’s Signature</td>
+                                    <!--                            <td>VP’s Signature</td>-->
+
+                                </tr>
+                                <tr>
+                                    <td>Date
+                                        <span t-field="o.date"/>
+                                    </td>
+                                    <td>Date:
+                                        <span t-field="o.date"/>
+                                    </td>
+                                    <td>Date:
+                                        <span t-field="o.date"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

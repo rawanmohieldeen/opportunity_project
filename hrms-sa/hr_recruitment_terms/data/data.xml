@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="email_template_terms" model="mail.template">
+            <field name="name">Terms and Conditions for Recruitment Agencies</field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Terms and Conditions for Recruitment Agencies</field>
+            <field name="email_from">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
+            <field name="email_to">{{ object.email_from }}</field>
+            <field name="description">Terms and Conditions for Recruitment Agencies</field>
+            <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        <!-- <Name>
+        <Designation>
+        <Company>
+        <Address> -->
+        Dear Mr. <span  t-out="object.partner_name"/>
+        <br/><br/>
+        We offer you the following terms and conditions for recruitment consultancy for <span style="font-weight: bold;"  t-out="object.job_id.name"/> assignments:
+        <br/>
+        <p> <span t-out="object.terms_id.terms_conditions"/></p>
+        <p>Please let us know at the earliest if the terms and conditions mentioned above are acceptable to you so that we may advise you about the specifications for the positions we want to recruit.
+        </p>
+        Thank You.
+    </p>
+</div>
+            </field>
+            <field name="report_name">{{ (object.name or '').replace('/','_') }}</field>
+            <field name="lang">{{ object.user_id.partner_id.lang }}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+        <!-- referance form -->
+        <record id="referance_form_template" model="mail.template">
+            <field name="name">Reference Check Form </field>
+            <field name="model_id" ref="hr_recruitment.model_hr_applicant"/>
+            <field name="subject">Reference Check Form </field>
+            <field name="email_from">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
+            <field name="email_to">{{ object.referance_email }}</field>
+            <field name="description">Reference Check Form</field>
+            <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+        To 
+        Mr. / Ms <span  t-out="object.referance_name"/><br/>
+        Name of the Company <span  t-out="object.company_name"/><br/>
+        Address <span  t-out="object.address"/><br/>
+
+        Sir/Madam,
+        Mr. / Ms. <span  t-out="object.partner_name"/> working as <span  t-out="object.previous_job"/> in <span  t-out="object.company_name"/> has appeared for an Interview with Bahrain KMC Contracting Company recently.  As one of the suggested references, we request you to help us with some information about him for our Personnel Reference Records.  Your candid response in this regard to the questions in the format below will be greatly appreciated.  All information received will be treated as strictly confidential.<br/>
+        Thanking you<br/>
+        With regards<br/>
+    </p>
+    <p><b>Human Resources Manager</b><br/>
+PLEASE ANSWER THE QUESTIONS ABOUT THE CANDIDATE AS KNOWN TO YOU. Select appropriate questions in accordance with the method of a reference check.
+</p>
+    <p>
+
+    • When did <span  t-out="object.partner_name"/> work for your company? Could you confirm starting and ending employment dates? When did she/ he leave the company?<br/>
+    • Why did <span  t-out="object.partner_name"/> leave the company?<br/>
+    • What was her/ his starting and ending salary?<br/>
+    • What was her/ his position? Can you describe the job responsibilities?<br/>
+    • Did <span  t-out="object.partner_name"/> miss a lot of work? Was she/ he frequently late? Were there any issues you are aware of that impacted her/ his job performance?<br/>
+    • Did she/ he get along well with management and co-workers?<br/>
+    • Was <span  t-out="object.partner_name"/> promoted while with your company?<br/>
+    • How did <span  t-out="object.partner_name"/> handle conflict? How about pressure? Stress?<br/>
+    • Did you evaluate <span  t-out="object.partner_name"/>'s' performance? Can you speak to his/ her strong and weak points? What was noted as needing improvement during this performance review?<br/>
+    • Would you rehire <span  t-out="object.partner_name"/> if the opportunity arose? If I describe the position we are hiring for you, could you describe how good a fit you think <span  t-out="object.partner_name"/> would be for the position?<br/>
+    • Can you describe this person’s experience working as a member of a team?<br/>
+    • Is there anything I haven’t asked that you would like to share with me?<br/>
+    </p>
+    <p>
+        Referee Details<br/>
+        NAME        : <span  t-out="object.user_id.name"/> <br/>
+        DESIGNATION : <br/>
+        ORGANISATION: <span  t-out="object.company_id.name"/> <br/>
+        SIGNATURE   : <br/>
+        DATE        : <br/>
+        Note: Early and candid information provided by you will help us in deciding his/her employment with our Organization.
+</p>
+</div>
+            </field>
+            <field name="report_name">{{ (object.referance_name or '').replace('/','_') }}</field>
+            <field name="lang">{{ object.user_id.partner_id.lang }}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+  </data>
+</odoo>

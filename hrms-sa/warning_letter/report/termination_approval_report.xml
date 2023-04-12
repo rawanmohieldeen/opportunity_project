@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="termination_approval_template">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+    <t t-foreach="docs" t-as="object">
+                    <h2  class="text-center">Termination Approval</h2>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>EMPLOYEE DETAILS</strong>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Employee ID</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee_no"/>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Employee Name</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Job Title</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.job_id.name"/>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Department / Project</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.department_id.name"/>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Reason for Termination </strong>
+                            </td>
+
+                        </tr>
+                         <tr>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="object.reaon"/>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Date of Issuing the Termination Notice:</strong>
+                            </td>
+
+
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.date"/>
+                            </td>
+                            
+                        </tr>
+                         <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Notice Period:</strong>
+                            </td>
+
+
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.notice_period"/>
+                            </td>
+                            
+                        </tr>
+                         <tr>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Comments: </strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.comments"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Initiated by:</strong>
+                            </td>
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Reviewed by:
+                            </td>
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Approved by:
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="object.create_uid.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.reciewer_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.gm_user.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            
+                        </tr>
+
+
+
+
+</table>
+    </t>
+     </t>
+    </t>
+</template>
+
+</odoo>

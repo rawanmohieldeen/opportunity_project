@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--appraisal.leave_application_form -->
+        <record id="report_performance_counselling" model="ir.actions.report">
+            <field name="name">Performance Counselling Form</field>
+            <field name="model">leave.application.form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">appraisal.performance_counselling_temp</field>
+            <field name="report_file">appraisal.performance_counselling_temp</field>
+            <field name="binding_model_id" ref="model_leave_application_form"/>
+            <field name="binding_type">report</field>
+        </record>
+        <template id="performance_counselling_temp">
+            <t t-call="web.external_layout">
+                <t t-call="web.html_container">
+                    <div class="page">
+
+                        <table style="width:100%" class="table table-bordered">
+                            <t t-foreach="docs" t-as="o">
+                                <caption>
+                                    PERFROMANCE COUNSELLING DETAILS
+                                </caption>
+                                <tr>
+                                    <th>Form No</th>
+                                    <td>
+                                        <strong>KMC/HR/Form 022</strong>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th>Form Title</th>
+                                    <td>
+                                        <strong>Performance Counselling Form</strong>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+
+                                </tr>
+                            </t>
+                        </table>
+                        <table style="width:100%" class="table table-bordered">
+                            <t t-foreach="docs" t-as="o">
+                                <caption>PERFROMANCE COUNSELLING</caption>
+                                <tr>
+                                    <td>Employee ID</td>
+                                    <td>
+                                        <span t-field="o.name"/>
+                                    </td>
+                                    <td>Review Period</td>
+                                    <td>
+                                        <span t-field="o.review_period"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Employee Name
+                                    </td>
+                                    <td>
+                                        <span t-field="o.employee_name"/>
+                                    </td>
+                                    <td>Job Title</td>
+                                    <td>
+                                        <span t-field="o.job_title"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Department/Project</td>
+                                    <td>
+                                        <span t-field="o.department"/>
+                                    </td>
+                                    <td>Date of Joining</td>
+                                    <td>
+                                        <span t-field="o.date_of_joining"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Appraiser Name</td>
+                                    <td>
+                                        <span t-field="o.appraiser_name"/>
+                                    </td>
+                                    <td>Appraiser Job Title</td>
+                                    <td>
+                                        <span t-field="o.appraiser_job_title"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </table>
+                        <table width="100%" bgcolor="gray" class="table table-bordered">
+                            <caption>Course of Action</caption>
+                            <tr>
+                                <t t-set="index_raw" t-value="1"/>
+                                <td>#</td>
+                                <td>
+                                    <strong>Objective</strong>
+                                </td>
+                                <td>
+                                    <strong>Measure</strong>
+                                    <p>How will you know that your objectives have been achieved</p>
+                                </td>
+                                <td>
+                                    <strong>Timescale</strong>
+                                </td>
+                                <td>
+                                    <strong>Training Required</strong>
+                                </td>
+                            </tr>
+                            <t t-foreach="o.line_per_con_ids" t-as="jo">
+                                <tr>
+                                    <td>
+                                        <span t-esc="index_raw"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="jo.objectives"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="jo.measure"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="jo.timescale"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="jo.train_required"/>
+                                    </td>
+
+                                </tr>
+                                <t t-set="index_raw" t-value="index_raw+1"/>
+                            </t>
+                        </table>
+                        <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
+                            <caption>Comments</caption>
+                            <t t-foreach="o.action_line_ids" t-as="act">
+                                <span t-field="act.action"/>
+                                <tr>
+                                </tr>
+                                <tr></tr>
+                            </t>
+                        </table>
+                        <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
+                            <span t-field="o.comments"/>
+                            <tr>
+                            </tr>
+                            <tr></tr>
+                        </table>
+                        <table style="width:100%" class="table table-bordered">
+                                <tr>
+                                    <th>Form No</th>
+                                    <td>
+                                        <strong>KMC/HR/Form 022</strong>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th>Form Title</th>
+                                    <td>
+                                        <strong>Performance Counselling Form</strong>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td></td>
+
+                                </tr>
+                        </table>
+                        <table style="width:100%" class="table table-bordered">
+
+                                <tr colspan="2">
+                                  <td>  Employee’s Signature </td>
+<!--                                    <th>Employee’s Signature</th>-->
+                                    <td>
+                                        Appraiser’s Signature
+<!--                                        <strong>KMC/HR/Form 022</strong>-->
+                                    </td>
+                                </tr>
+
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

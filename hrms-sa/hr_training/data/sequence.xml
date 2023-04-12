@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="seq_hr_exit_interview" model="ir.sequence">
+        <field name="name">HR Exit Interview</field>
+        <field name="code">hr.exit.interview</field>
+        <field name="prefix">EI</field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_hr_training_plan" model="ir.sequence">
+        <field name="name">Hr Training Plan</field>
+        <field name="code">hr.training.plan</field>
+        <field name="prefix">TP</field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+    <record id="seq_hr_training_course_report" model="ir.sequence">
+        <field name="name">Hr Training Course Repport</field>
+        <field name="code">hr.training.course.report</field>
+        <field name="prefix">CR</field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+    <record id="seq_hr_training_course_request" model="ir.sequence">
+        <field name="name">Hr Training Course Request</field>
+        <field name="code">hr.training.course.request</field>
+        <field name="prefix">CR</field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

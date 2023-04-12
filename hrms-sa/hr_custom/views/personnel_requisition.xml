@@ -1,0 +1,214 @@
+<odoo>
+    <record id="personnel_requisition_form" model="ir.ui.view">
+      <field name="name">personnel.requisition form</field>
+      <field name="model">personnel.requisition</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+                <button name="confirm" type="object" string="Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                <button name="deputy_general_manager_confirm" type="object" string="Deputy General Manager Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'deputy_general_manager')]}"/>
+                <button name="hr_director_approval_confirm" type="object" string="Hr Director Approval Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'hr_director_approval')]}"/>
+                <button name="general_manager_approval_confirm" type="object" string="General Manager Approval Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'general_manager_approval')]}"/>
+                
+                <field name="state" widget="statusbar" />
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="currency_id" invisible="1"/>
+                        <field  name="company"/>
+                        <field  name="position_title"/>
+                        <field  name="date_of_request"/>
+                        <field  name="department"/>
+                        <field  name="position_location"/>
+                        <field  name="city"/>
+                    </group>
+                    <group >
+                        <field  name="new_position"/>
+                        <field  name="replacement_for"/>
+                        <field  name="position"/>
+                        <field  name="min_range"  widget="monetary"/>
+                        <field  name="max_range"  widget="monetary"/>
+                        <field  name="attach_copy_of_budget_plan"/>
+                        
+                    </group>
+                </group>
+                <notebook>
+                    <page string="QUALIFICATIONS AND SKILLS REQUIREMENTS" >
+                    <group >
+                        <field  name="qualifications"/>
+                        <field  name="experience"/>
+                        <field  name="language" widget="many2many_tags"/>
+                        <field  name="job_description_experience_skills"/>
+                        <field  name="comments"/>
+                    </group>
+                  
+                    </page>
+                    <page string="RECRUITMENT METHODS" >
+                    <group >
+                        <field  name="recruitment_agency"/>
+                        <field  name="agency_estimated_cost"/>
+                        <field  name="attach_copy_of_estimated_cost"/>
+                        <field  name="advertisement"/>
+                        <field  name="adv_estimated_cost"/>
+                        <field  name="attach_copy_of_draft_advertisement_and_estimated_cost"/>
+                    </group>
+                  
+                    </page>
+                </notebook>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+        <record id="personnel_requisitio_view_tree" model="ir.ui.view">
+      <field name="name">personnel.requisition tree</field>
+      <field name="model">personnel.requisition</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field  name="company"/>
+                        <field  name="position_title"/>
+                        <field  name="date_of_request"/>
+                        <field  name="department"/>
+                        <field  name="position_location"/>
+                        <field  name="city"/>
+                        <field  name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_personnel_requisition" model="ir.actions.act_window">
+            <field name="name">Personnel Requisition</field>
+            <field name="res_model">personnel.requisition</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+
+
+
+    <record id="personnel_requisition_non_executive_form" model="ir.ui.view">
+      <field name="name">personnel.requisition.non.executive form</field>
+      <field name="model">personnel.requisition.non.executive</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+                <button name="confirm" type="object" string="Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+                <button name="deputy_general_manager_confirm" type="object" string="Deputy General Manager Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'deputy_general_manager')]}"/>
+                <button name="hr_director_approval_confirm" type="object" string="Hr Director Approval Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'hr_director_approval')]}"/>
+                <button name="general_manager_approval_confirm" type="object" string="General Manager Approval Confirm" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'general_manager_approval')]}"/>
+                
+                <field name="state" widget="statusbar" />
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="currency_id" invisible="1"/>
+                        <field  name="company"/>
+                        <field  name="position_title"/>
+                        <field  name="date_of_request"/>
+                        <field  name="department"/>
+                        <field  name="position_location"/>
+                        <field  name="city"/>
+                    </group>
+                    <group >
+                        <field  name="new_position"/>
+                        <field  name="replacement_for"/>
+                        <field  name="position"/>
+                        <field  name="min_range"  widget="monetary"/>
+                        <field  name="max_range"  widget="monetary"/>
+                        <field  name="attach_copy_of_budget_plan"/>
+                        
+                    </group>
+                </group>
+                <notebook>
+                    <page string="QUALIFICATIONS AND SKILLS REQUIREMENTS" >
+                    <group >
+                        <field  name="qualifications"/>
+                        <field  name="experience"/>
+                        <field  name="language" widget="many2many_tags"/>
+                        <field  name="job_description_experience_skills"/>
+                        <field  name="comments"/>
+                    </group>
+                  
+                    </page>
+                    <page string="RECRUITMENT METHODS" >
+                    <group >
+                        <field  name="recruitment_agency"/>
+                        <field  name="agency_estimated_cost"/>
+                        <field  name="attach_copy_of_estimated_cost"/>
+                        <field  name="advertisement"/>
+                        <field  name="adv_estimated_cost"/>
+                        <field  name="attach_copy_of_draft_advertisement_and_estimated_cost"/>
+                    </group>
+                  
+                    </page>
+                </notebook>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+        <record id="personnel_requisitio_non_executive_view_tree" model="ir.ui.view">
+      <field name="name">personnel.requisition.non.executive tree</field>
+      <field name="model">personnel.requisition.non.executive</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field  name="company"/>
+                        <field  name="position_title"/>
+                        <field  name="date_of_request"/>
+                        <field  name="department"/>
+                        <field  name="position_location"/>
+                        <field  name="city"/>
+                        <field  name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_personnel_requisition_non_executive" model="ir.actions.act_window">
+            <field name="name">Personnel Requisition Non Executive</field>
+            <field name="res_model">personnel.requisition.non.executive</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- <menuitem
+            id="hr_menu_action_personnel"
+            action="action_personnel_requisition"
+            parent="hr_recruitment.menu_hr_recruitment_root"
+            sequence="3"/>
+
+        <menuitem
+            id="hr_menu_action_personnel_non_executive"
+            action="action_personnel_requisition_non_executive"
+            parent="hr_recruitment.menu_hr_recruitment_root"
+            sequence="3"/> -->
+
+        <menuitem id="menu_personnel_requisition_main" name="Personnel Requisition" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2">
+            <menuitem id="hr_menu_action_personnel_requisition" action="action_personnel_requisition" sequence="1"/>
+            <menuitem id="hr_menu_action_personnel_requisition_non_executive" action="action_personnel_requisition_non_executive" sequence="2"/>
+        </menuitem>
+
+</odoo> 

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_training_course_report"> 
+         <t t-call="web.basic_layout">
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page" style="font-size: 14;font-family:KacstOffice,KacstOne;">
+                    <!-- <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 26px;"> -->
+                        <t t-foreach="docs" t-as="o">        
+                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form No</td>
+                                    <td width="45%" style="border: 1px solid black !important;">KMC / HR / Form 026</td>
+                                    <td width="10%" rowspan="2"></td>
+                                </tr>
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form Title</td>
+                                    <td width="45%" style="border: 1px solid black !important;">Training Course/ Seminar/ Workshop Report</td>
+                                </tr>
+                                
+                            </table>
+                            <br/> 
+                            <br/> 
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">EMPLOYEE DETAILS</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Employee ID</td>
+                                    <td width="25%"></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Employee Name</td>
+                                    <td width="25%"><t t-esc="o.employee_id.name"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Job Title</td>
+                                    <td width="25%"><t t-esc="o.job_id.name"/></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Department/Project</td>
+                                    <td width="25%"><t t-esc="o.deparment_id.name"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">Course DETAILS</td>
+                                </tr>
+
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="20%" style="border: 1px solid black !important;">Course Name</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Relevance to Duties</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Place of Training</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Duration</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Course Fee</td>
+                                </tr>
+                                <t t-foreach="o.line_ids" t-as="line">
+                                    
+                                    
+                                    <tr style="border: 1px solid black !important;">
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.course_id.course"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.relevance_to_duties"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.place"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.duration"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.fees"/></td>
+                                    </tr>
+                                </t>
+                                 
+                            </table>
+                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  double black;">
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="8">GENERAL EVALUATION OF THE TRAINING COURSE</td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">#</td>
+                                    <td width="35%" style="border: 1px solid black !important;">Question</td>
+                                    <td width="60%"  colspan="6" align="center" style="border: 1px solid black !important;">Response</td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">1</td>
+                                    <td width="35%"  style="border: 1px solid black !important;">Do you think the course has achieved its object?</td>
+                                    <td width="10%"  style="border: 1px solid black !important;">Yes</td>
+                                    <td width="10%"  style="border: 1px solid black !important;">
+                                    <t t-if="o.q_object == 'yes'">
+                                        <input type="checkbox" checked="checked"/> 
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox"/> 
+                                    </t>
+                                    </td>
+                                    <td width="10%"  style="border: 1px solid black !important;">No</td>
+                                    <td width="10%"  style="border: 1px solid black !important;">
+                                    <t t-if="o.q_object == 'no'">
+                                        <input type="checkbox" checked="checked"/> 
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox"/> 
+                                    </t>
+                                    </td>
+                                    <td width="10%"  style="border: 1px solid black !important;">Partly</td>
+                                    <td width="10%"  style="border: 1px solid black !important;">
+                                    <t t-if="o.q_object == 'partly'">
+                                        <input type="checkbox" checked="checked"/> 
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox"/> 
+                                    </t>
+                                    </td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">2</td>
+                                    <td width="35%"  style="border: 1px solid black !important;">Where you the right person to attend the course?</td>
+                                    <td width="60%"  colspan="6" align="center" style="border: 1px solid black !important;"><t t-esc="o.q_attend"/></td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">3</td>
+                                    <td width="35%"  style="border: 1px solid black !important;">Will the course help in your duties (please elaborate)?</td>
+                                    <td width="15%"  style="border: 1px solid black !important;">Yes</td>
+                                    <td width="10%"  style="border: 1px solid black !important;">
+                                    <t t-if="o.q_duties == 'yes'">
+                                        <input type="checkbox" checked="checked"/> 
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox"/> 
+                                    </t>
+                                    </td>
+                                    <td width="10%"  style="border: 1px solid black !important;">No</td>
+                                    <td width="10%"  style="border: 1px solid black !important;">
+                                    <t t-if="o.q_duties == 'no'">
+                                        <input type="checkbox" checked="checked"/> 
+                                    </t>
+                                    <t t-else="">
+                                        <input type="checkbox"/> 
+                                    </t>
+                                    </td>
+                                    
+                                    
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">4</td>
+                                    <td width="35%"  style="border: 1px solid black !important;">Mention any problems faced at the training</td>
+                                    <td width="60%"  colspan="6" align="center" style="border: 1px solid black !important;"><t t-esc="o.problems"/></td>
+                                </tr>
+
+                            
+
+                            </table>
+                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  double black;">
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="8">TRAINEE’S EVALUATION OF THE TRAINING COURSE</td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">#</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Question</td>
+                                    <td width="10%"  align="center" style="border: 1px solid black !important;">Excellent</td>
+                                    <td width="10%"  align="center" style="border: 1px solid black !important;">Good</td>
+                                    <td width="10%"  align="center" style="border: 1px solid black !important;">Average</td>
+                                    <td width="10%"  align="center" style="border: 1px solid black !important;">Weak</td>
+                                    <td width="35%"  align="center" style="border: 1px solid black !important;">Remarks</td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">1</td>
+                                    <td width="20%"  style="border: 1px solid black !important;">Timing of the Course</td>
+                                    <td width="10%" align="center"  style="border: 1px solid black !important;">
+                                        <t t-if="o.course_time == 'excellent'">
+                                            <input type="checkbox"  checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_time == 'good'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_time == 'average'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_time == 'weak'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                    </td>
+                                    <td width="35%" align="center" style="border: 1px solid black !important;"><t t-esc="o.remark"/></td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">2</td>
+                                    <td width="20%"  style="border: 1px solid black !important;">Course Duration</td>
+                                    <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_duration == 'excellent'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_duration == 'good'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_duration == 'average'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_duration == 'weak'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                    </td>
+                                    <td width="35%" align="center" style="border: 1px solid black !important;"><t t-esc="o.remark"/></td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">3</td>
+                                    <td width="20%"  style="border: 1px solid black !important;">Place of Training</td>
+                                    <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_place == 'excellent'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_place == 'good'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_place == 'average'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.course_place == 'weak'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                    </td>
+                                    <td width="35%" align="center" style="border: 1px solid black !important;"><t t-esc="o.remark"/></td>
+                                </tr>
+                                <tr width="100%" style="border: 1px solid black !important;">
+                                    <td width="5%" style="border: 1px solid black !important;">4</td>
+                                    <td width="20%"  style="border: 1px solid black !important;">Method of Training</td>
+                                    <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.training_method == 'excellent'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.training_method == 'good'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.training_method == 'average'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%" align="center" style="border: 1px solid black !important;">
+                                        <t t-if="o.training_method == 'weak'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                    </td>
+                                    <td width="35%" align="center" style="border: 1px solid black !important;"><t t-esc="o.remark"/></td>
+                                </tr>
+                                <br/> <br/>
+                                <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  double black;">
+                                    <tr width="100%" style="border: 1px solid black !important;">
+                                        <td width="35%"  style="border: 1px solid black !important;">Would you recommend the course to other colleagues?</td>
+                                        <td width="15%"  style="border: 1px solid black !important;">Yes</td>
+                                        <td width="10%"  style="border: 1px solid black !important;">
+                                        <t t-if="o.recommend == 'yes'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        <td width="10%"  style="border: 1px solid black !important;">No</td>
+                                        <td width="10%"  style="border: 1px solid black !important;">
+                                        <t t-if="o.recommend == 'no'">
+                                            <input type="checkbox" checked="checked"/> 
+                                        </t>
+                                        <t t-else="">
+                                            <input type="checkbox"/> 
+                                        </t>
+                                        </td>
+                                        
+                                        
+                                    </tr>
+                                </table>
+                            
+                                
+                            </table>
+                                <br /><br />
+                                <table>
+                                        <tr>
+                                            <td>
+                                            Employee’s Signature <br /><br />
+                                            Date
+                                            </td>
+                                        </tr> 
+                                </table>
+                        </t>
+                </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,117 @@
+<odoo>
+    <record id="interview_evaluation_sheet_form" model="ir.ui.view">
+      <field name="name">Interview Evaluation Sheet form</field>
+      <field name="model">interview.evaluation.sheet</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="candidate_name"/>
+                        <field  name="date_of_interview"/>
+                        <field  name="position_applied_for"/>
+                        <field  name="department"/>
+                        <field  name="scoring_legend"/>
+                    </group>
+                    
+                </group>
+                <notebook>
+
+                    <page string="Evaluation" >
+                        <field name="evaluation_lines_ids">
+                            <tree editable="bottom">
+                                <field name="attributes" />
+                                <field name="description" />
+                                <field name="max_points" />
+                                <field name="score" />
+                            </tree>
+                           
+                        </field>
+                    </page>
+
+                    <page string="Interviewees Strengths" >
+                        <field name="interviewees_strength_lines_ids">
+                            <tree editable="bottom">
+                                <field name="strength" />
+                            </tree>
+                           
+                        </field>
+                    </page>
+
+                    <page string="Interviewees Limitations" >
+                        <field name="interviewees_limitations_lines_ids">
+                            <tree editable="bottom">
+                                <field name="limitation" />
+                            </tree>
+                           
+                        </field>
+                    </page>
+
+                    <page string="Compensation and Joining Details" >
+                    
+                        <field name="compensation_and_joining_details_lines_ids">
+                            <tree editable="bottom">
+                                <field name="current_basic_salary" />
+                                <field name="current_other_allowances" />
+                                <field name="current_annual_incentives" />
+                                <field name="expected_joining_date" />
+                                <field name="employment_type" />
+                                <field name="interview_outcome" />
+                            </tree>
+                           
+                        </field>
+                 
+                    </page>
+                </notebook>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+    <record id="interview_evaluation_sheet_view_tree" model="ir.ui.view">
+      <field name="name">Interview Evaluation Sheet tree</field>
+      <field name="model">interview.evaluation.sheet</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field name="candidate_name"/>
+                        <field  name="date_of_interview"/>
+                        <field  name="position_applied_for"/>
+                        <field  name="department"/>
+                        <field  name="scoring_legend"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_interview_evaluation_sheet" model="ir.actions.act_window">
+            <field name="name">Interview Evaluation Sheet</field>
+            <field name="res_model">interview.evaluation.sheet</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+    
+
+    
+
+
+
+
+
+
+        <menuitem id="menu_interview_evaluation_main" name="Interview Evaluation" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2">
+            <menuitem id="hr_menu_action_interview_evaluation_sheet" action="action_interview_evaluation_sheet" sequence="1"/>
+        </menuitem>
+
+</odoo> 

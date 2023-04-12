@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+    <record model="ir.ui.view" id="hr_applicant_view_form_inherit">
+        <field name="name">Jobs - Recruitment Form</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+
+          <field name="department_id" position="after">
+            <field name="terms_id"/>
+          </field>
+          <button name="archive_applicant" position="after">
+            <button string="Send Terms And Conditions" name="action_terms_and_conditions" type="object" attrs="{'invisible': [('active', '=', False)]}" data-hotkey="x"/>
+            <button string="Send Referance Form" name="action_referance_send" type="object" attrs="{'invisible': [('active', '=', False)]}" data-hotkey="x"/>
+          </button>
+          <notebook position="inside">
+            <page string="Referance Information">
+              <group>
+                <group>
+                  <field name="referance_name"/>
+                  <field name="referance_email"/>
+                  <field name="previous_job"/>
+                </group>
+                 <group>
+                      <field name="company_name"/>
+                      <field name="address"/>
+                  </group>
+              </group>
+            </page>
+          </notebook>
+
+
+        </field>
+      </record>
+    </data>
+</odoo>

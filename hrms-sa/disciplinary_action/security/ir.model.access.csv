@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_offence,hr.offence,model_hr_offence,,1,1,1,1
+access_offence_report,offence.report,model_offence_report,,1,1,1,1
+access_offence_report_line,offence.report.line,model_offence_report_line,,1,1,1,1
+access_hr_offence_report_wizard,hr.offence.report.wizard,model_hr_offence_report_wizard,,1,1,1,1

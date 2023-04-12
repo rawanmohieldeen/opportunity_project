@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+<report
+            id="warning_letter_report"
+            model="warning.letter"
+            string="Warning Letter"
+            report_type="qweb-pdf"
+            name="warning_letter.warning_letter_template"
+            file="warning_letter.warning_letter_template"
+
+
+        />
+<report
+            id="termination_letter_report"
+            model="hr.termination"
+            string="Termination Letter"
+            report_type="qweb-pdf"
+            name="warning_letter.termination_letter_template"
+            file="warning_letter.termination_letter_template"
+
+
+        />
+<report
+            id="termination_approval_report"
+            model="hr.termination"
+            string="Termination Letter Approval"
+            report_type="qweb-pdf"
+            name="warning_letter.termination_approval_template"
+            file="warning_letter.termination_approval_template"
+
+
+        />
+    </data>
+</odoo>

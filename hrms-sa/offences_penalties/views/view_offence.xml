@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <record id="offence_pen_form" model="ir.ui.view">
+        <field name="name">Offences and Penalties Form</field>
+        <field name="model">offence.penalty</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="type_action"/>
+                            <field name="initial_pro"/>
+                            <field name="f_time"/>
+                            <field name="s_time"/>
+                        </group>
+                        <group>
+                            <field name="third_time"/>
+                            <field name="company_id" invisible="1"/>
+                            <field name="user_id" widget="many2one_avatar_user"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="offence line" string="Offence items">
+                            <field name="offence_line_ids">
+                                <tree editable="top">
+                                    <field name="fu_de"/>
+                                    <field name="reco_penalty"/>
+                                </tree>
+                            </field>
+
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="offence_view_tree" model="ir.ui.view">
+        <field name="name">Offences Penalties tree</field>
+        <field name="model">offence.penalty</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="type_action"/>
+                <field name="initial_pro"/>
+                <field name="f_time"/>
+                <field name="s_time"/>
+                <field name="third_time"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_view_offence" model="ir.actions.act_window">
+        <field name="name">Offence Action</field>
+        <field name="res_model">offence.penalty</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_offence_main" name="Offences and Penalties" parent="hr.menu_hr_root" sequence="3"/>
+    <menuitem id="offence_sub_menu" action="action_view_offence" name=" "
+              parent="offences_penalties.menu_offence_main"/>
+
+
+</odoo> 

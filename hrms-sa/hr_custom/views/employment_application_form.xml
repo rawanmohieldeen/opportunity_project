@@ -1,0 +1,138 @@
+<odoo>
+
+       <record id="employment_application_form_inh" model="ir.ui.view">
+              <field name="name">employment application form inh</field>     
+                 <field name="model">hr.applicant</field>  
+                 <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form" />       
+                 <field name="arch" type="xml">              
+                    
+                    <!--
+                    <xpath expr="//group[@name='recruitment_contract']" position="before">  
+                        <div class="oe_title">
+                            <h1>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <field name="first_name" placeholder="First Name"  required="1"
+                                                   style="padding-right:5px"/>
+                                        </td>
+                                        <td>
+                                            <field name="middle_name" placeholder="Middle Name" required="1"
+                                                   style="padding-right:5px"/>
+                                        </td>
+                                        <td>
+                                            <field name="last_name" placeholder="Last Name" required="1"
+                                                   style="padding-right:5px"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </h1>
+                        </div>
+                    </xpath>   
+
+                    <xpath expr="//field[@name='name']" position="after">  
+                        <field name="gender"/>
+                        <field name="marital_status"/>
+                        <field name="date_of_birth"/>
+                        <field name="nationality"/>
+                        <field name="id_iqama_passport"/>
+                        <field name="id_iqama_passport_valid"/>
+                        <field name="current_residence_address"/>
+                    </xpath> 
+                    -->
+                    <xpath expr="//form/sheet/notebook" position="inside">
+
+                        <page string="Qualifications">
+                            <field name="qualifications_acquired_line_ids">
+                                <tree editable="bottom">
+                                    <field name="qualification_title" />
+                                    <field name="institution_training_provider" />
+                                    <field name="year_from" />
+                                    <field name="year_to" />
+                                </tree>
+                               
+                            </field>
+                        </page>
+
+                        <page string="Courses and Training">
+                            <field name="courses_attended_line_ids">
+                                <tree editable="bottom">
+                                    <field name="course_training_name" />
+                                </tree>
+                               
+                            </field>
+                        </page>
+
+                        <page string="Courses/Programmes Pursuing">
+                            <field name="courses_programmes_line_ids">
+                                <tree editable="bottom">
+                                    <field name="course_programme_mame" />
+                                    <field name="institution_training_provider" />
+                                    <field name="full_time" />
+                                    <field name="distance" />
+                                    <field name="notes" />
+                                </tree>
+                               
+                            </field>
+                        </page>
+
+                        <page string="Computer Software Packages">
+                            <field name="computer_software_packages_line_ids">
+                                <tree editable="bottom">
+                                    <field name="package" />
+                                    <field name="proficiency_level" />
+                                </tree>
+                               
+                            </field>
+                        </page>
+
+                        <page string="Previous Employment">
+                            <field name="previous_employment_line_ids">
+                                <tree editable="bottom">
+                                    <field name="employer_name" />
+                                    <field name="period_from" />
+                                    <field name="period_to" />
+                                    <field name="position_held" />
+                                    <field name="reason_for_leaving" />
+                                </tree>
+                               
+                            </field>
+                        </page>
+
+                        <page string="Languages">
+                            <field name="languages_line_ids">
+                                <tree editable="bottom">
+                                    <field name="languages" />
+                                    <field name="cpability" />
+                                    <field name="rating" />
+                                </tree>
+                               
+                            </field>
+                        </page>
+
+                        <page string="References">
+                            <field name="references_line_ids">
+                                <tree editable="bottom">
+                                    <field name="name" />
+                                    <field name="contact_number" />
+                                    <field name="business_profession" />
+                                </tree>
+                               
+                            </field>
+                        </page>
+                    </xpath>    
+
+                    <xpath expr="//form/sheet/notebook" position="after">  
+                        <field name="if_offered_employment_when_will_you_be_available_to_start_work"/>
+                        <!-- <field name="please_provide_any_other_information_that_you_identify_as_being_pertinent_to_this_application"/> -->
+                        <field name="if_you_are_currently_in_saudi_arabia"/>
+                        <field name="hobbies_and_interests"/>
+                    </xpath>      
+                </field>   
+        </record>
+
+
+ 
+
+
+</odoo>

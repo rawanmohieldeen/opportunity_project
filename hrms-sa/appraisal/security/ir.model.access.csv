@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_appraisal_performance,appraisal.performance,model_appraisal_performance,,1,1,1,1
+access_job_objective_past,job.objective.past,model_job_objective_past,,1,1,1,1
+access_job_objective_next,job.objective.next,model_job_objective_next,,1,1,1,1
+access_generic_indicators,generic.indicators,model_generic_indicators,,1,1,1,1
+access_appraisal_outcome,appraisal.outcome,model_appraisal_outcome,,1,1,1,1
+access_appraisal_recommendations,appraisal.recommendations,model_appraisal_recommendations,,1,1,1,1
+access_appraisal_performance_counselling,appraisal.performance.counselling,model_appraisal_performance_counselling,,1,1,1,1
+access_performance_counselling,performance.counselling,model_performance_counselling,,1,1,1,1
+access_course_action,course.action,model_course_action,,1,1,1,1

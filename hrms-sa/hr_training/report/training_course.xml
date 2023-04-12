@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="training_course_report"> 
+         <t t-call="web.basic_layout">
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page" style="font-size: 14;font-family:KacstOffice,KacstOne;">
+                    <!-- <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 26px;"> -->
+                        <t t-foreach="docs" t-as="o">        
+                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form No</td>
+                                    <td width="45%" style="border: 1px solid black !important;">/ HR / Form 027</td>
+                                    <td width="10%" rowspan="2"></td>
+                                </tr>
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form Title</td>
+                                    <td width="45%" style="border: 1px solid black !important;">Personal Training Record</td>
+                                </tr>
+                                
+                            </table>
+                            <br/> 
+                            <br/> 
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">EMPLOYEE DETAILS</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Employee ID</td>
+                                    <td width="25%"></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Employee Name</td>
+                                    <td width="25%"></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Job Title</td>
+                                    <td width="25%"></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Department/Project</td>
+                                    <td width="25%"></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">TRAINING DETAILS</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="20%" style="border: 1px solid black !important;">Training Course</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Place of Training</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Duration</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Training Fee</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Comments</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="20%" style="border: 1px solid black !important;"><t t-esc="o['course']"/></td>
+                                    <td width="20%" style="border: 1px solid black !important;"><t t-esc="o['place']"/></td>
+                                    <td width="20%" style="border: 1px solid black !important;"><t t-esc="o['duration']"/></td>
+                                    <td width="20%" style="border: 1px solid black !important;"><t t-esc="o['fees']"/></td>
+                                    <td width="20%" style="border: 1px solid black !important;"><t t-esc="o['comments']"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black double !important;">
+                                    <td colspan="3" style="border: 1px solid black !important;">
+                                    HR Manager’s Signature <br /><br />
+                                    Date
+                                    </td>
+                                    <td colspan="2" style="border: 1px solid black  !important;">
+                                    Employee’s Signature <br /><br />
+                                    Date
+                                    </td>
+                                </tr>
+                            </table>
+                        </t>
+                </div>
+        </t>
+    </template>
+</odoo>

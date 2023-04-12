@@ -1,0 +1,61 @@
+<odoo>
+    <record id="payroll_authorization_form" model="ir.ui.view">
+      <field name="name">Payroll Authorization form</field>
+      <field name="model">payroll.authorization</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                        <field name="employee_name"/>
+                        <field  name="employee_department"/>
+                        <field  name="employee_designation"/>
+                        <field  name="employee_grade"/>
+                        <field  name="starting_date"/>
+                        <field  name="iban_number" widget="char" />
+
+                </group>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+    <record id="payroll_authorization_view_tree" model="ir.ui.view">
+      <field name="name">Payroll Authorization tree</field>
+      <field name="model">payroll.authorization</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field name="employee_name"/>
+                        <field  name="employee_department"/>
+                        <field  name="employee_designation"/>
+                        <field  name="employee_grade"/>
+                        <field  name="starting_date"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_payroll_authorization" model="ir.actions.act_window">
+            <field name="name">Payroll Authorization</field>
+            <field name="res_model">payroll.authorization</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+        <menuitem id="menu_payroll_authorization_main" name="Payroll Authorization" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2">
+            <menuitem id="hr_menu_action_payroll_authorization" action="action_payroll_authorization" sequence="1"/>
+        </menuitem>
+
+</odoo> 

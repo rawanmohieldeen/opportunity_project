@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="seq_hr_offence_report" model="ir.sequence">
+        <field name="name">HR Offence Report</field>
+        <field name="code">offence.report</field>
+        <field name="prefix">OF</field>
+        <field name="padding">6</field>
+        <field name="company_id" eval="False"/>
+    </record>
+</odoo>

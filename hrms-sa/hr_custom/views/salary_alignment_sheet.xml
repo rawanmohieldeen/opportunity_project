@@ -1,0 +1,110 @@
+<odoo>
+    <record id="salary_alignment_sheet_form" model="ir.ui.view">
+      <field name="name">Salary Alignment Sheet form</field>
+      <field name="model">salary.alignment.sheet</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="candidate_name"/>
+                        <field  name="age"/>
+                        <field  name="highest_qualification"/>
+                        <field  name="year_of_passing"/>
+                        <field  name="current_designation"/>
+                        <field  name="reporting_to"/>
+                        <field  name="current_employer"/>
+                        <field  name="total_experience"/>
+                        <field  name="proposed_position"/>
+                        <field  name="proposed_grade"/>
+                        <field  name="current_designation"/>
+                    </group>
+                    
+                </group>
+                <notebook>
+
+                    <page string="Compensation Offer Details" >
+                        <field name="compensation_offer_details_lines_ids">
+                            <tree editable="bottom">
+                                <field name="package" />
+                                <field name="current" />
+                                <field name="expected" />
+                                <field name="proposed" />
+                                <field name="proposed_to_current" />
+                                <field name="proposed_to_expected" />
+                                <field name="expected_to_current" />
+                                <field name="total_gross_salary" />
+                            </tree>
+                           
+                        </field>
+                    </page>
+
+                    <page string="Comparable incumben" >
+                        <field name="incumbent"/>
+                        <field name="grade"/>
+                        <field name="gross"/>
+                        <field name="gross_to_incumbent"/>
+                        <field name="comments1"/>
+                    </page>
+
+                   
+                </notebook>
+                <field name="comments"/>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+    <record id="salary_alignment_sheet_view_tree" model="ir.ui.view">
+      <field name="name">Salary Alignment Sheet tree</field>
+      <field name="model">salary.alignment.sheet</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field name="candidate_name"/>
+                        <field  name="age"/>
+                        <field  name="highest_qualification"/>
+                        <field  name="year_of_passing"/>
+                        <field  name="current_designation"/>
+                        <field  name="reporting_to"/>
+                        <field  name="current_employer"/>
+                        <field  name="total_experience"/>
+                        <field  name="proposed_position"/>
+                        <field  name="proposed_grade"/>
+                        <field  name="current_designation"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_salary_alignment_sheet" model="ir.actions.act_window">
+            <field name="name">Salary Alignment Sheet</field>
+            <field name="res_model">salary.alignment.sheet</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+    
+
+    
+
+
+
+
+
+
+        <menuitem id="menu_salary_alignment_main" name="Salary Alignment" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2">
+            <menuitem id="hr_menu_action_salary_alignment_sheet" action="action_salary_alignment_sheet" sequence="1"/>
+        </menuitem>
+
+</odoo> 

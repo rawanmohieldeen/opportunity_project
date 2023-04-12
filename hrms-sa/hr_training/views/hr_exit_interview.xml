@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="hr_exit_interview_form" model="ir.ui.view">
+        <field name="name">hr.exit.interview.form</field>
+        <field name="model">hr.exit.interview</field>
+        <field name="arch" type="xml">
+            <form string="HR Exit Interview">
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="employee"/>
+                        <field name="factor_id"/>
+                        <field name="critical_incidents_examples"/>
+                        <field name="points"/>
+                        <field name="hr_comments"/>
+                    </group>
+                    <notebook>
+                        <page string="Positive Features">
+                            <field name="positive_features_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Negative Features">
+                            <field name="negative_features_ids">
+                                <tree editable="bottom">
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Suggestions " >
+                            <label for="suggestions"/>
+                            <field name="suggestions"/>
+                        </page>
+                        <page string="Future Opportunity">
+                            <label for="future_opportunity"/>
+                            <field name="future_opportunity"/>
+                        </page>
+                        <page string="Contact Address">
+                            <label for="contact_address"/>
+                            <field name="contact_address"/>
+                        </page>
+                        <page string="Incident Details" groups='hr.group_hr_user,hr.group_hr_manager'>
+                            <label for="details"/>
+                            <field name="details"/>
+                        </page>
+                        <page string="Character Certificate" groups='hr.group_hr_user,hr.group_hr_manager'>
+                            <label for="character_certificate"/>
+                            <field name="character_certificate"/>
+                        </page>
+                        <page string=" Employment Reconsideration" groups='hr.group_hr_user,hr.group_hr_manager'>
+                            <label for="employment_reconsideration"/>
+                            <field name="employment_reconsideration"/>
+                        </page>
+                        <page string="Other Comments" groups='hr.group_hr_user,hr.group_hr_manager'>
+                            <label for="hr_other_comments"/>
+                            <field name="hr_other_comments"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="hr_exit_interview_tree" model="ir.ui.view">
+        <field name="name">hr.exit.interview.tree</field>
+        <field name="model">hr.exit.interview</field>
+        <field name="arch" type="xml">
+            <tree string="HR Exit Interview">
+                <field name="employee"/>
+                <field name="factor_id"/>
+                <field name="critical_incidents_examples"/>
+                <field name="points"/>
+                <field name="hr_comments"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id= "hr_exit_interview_action" model="ir.actions.act_window">
+        <field name="name">HR Exit Interview</field>
+        <field name="res_model">hr.exit.interview</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Training" sequence="7" id="training_root" parent="hr.menu_hr_root"/>
+    <menuitem name="Exit Interview" sequence="0" id="hr_exit_interview_menu" parent="training_root" action="hr_exit_interview_action"/>
+
+
+</odoo>

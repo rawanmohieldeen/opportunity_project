@@ -1,0 +1,213 @@
+<odoo>
+    <record id="leave_application_form" model="ir.ui.view">
+        <field name="name">Leave Application form</field>
+        <field name="model">leave.application.form</field>
+        <field name="arch" type="xml">
+            <form class="o_sale_order">
+                <header>
+                    <button name="action_draft" string="Set to Draft" type="object" states="appraiser_appr"
+                            class="oe_highlight"/><!--states="appraiser_appr"-->
+                    <button name="action_submit" string="Submit" type="object" states="draft" class="oe_highlight"/>
+                    <button name="action_approval" string="Approve" type="object" states="emp_submit"
+                            class="oe_highlight"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,emp_submit,appraiser_appr"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_name"/>
+                            <field name="job_title"/>
+                            <field name="department"/>
+                            <field name="date_of_joining"/>
+                        </group>
+                        <group>
+                            <field name="appraiser_name"/>
+                            <field name="appraiser_job_title"/>
+                            <field name="review_period" widget="date"/>
+                            <field name="comments"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+
+                        <page string="Evaluation">
+                            <field name="appraisal_lines_ids">
+                                <tree editable="bottom">
+                                    <field name="attributes"/>
+                                    <field name="description"/>
+                                    <field name="max_points"/>
+                                    <field name="score"/>
+                                </tree>
+
+                            </field>
+                        </page>
+
+                        <page string="Interviewees Strengths">
+                            <group>
+                                <field name="overall_remarks_by_line_manage"/>
+                                <field name="recommendations_by_line_manage"/>
+                            </group>
+
+                        </page>
+                        <page name="part B" string="Generic Performance Indicator">
+                            <field name="line_gen_ids">
+                                <tree string="Generic Performance" editable="bottom">
+                                    <field name="att_gen"/>
+                                    <field name="des_gen"/>
+                                    <field name="sco_emp_gen"/>
+                                    <field name="sco_appr_gen"/>
+                                    <!--                                    <field name="avg_score_gen" optional="hide"/>-->
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="counselling from" string="Performance Counselling">
+                            <field name="line_per_con_ids">
+                                <tree string="Performance Counselling Line" editable="bottom">
+                                    <field name="objectives"/>
+                                    <field name="measure"/>
+                                    <field name="timescale"/>
+                                    <field name="train_required"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page name="part c" string="Job Specific Objectives">
+                            <field name="line_items_ids" options="{'no_create': False}">
+                                <tree string="Job Objectives" editable="bottom">
+                                    <field name="object_job"/>
+                                    <field name="jo_measure"/>
+                                    <field name="jo_s_time"/>
+                                    <field name="jo_tarin"/>
+
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Course of Action">
+                            <field name="action_line_ids" string="Course Action">
+                                <tree editable="top">
+                                    <field name="action"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+                <!-- <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div> -->
+            </form>
+        </field>
+    </record>
+
+    <record id="leave_application_view_tree" model="ir.ui.view">
+        <field name="name">Leave Application tree</field>
+        <field name="model">leave.application.form</field>
+        <field name="arch" type="xml">
+            <tree string="Contract Type">
+                <field name="name"/>
+                <field name="employee_name"/>
+                <field name="job_title"/>
+                <field name="department"/>
+                <field name="date_of_joining"/>
+                <field name="appraiser_name"/>
+                <field name="appraiser_job_title"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_leave_application" model="ir.actions.act_window">
+        <field name="name">Leave Application</field>
+        <field name="res_model">leave.application.form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="probation_application_form" model="ir.ui.view">
+        <field name="name">probation Application form</field>
+        <field name="model">probation.application.form</field>
+        <field name="arch" type="xml">
+            <form class="o_sale_order">
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_name"/>
+                            <field name="job_title"/>
+                            <field name="department"/>
+                            <field name="date_of_joining"/>
+                            <field name="appraiser_name"/>
+                            <field name="appraiser_job_title"/>
+                        </group>
+
+                    </group>
+                    <notebook>
+
+                        <page string="Evaluation">
+                            <field name="appraisal_lines_ids">
+                                <tree editable="bottom">
+                                    <field name="attributes"/>
+                                    <field name="description"/>
+                                    <field name="max_points"/>
+                                    <field name="score"/>
+                                </tree>
+
+                            </field>
+                        </page>
+
+                        <page string="Interviewees Strengths">
+                            <field name="overall_remarks_by_line_manage"/>
+                            <field name="recommendations_by_line_manage"/>
+                        </page>
+
+                    </notebook>
+                </sheet>
+                <!-- <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div> -->
+            </form>
+        </field>
+    </record>
+
+    <record id="probation_application_view_tree" model="ir.ui.view">
+        <field name="name">probation Application tree</field>
+        <field name="model">probation.application.form</field>
+        <field name="arch" type="xml">
+            <tree string="Contract Type">
+                <field name="name"/>
+                <field name="employee_name"/>
+                <field name="job_title"/>
+                <field name="department"/>
+                <field name="date_of_joining"/>
+                <field name="appraiser_name"/>
+                <field name="appraiser_job_title"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_probation_application" model="ir.actions.act_window">
+        <field name="name">probation Application</field>
+        <field name="res_model">probation.application.form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem id="menu_leave_application_main" name="Appraisal" parent="hr.menu_hr_root" sequence="2">
+        <menuitem id="hr_menu_action_leave_application" action="action_leave_application" sequence="1"/>
+        <menuitem id="hr_menu_action_probation_application" action="action_probation_application" sequence="2"/>
+    </menuitem>
+
+</odoo> 

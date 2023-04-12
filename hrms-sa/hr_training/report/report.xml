@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_training_course"
+            model="hr.training.course"
+            string="Training Course Report"
+            report_type="qweb-html"
+            name="hr_training.training_course_report"
+            file="hr_training.training_course_report"
+        /> 
+        <report
+            id="hr_training_course_report"
+            model="hr.training.course.report"
+            string="Training Course Report"
+            report_type="qweb-html"
+            name="hr_training.report_training_course_report"
+            file="hr_training.report_training_course_report"
+        /> 
+    </data>
+</odoo>

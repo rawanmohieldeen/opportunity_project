@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<!-- HR Recruitment Terms and Conditions -->
+    <record id="tree_hr_recruitment_terms_view" model="ir.ui.view">
+        <field name="name">hr.recruitment.terms.tree</field>
+        <field name="model">hr.recruitment.terms</field>
+        <field name="arch" type="xml">
+            <tree string="Terms and Conditions">
+                
+                <field name="name" />
+                <field name="date"/>
+                <field name="active" />
+             
+            </tree>
+        </field>
+    </record>
+
+
+
+
+    <record id="view_hr_recruitment_terms_form" model="ir.ui.view">
+        <field name="name">hr.recruitment.terms.form</field>
+        <field name="model">hr.recruitment.terms</field>
+        <field name="arch" type="xml">
+            <form string="Recruitment Terms And Conditions">
+                <header>
+                  
+                </header>
+                <sheet>
+                           
+
+                    <div class="oe_title">
+                           
+                            <h1 class="mt0" >
+                                <field name="name"/>
+                            </h1>
+
+                        </div>
+                    <group>
+                        <group>
+                            
+                            <field name="date" readonly="0"/>
+                           
+                            
+                        </group>
+                        <group>
+                            <field name="active" widget="boolean_toggle"/>
+                            
+                        </group>
+
+                    </group>
+                   
+                    
+                    <group>
+                            <field name="terms_conditions" required="1" />
+                        
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_hr_recruitment_terms" model="ir.actions.act_window">
+        <field name="name">Recruitment Terms and Conditions</field>
+        <field name="res_model">hr.recruitment.terms</field>
+        <field name="view_mode">tree,form</field>
+       
+    </record>
+
+
+
+    
+    <menuitem name="Terms and Conditions" parent="hr_recruitment.menu_hr_recruitment_configuration" id="menu_hr_recruitment_terms" action="action_hr_recruitment_terms"  groups="hr_recruitment.group_hr_recruitment_user"/>
+
+
+
+</odoo>

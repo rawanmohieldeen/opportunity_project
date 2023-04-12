@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="appraisal_performance_form" model="ir.ui.view">
+        <field name="name">appraisal.performance.form</field>
+        <field name="model">appraisal.performance</field>
+        <field name="arch" type="xml">
+            <form string="appraisal performance">
+                <header>
+                    <field name="state" widget="statusbar"/>
+                   <button name="action_draft" type="object" string="Draft" states="confirm"/>
+                    <button name="action_confirm" type="object" class="oe_highlight" string="Confirm" states="draft"/>
+                    <button name="action_line_approve" type="object" class="oe_highlight" string="HR Line Approve" states="confirm" groups='hr.group_hr_manager'/>
+                    <button name="action_hr_approve" type="object" class="oe_highlight" string="HR Manager Approve" states="line_approve" groups='hr.group_hr_manager'/>
+                    <button name="action_general_approve" type="object" class="oe_highlight" string="General Manager Approve" states="hr_approve" groups='hr.group_hr_manager'/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="deparment_id" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="job_id"  options="{'no_open': True, 'no_create': True}"/>
+                        <field name="appraiser_employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="appraiser_job_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                    </group>
+                    <notebook>
+                        <page string="Job Specific Objectives of Past 12 Months">
+                            <field name="job_objective_past_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="objectives"/>
+                                    <field name="measure"/>
+                                    <field name="timescale"/>
+                                    <field name="results"/>
+                                    <field name="employee_score"/>
+                                    <field name="appraiser_score"/>
+                                    <field name="performance_id" invisible="1"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" colspan="2" name="average_score_a">
+                                <div class="oe_inline o_td_label">
+                                    <label for="average_score_a"/>
+                                </div>
+                                <field name="average_score_a" nolabel="1" style="font-size:20px;font-weight: bold;"/>
+                            </group>
+                        </page>
+                        <page string="Generic Performance Indicators">
+                            <field name="generic_indicators_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="attributes"/>
+                                    <field name="description"/>
+                                    <field name="employee_score"/>
+                                    <field name="appraiser_score"/>
+                                    <field name="performance_id" invisible="1"/>
+                                </tree>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right" colspan="2" name="average_score_b">
+                                <div class="oe_inline o_td_label">
+                                    <label for="average_score_b"/>
+                                </div>
+                                <field name="average_score_b" nolabel="1" style="font-size:20px;font-weight: bold;"/>
+                            </group>
+                        </page>
+                        <page string="Job Specific Objectives for the Next 12 Months">
+                            <field name="job_objective_next_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="objectives"/>
+                                    <field name="measure"/>
+                                    <field name="timescale"/>
+                                    <field name="training_required"/>
+                                    <field name="performance_id" invisible="1"/>
+                                </tree>
+                            </field>
+                            
+                        </page>
+                        <page string="Appraisal Outcome">
+                            <field name="appraisal_outcome_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="indicators"/>
+                                    <field name="score"/>
+                                    <field name="weight"/>
+                                    <field name="weight_Score"/>
+                                    <field name="performance_id" invisible="1"/>
+                                </tree>
+                            </field>
+                            
+                        </page>
+                        <page string="Recommendations">
+                            <field name="appraisal_recommendations_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <tree editable="bottom">
+                                    <field name="parameter"/>
+                                    <field name="recommendations"/>
+                                    <field name="performance_id" invisible="1"/>
+                                </tree>
+                            </field>
+                            
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <record id="appraisal_performance_tree" model="ir.ui.view">
+        <field name="name">appraisal.performance.tree</field>
+        <field name="model">appraisal.performance</field>
+        <field name="arch" type="xml">
+            <tree string="appraisal performance">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="deparment_id"/>
+                <field name="job_id"/>
+                <field name="appraiser_employee_id"/>
+                <field name="appraiser_job_id"/>
+            </tree>
+        </field>
+    </record>
+    
+    <record id= "appraisal_performance_action" model="ir.actions.act_window">
+        <field name="name">Appraisal Performance</field>
+        <field name="res_model">appraisal.performance</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Appraisal" sequence="7" id="appraisal_root" parent="hr.menu_hr_root"/>
+    <menuitem name="Training Performance" sequence="0" id="appraisal_performance_menu" parent="appraisal_root" action="appraisal_performance_action"/>
+
+
+</odoo>

@@ -1,0 +1,78 @@
+<odoo>
+    <record id="policy_request_form" model="ir.ui.view">
+      <field name="name">Policy Request form</field>
+      <field name="model">policy.request</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="chapter_reference"/>
+                        <field  name="subject_reference"/>
+                        <field  name="issue_with"/>
+                        <field  name="description"/>
+                        <field  name="suggested_solution"/>
+                        <field  name="rationale_for_hange"/>
+                        <field  name="comments"/>
+                        <field  name="max_salary"  widget="monetary"/>
+                        <field  name="min_salary"  widget="monetary"/>
+                        <field  name="attach_copy_of_budget_plan"/>
+                    </group>
+                    <group >
+                        <field name="update_no"/>
+                        <field  name="update_date"/>
+                        <field  name="section_no"/>
+                        <field  name="policy_procedure"/>
+                    </group>
+                    
+                </group>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+    <record id="policy_request_view_tree" model="ir.ui.view">
+      <field name="name">Policy Request tree</field>
+      <field name="model">policy.request</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field name="chapter_reference"/>
+                        <field  name="subject_reference"/>
+                        <field  name="issue_with"/>
+                        <field  name="description"/>
+                        <field  name="suggested_solution"/>
+                        <field  name="rationale_for_hange"/>
+                        <field  name="comments"/>
+                        <field  name="max_salary"  widget="monetary"/>
+                        <field  name="min_salary"  widget="monetary"/>
+                        <field  name="attach_copy_of_budget_plan"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_policy_request" model="ir.actions.act_window">
+            <field name="name">Policy Request</field>
+            <field name="res_model">policy.request</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+        <menuitem id="menu_policy_and_procedure_main" name="Policy and Procedure" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2">
+            <menuitem id="hr_menu_action_policy_request" action="action_policy_request" sequence="1"/>
+        </menuitem>
+
+</odoo> 

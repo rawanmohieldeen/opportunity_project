@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <report
+            id="report_appraisal_performance"
+            model="appraisal.performance"
+            string="Appraisal Performance Report"
+            report_type="qweb-html"
+            name="appraisal.appraisal_performance_report"
+            file="appraisal.appraisal_performance_report"
+        /> 
+        <report
+            id="report_appraisal_performance_counselling"
+            model="appraisal.performance.counselling"
+            string="Appraisal Performance Counselling Report"
+            report_type="qweb-html"
+            name="appraisal.appraisal_performance_counselling_report"
+            file="appraisal.appraisal_performance_counselling_report"
+        /> 
+        
+    </data>
+</odoo>

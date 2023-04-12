@@ -1,0 +1,247 @@
+<odoo>
+    <record id="annual_departmental_manpower_planning_form" model="ir.ui.view">
+      <field name="name">Annual Departmental Manpower Planning form</field>
+      <field name="model">annual.departmental.manpower.planning</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="department"/>
+                        <field  name="date"/>
+                    </group>
+                    
+                </group>
+                <notebook>
+                    <page string="Lines" >
+                    <group >
+                        <field name="lines_ids">
+                            <tree editable="bottom">
+                                <field name="position_title" />
+                                <field name="department" />
+                                <field name="date" />
+                                <field name="promote" />
+                                <field name="transfer" />
+                                <field name="replacement" />
+                                <field name="additional" />
+                                <field name="retrench" />
+                                <field name="total" />
+                                <field name="comments" />
+                            </tree>
+                           
+                        </field>
+                    </group>
+                  
+                    </page>
+                </notebook>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+    <record id="annual_departmental_manpower_planning_view_tree" model="ir.ui.view">
+      <field name="name">Annual Departmental Manpower Planning tree</field>
+      <field name="model">annual.departmental.manpower.planning</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field  name="department"/>
+                        <field  name="date"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_annual_departmental_manpower_planning" model="ir.actions.act_window">
+            <field name="name">Annual Departmental Manpower Planning</field>
+            <field name="res_model">annual.departmental.manpower.planning</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+    
+
+
+
+
+
+
+   
+
+
+
+
+    <record id="annual_manpower_planning_form" model="ir.ui.view">
+      <field name="name">Annual Manpower Planning form</field>
+      <field name="model">annual.manpower.planning</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="department"/>
+                        <field  name="date"/>
+                    </group>
+                    
+                </group>
+                <notebook>
+                    <page string="Lines" >
+                    <group >
+                        <field name="lines_ids">
+                            <tree editable="bottom">
+                                <field name="position_title" />
+                                <field name="department" />
+                                <field name="date" />
+                                <field name="promote" />
+                                <field name="transfer" />
+                                <field name="replacement" />
+                                <field name="additional" />
+                                <field name="retrench" />
+                                <field name="total" />
+                                <field name="comments" />
+                            </tree>
+                           
+                        </field>
+                    </group>
+                  
+                    </page>
+                </notebook>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+    <record id="annual_manpower_planning_view_tree" model="ir.ui.view">
+      <field name="name">Annual Manpower Planning tree</field>
+      <field name="model">annual.manpower.planning</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field  name="department"/>
+                        <field  name="date"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_annual_manpower_planning" model="ir.actions.act_window">
+            <field name="name">Annual Manpower Planning</field>
+            <field name="res_model">annual.manpower.planning</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+
+    
+
+
+
+
+
+
+   
+
+
+
+
+    <record id="position_request_form" model="ir.ui.view">
+      <field name="name">Position Request form</field>
+      <field name="model">position.request</field>
+      <field name="arch" type="xml">
+        <form  class="o_sale_order">
+            <header>
+            </header>
+            <sheet>
+                <div class="oe_title">
+                    <h1>
+                        <field name="name" readonly="1"/>
+                    </h1>
+                </div>
+                <group >
+                    <group >
+                        <field name="department"/>
+                        <field  name="date"/>
+                        <field  name="new_position"/>
+                        <field  name="reports_to"/>
+                        <field  name="justification_for_new_position"/>
+                        <field  name="proposed_grade"  widget="monetary"/>
+                        <field  name="proposed_min_salary"  widget="monetary"/>
+                        <field  name="proposed_max_salary"  widget="monetary"/>
+                        <field  name="comments"/>
+                        <field  name="broad_roles_responsibilities"/>
+                        <field  name="attach_envisaged_job_escription"/>
+                    </group>
+                    <group >
+                        <field name="update_no"/>
+                        <field  name="update_date"/>
+                        <field  name="section_no"/>
+                        <field  name="policy_procedure"/>
+                    </group>
+                    
+                </group>
+            </sheet>
+            <!-- <div class="oe_chatter">
+                <field name="message_follower_ids"/>
+                <field name="activity_ids"/>
+                <field name="message_ids"/>
+            </div> -->
+            </form>
+      </field>
+    </record>
+
+    <record id="position_request_view_tree" model="ir.ui.view">
+      <field name="name">Position Request tree</field>
+      <field name="model">position.request</field>
+            <field name="arch" type="xml">
+                <tree string="Contract Type">
+                        <field  name="name"/>
+                        <field name="department"/>
+                        <field  name="date"/>
+                        <field  name="new_position"/>
+                        <field  name="reports_to"/>
+                        <field  name="justification_for_new_position"/>
+                        <field  name="proposed_grade"/>
+                        <field  name="proposed_min_salary"/>
+                        <field  name="proposed_max_salary"/>
+                        <field  name="comments"/>
+                        <field  name="broad_roles_responsibilities"/>
+                        <field  name="attach_envisaged_job_escription"/>
+                </tree>
+            </field>
+    </record>
+
+    <record id="action_position_request" model="ir.actions.act_window">
+            <field name="name">Position Request</field>
+            <field name="res_model">position.request</field>
+            <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+        <menuitem id="menu_annual_manpower_main" name="Manpower" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2">
+            <menuitem id="hr_menu_action_annual_departmental_manpower_planning" action="action_annual_departmental_manpower_planning" sequence="1"/>
+            <menuitem id="hr_menu_action_annual_manpower_planning" action="action_annual_manpower_planning" sequence="2"/>
+            <menuitem id="hr_menu_action_position_request" action="action_position_request" sequence="3"/>
+        </menuitem>
+
+</odoo> 

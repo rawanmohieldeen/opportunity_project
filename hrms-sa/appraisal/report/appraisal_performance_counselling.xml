@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="appraisal_performance_counselling_report"> 
+         <t t-call="web.basic_layout">
+            <!-- <t t-call="web.external_layout"> -->
+                <div class="page" style="font-size: 14;font-family:KacstOffice,KacstOne;">
+                    <!-- <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 26px;"> -->
+                        <t t-foreach="docs" t-as="o">        
+                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form No</td>
+                                    <td width="45%" style="border: 1px solid black !important;">/ HR / Form 022</td>
+                                    <td width="10%" rowspan="2"></td>
+                                </tr>
+                                <tr style="border: 1px solid black !important;">
+                                    <td width="45%" style="border: 1px solid black !important;">Form Title</td>
+                                    <td width="45%" style="border: 1px solid black !important;">Performance Counselling Form</td>
+                                </tr>
+                                
+                            </table>
+                            <br/> 
+                            <br/> 
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                               <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">PERFROMANCE COUNSELLING DETAILS</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Employee ID</td>
+                                    <td width="25%"></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Review Period</td>
+                                    <td width="25%"></td>
+                                    
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Employee Name</td>
+                                    <td width="25%"><t t-esc="o.employee_id.name"/></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Job Title</td>
+                                    <td width="25%"><t t-esc="o.job_id.name"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Department/Project</td>
+                                    <td width="25%"><t t-esc="o.deparment_id.name"/></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Date of Joining</td>
+                                    <td width="25%"></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td width="25%" style="border: 1px solid black !important;">Appraiser name</td>
+                                    <td width="25%"><t t-esc="o.appraiser_employee_id.name"/></td>
+                                    <td width="25%" style="border: 1px solid black !important;">Appraiser Job Title</td>
+                                    <td width="25%"><t t-esc="o.appraiser_job_id.name"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="5">PERFROMANCE COUNSELLING</td>
+                                </tr>
+                                 <tr style="border: 1px solid black !important;">
+                                    <td width="20%" align="center" style="border: 1px solid black !important;">#</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Objectives</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Measure</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Timescale</td>
+                                    <td width="20%" style="border: 1px solid black !important;">Training Required</td>
+                                </tr>
+                                <t t-set="i" t-value="1" />
+                                <t t-foreach="o.performance_counselling_ids" t-as="line">
+                                    
+                                    
+                                    <tr style="border: 1px solid black !important;">
+                                        <td width="20%" align="center" style="border: 1px solid black !important;">
+                                            <t t-esc="i" />
+                                            <t t-set="i" t-value="i+1"/>
+                                        </td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.objectives"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.measure"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.timescale"/></td>
+                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.training_required"/></td>
+                                    </tr>
+                                </t>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="7">Course of Action</td>
+                                </tr>
+                
+                                <t t-set="i" t-value="1" />
+                                <t t-foreach="o.course_action_ids" t-as="line">
+                                    
+                                    
+                                    <tr style="border: 1px solid black !important;">
+                                        <td width="20%" align="center" style="border: 1px solid black !important;">
+                                            <t t-esc="i" />
+                                            <t t-set="i" t-value="i+1"/>
+                                        </td>
+                                        <td width="80%" style="border: 1px solid black !important; " colspan="4"><t t-esc="line.action"/></td>
+                                        
+                                    </tr>
+                                    
+                                </t>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="7" rowspan="3">Comments:<br /><br /></td>
+                                </tr>
+                                
+                            </table>
+                           
+                            
+                        </t>
+                </div>
+        </t>
+    </template>
+</odoo>

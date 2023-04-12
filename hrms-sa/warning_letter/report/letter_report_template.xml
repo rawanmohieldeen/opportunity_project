@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="warning_letter_template">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+    <t t-foreach="docs" t-as="object">
+                    <h2  class="text-center">Warning Letter</h2>
+                    <p style="margin: 0px; padding: 0px; font-size: 16px;">
+                    To<br/>
+                    Employee Name : <span  t-field="object.employee_id.name"/><br/>
+                    Employee ID : <span  t-field="object.employee_no"/><br/>
+                    Designation : <span  t-field="object.designation"/><br/>
+                    Department : <span  t-field="object.department_id.name"/><br/>
+                    Date : <span  t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/><br/>
+                    Dear   <span  t-field="object.employee_id.name"/><br/>             
+            This written warning is issued to you in respect of the following misconduct:<br/>
+            <span  t-field="object.misconduct"/><br/>
+            <span style="margin: 0px; padding: 0px; font-size: 16px;">Any repetition of this action or comparable misconduct will result in further disciplinary action according to the schedule of penalties of KMC - Saudi. Details of this misconduct will be placed on your Personnel File.</span><br/>
+                </p>
+                <p style="margin: 0px; padding: 0px; font-size: 16px;">
+                  Signed   _____________<br/>
+            Designation    _____________           
+            <br/>
+            Copy of warning received  _____________ <br/>     
+              <center>Signature of Employee</center><br/>
+            Date of Receipt  _____________ <br/>  
+            </p>
+                    
+    </t>
+     </t>
+    </t>
+</template>
+<!-- Termination Templates-->
+<template id="termination_letter_template">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+    <t t-foreach="docs" t-as="object">
+        <t t-if="object.employee_id.emp_type == 'saudi'">
+                    <h2  class="text-center">Termination Letter</h2>
+                    <p style="margin: 0px; padding: 0px; font-size: 15px;">
+                    Date: xxxx<br/>
+       Mr.  <span  t-field="object.employee_id.name"/><br/>   
+National ID No.  <span  t-field="object.employee_id.national_id"/><br/>   
+Nationality: Saudi Arabia<br/><br/>
+
+                                    
+Re:     Termination Notice <br/>
+
+        Dear   <span  t-field="object.employee_id.name"/><br/> <br/>            
+I write to inform you that your employment with KMC is by this letter terminated with immediate effect from <b><span  t-field="object.end_date"/></b>. Unfortunately, your employment has been terminated as the Company currently is undergoing re-structuring and your position has been made redundant.<br/>
+</p>
+<p>
+    Based on your contractual and Saudi Labour Law entitlements you will receive the separation package outlined in this letter.<br/>
+
+    1. Notice.  In accordance with your Contract you are receiving <span  t-field="object.notice_period"/> notice. You are required to work during this Notice Period and you will continue to receive your base salary and all Company-paid benefits during the Notice Period until S<span  t-field="object.end_date"/> less any required deductions. Reasonable time off will be given, with prior management authorisation, to enable you to attend to demobilisation issues and employment search.<br/>
+
+    2. Holidays.  Any accrued but untaken holidays until "<span  t-field="object.end_date"/>" will be included in your final payment.<br/>
+
+    3. Confidential and Proprietary Information.  You acknowledge your continuing obligation not to use or disclose any confidential or proprietary information of the Company at any time, both before and after <span  t-field="object.end_date"/>, without the written authorization of the Company, except as necessary to perform your duties to the Company.<br/>  
+
+    4. Return of Property.  On <span  t-field="object.end_date"/>, or earlier if requested by the Company, you shall return to the Company all Company documents (and all copies thereof) and other Company property or materials which you may possess or control, including any materials which embody any confidential or proprietary information of the Company (and all copies thereof), e.g., notes, drawings, or computer-recorded information.<br/>
+</p>
+<p>
+
+
+Yours sincerely,<br/>
+
+Sultan Al-Amri<br/>
+Vice President<br/>
+Khaleeji Manager Company<br/>
+
+<br/><br/>
+
+
+I confirm receipt of this letter: <br/>          
+
+Employee Name                     ______________________
+<br/>
+Date                                        ______________________<br/>
+</p>
+        </t>
+        <!-- Non -->
+       <t t-if="object.employee_id.emp_type == 'no_saudi'">
+                <h2  class="text-center">Termination Letter</h2>
+                <p style="margin: 0px; padding: 0px; font-size: 15px;">
+                    Date: xx<br/>
+       Mr.  <span  t-field="object.employee_id.name"/><br/>   
+Iqama No. <span  t-field="object.iqama"/><br/>   
+Nationality: <span  t-field="object.employee_id.country_id.name"/><br/><br/>
+
+                                    
+Re:     Termination Notice <br/>
+
+        Dear   <span  t-field="object.employee_id.name"/><br/> <br/>            
+I write to inform you that your employment with KMC (the “Company”) is by this letter terminated with immediate effect from <span t-field="object.end_date"/>. The reason for Termination is the restructuring KMC currently undergoing under which your position has become redundant.<br/>
+
+Based on your contractual and Saudi Labour Law entitlements you will receive the separation package outlined in this letter.<br/>
+</p>
+<p>
+       1. Notice.  In accordance with your employment contract, you are receiving <span  t-field="object.notice_period"/>. You are required to work during this Notice Period and you will continue to receive your base salary and all Company-paid benefits during the Notice Period until <span  t-field="object.end_date"/> less any required deductions. Reasonable time off will be given, with prior management authorisation, to enable you to attend to demobilisation issues and employment search.<br/>
+
+    2. End of Service Remuneration Payment.  The total amount of end of service remuneration (indemnity) will be paid to you as per Saudi Law.<br/> 
+
+    3. Repatriation Expenses.  The Company shall cover the cost of the flight tickets to your country of origin in accordance with your contract of employment. Demobilisation needs to be taken within a reasonable time frame, up to a maximum of one (1) month from "<span  t-field="object.end_date"/>". Should you wish to remain in Saudi Arabia, then this benefit is forfeited.<br/>
+
+    4. Holidays.  Any accrued but untaken holidays until “<span  t-field="object.end_date"/>” will be included in your final payment.<br/>
+
+    5. Confidential and Proprietary Information.  You acknowledge your continuing obligation not to use or disclose any confidential or proprietary information of the Company at any time, both before and after <span  t-field="object.end_date"/>, without the written authorization of the Company, except as necessary to perform your duties to the Company.  <br/>
+
+    6. Return of Property.  On <span  t-field="object.end_date"/>, or earlier if requested by the Company, you shall return to the Company all Company documents (and all copies thereof) and other Company property or materials which you may possess or control, including any materials which embody any confidential or proprietary information of the Company (and all copies thereof), e.g., notes, drawings, or computer-recorded information.<br/>
+
+    7. No Objection Certificate. An NOC will be provided to assist you should you wish to continue to work in Saudi Arabia.<br/>
+
+</p>
+<p>
+
+
+Yours sincerely,<br/>
+
+Ibrahim Al Saqabi<br/>
+General Manager<br/>
+
+<br/><br/>
+
+
+I confirm receipt of this letter: <br/>          
+
+Employee Name                     ______________________
+<br/>
+Date                                        ______________________<br/>
+</p>    
+        </t>             
+    </t>
+     </t>
+    </t>
+</template>
+
+
+</odoo>

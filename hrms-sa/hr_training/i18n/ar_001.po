@@ -1,0 +1,1285 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_training
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20221109\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-19 21:15+0000\n"
+"PO-Revision-Date: 2022-12-19 21:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "/ HR / Form 027"
+msgstr "أستمارة الموارد البشرية 027"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_needaction
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_needaction
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_needaction
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_needaction
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_needaction
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_state
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_state
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_state
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_state
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_state
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_type_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_type_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_type_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_type_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_type_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_attachment_count
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_attachment_count
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_attachment_count
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_attachment_count
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_attachment_count
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_duration__average
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_place__average
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_time__average
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__training_method__average
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Average"
+msgstr "متوسط"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__budget
+msgid "Budget"
+msgstr "الميزانية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__character_certificate
+msgid "Can a good character certificate be issued to the person?"
+msgstr "هل يمكن إصدار شهادة حسن السيرة والسلوك للشخص"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__employment_reconsideration
+msgid "Can the person be rconsidered for re-employment?"
+msgstr "هل يمكن إعادة النظر في إعادة توظيف الشخص"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Character Certificate"
+msgstr "شهادة شخصية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__comments
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Comments"
+msgstr "التعليقات"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__state__confirm
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan__state__confirm
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_plan_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Contact Address"
+msgstr "عنوان الإتصال"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__contact_address
+msgid "Contact address for all further correspondence is Address"
+msgstr "عنوان الاتصال لجميع المراسلات الأخرى هو العنوان"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Course DETAILS"
+msgstr "تفاصيل الدورة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_report_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_form
+msgid "Course Details"
+msgstr "تفاصيل الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__course_duration
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Course Duration"
+msgstr "مدة الدورة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Course Fee"
+msgstr "رسوم الدورة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Course Name"
+msgstr "أسم الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__course_place
+msgid "Course Place"
+msgstr "مكان الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__training_course_report_id
+msgid "Course Report"
+msgstr "تقرير الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__training_course_request_id
+msgid "Course request"
+msgstr "طلب الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__create_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__create_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__critical_incidents_examples
+msgid "Critical Incidents Examples"
+msgstr "أمثلة على الحوادث الحرجة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__currency_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__currency_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__currency_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__currency_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report_line__duration_unit__day
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request_line__duration_unit__day
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan_line__duration_unit__day
+msgid "Day(s)"
+msgstr "ايام"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__deparment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__deparment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__deparment_id
+msgid "Deparment"
+msgstr "القسم"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Department/Project"
+msgstr "القسم / المشروع"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__job_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__job_id
+msgid "Designation"
+msgstr "التعيين"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_plan_form
+msgid "Details"
+msgstr "التفاصيل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__details
+msgid ""
+"Details of any mentionable incident during the notice period of the person"
+msgstr "تفاصيل أي حادث مذكور خلال فترة الإخطار للشخص"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__display_name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__q_object
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Do you think the course has achieved its object?"
+msgstr "هل تعتقد أن الدورة قد حققت هدفها ؟"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__state__draft
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan__state__draft
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_plan_form
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__duration
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__duration
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__duration
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__duration
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Duration"
+msgstr "المدة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__duration_unit
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__duration_unit
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__duration_unit
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__duration_unit
+msgid "Duration Unit"
+msgstr "مدة الوحدة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "EMPLOYEE DETAILS"
+msgstr "تفاصيل الموظف"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__employee_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__employee_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Employee ID"
+msgstr "رقم الموظف"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Employee Name"
+msgstr "أسم الموظف"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid ""
+"Employee’s Signature <br/><br/>\n"
+"                                            Date"
+msgstr "توقيع الموظف"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid ""
+"Employee’s Signature <br/><br/>\n"
+"                                    Date"
+msgstr "توقيع الموظف"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Employment Reconsideration"
+msgstr "إعادة النظر في التوظيف"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_duration__excellent
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_place__excellent
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_time__excellent
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__training_method__excellent
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Excellent"
+msgstr "ممتاز"
+
+#. module: hr_training
+#: model:ir.ui.menu,name:hr_training.hr_exit_interview_menu
+msgid "Exit Interview"
+msgstr "مقابلة "
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__factor_id
+msgid "Factor"
+msgstr "عامل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__fees
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__fees
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__fees
+msgid "Fees"
+msgstr "الضريبة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_follower_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_follower_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_follower_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_follower_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_follower_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_partner_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_partner_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_partner_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_partner_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_partner_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__activity_type_icon
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__activity_type_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__activity_type_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__activity_type_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__activity_type_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Form No"
+msgstr "رقم الاستمارة"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Form Title"
+msgstr "عنوان الاستمارة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__from_date
+msgid "From Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Future Opportunity"
+msgstr "فرصة مستقبلية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "GENERAL EVALUATION OF THE TRAINING COURSE"
+msgstr "التقييم العام للدورة التدريبية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_report_form
+msgid "General Evaluation of the Training Course"
+msgstr "التقييم العام للدورة التدريبية"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__state__general_approve
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan__state__general_approve
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_plan_form
+msgid "General Manager Approve"
+msgstr "موافقة المدير العام"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_duration__good
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_place__good
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_time__good
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__training_method__good
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Good"
+msgstr "جيد"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__hr_comments
+msgid "HR Comments"
+msgstr "تعليقات الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_exit_factors_action
+#: model:ir.ui.menu,name:hr_training.hr_exit_factors_menu
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_factors_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_factors_tree
+msgid "HR Exit Factors"
+msgstr "عوامل الخروج من الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_exit_interview_action
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_tree
+msgid "HR Exit Interview"
+msgstr "مقابلة الموارد البشرية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_form
+msgid "HR Line Approve"
+msgstr "اعتماد الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__state__hr_approve
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan__state__hr_approve
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_plan_form
+msgid "HR Manager Approve"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid ""
+"HR Manager’s Signature <br/><br/>\n"
+"                                    Date"
+msgstr "توقيع مدير الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.ui.menu,name:hr_training.hr_training_course_report_menu
+msgid "HR Training Course Report"
+msgstr "تقرير الدورات التدريب في الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.ui.menu,name:hr_training.hr_training_course_request_menu
+msgid "HR Training Course request"
+msgstr "طلب دورة تدريبية في الموارد البشرية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_report_form
+msgid "HR training Course Report"
+msgstr "تقرير الدورات التدريب في الموارد البشرية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_form
+msgid "HR training Course request"
+msgstr "طلب دورة تدريبية في الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_training_course_action
+#: model:ir.ui.menu,name:hr_training.hr_training_course_menu
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_report_tree
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_request_tree
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_tree
+msgid "HR training course"
+msgstr "الدورات التدريبية في الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_training_course_report_action
+msgid "HR training course Report"
+msgstr "تقرير الدورات التدريب في الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_training_course_request_action
+msgid "HR training course request"
+msgstr "طلب دورة تدريبية في الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.actions.act_window,name:hr_training.hr_training_plan_action
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_plan_tree
+msgid "HR training plan"
+msgstr "خطة تدريب الموارد البشرية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__has_message
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__has_message
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__has_message
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__has_message
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__has_message
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan_line__priority__2
+msgid "High"
+msgstr "عالي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__suggestions
+msgid "I have the following suggestions to make the company a better place"
+msgstr "لدي الاقتراحات التالية لجعل الشركة مكانًا أفضل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__activity_exception_icon
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__activity_exception_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__activity_exception_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__activity_exception_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__activity_exception_icon
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__future_opportunity
+msgid ""
+"If an opportunity ever arises, I will/will not consider joining the company "
+"again because"
+msgstr "إذا أتيحت فرصة في أي وقت ، فسأفكر في الانضمام إلى الشركة مرة أخرى / لن أفكر في الانضمام إليها مرة أخرى"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__message_needaction
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__message_needaction
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__message_needaction
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__message_needaction
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__message_needaction
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__message_has_error
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__message_has_sms_error
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__message_has_error
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__message_has_sms_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__message_has_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__message_has_sms_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__message_has_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__message_has_sms_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__message_has_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__message_has_sms_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__message_has_error
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Incident Details"
+msgstr "تفاصيل الحادثة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__interview_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__interview_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__training_plan_id
+msgid "Interview"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_is_follower
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_is_follower
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_is_follower
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_is_follower
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_is_follower
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Job Title"
+msgstr "العنوان الوظيفي"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "KMC / HR / Form 026"
+msgstr "استمارة الموارد البشرية KMC / 026"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan____last_update
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__write_uid
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__write_date
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__line_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__line_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__line_ids
+msgid "Line IDs"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__state__line_approve
+msgid "Line Manager Approve"
+msgstr "موافقة المدير المباشر"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__line_manager_comments
+msgid "Line Manager Comments"
+msgstr "تعليقات المدير المباشر"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan_line__priority__0
+msgid "Low"
+msgstr "قليل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan_line__priority__1
+msgid "Medium"
+msgstr "متوسط"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__problems
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Mention any problems faced at the training"
+msgstr "اذكر أي مشاكل واجهتها أثناء التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_has_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_has_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_has_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_has_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_has_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Method of Training"
+msgstr "طريقة التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report_line__duration_unit__month
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request_line__duration_unit__month
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_plan_line__duration_unit__month
+msgid "Month(s)"
+msgstr "شهور"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__negative_features_ids
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Negative Features"
+msgstr "الميزات السلبية"
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_exit_interview.py:0
+#: code:addons/hr_training/models/hr_exit_interview.py:0
+#: code:addons/hr_training/models/hr_exit_interview.py:0
+#: code:addons/hr_training/models/hr_exit_interview.py:0
+#: code:addons/hr_training/models/hr_training_course_report.py:0
+#: code:addons/hr_training/models/hr_training_course_report.py:0
+#: code:addons/hr_training/models/hr_training_course_report.py:0
+#: code:addons/hr_training/models/hr_training_course_report.py:0
+#: code:addons/hr_training/models/hr_training_course_request.py:0
+#: code:addons/hr_training/models/hr_training_course_request.py:0
+#: code:addons/hr_training/models/hr_training_course_request.py:0
+#: code:addons/hr_training/models/hr_training_course_request.py:0
+#: code:addons/hr_training/models/hr_training_plan.py:0
+#: code:addons/hr_training/models/hr_training_plan.py:0
+#: code:addons/hr_training/models/hr_training_plan.py:0
+#: code:addons/hr_training/models/hr_training_plan.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_calendar_event_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_calendar_event_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_calendar_event_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_calendar_event_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_calendar_event_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_summary
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_summary
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_summary
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_summary
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_summary
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_type_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_type_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_type_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_type_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_type_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__q_duties__no
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__q_object__no
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__recommend__no
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "No"
+msgstr "لا"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__message_needaction_counter
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__message_needaction_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__message_needaction_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__message_needaction_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__message_needaction_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__message_has_error_counter
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__message_has_error_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__message_has_error_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__message_has_error_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__message_has_error_counter
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__hr_other_comments
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__other_comments
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__other_comments
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Other Comments"
+msgstr "تعليقات أخرى"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__overall_budget
+msgid "Overall Budget"
+msgstr "الميزانية العامة"
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_training_plan.py:0
+#, python-format
+msgid "Overall Budget Must Be Not Zero!"
+msgstr "يجب ألا تكون الميزانية الإجمالية صفرًا!"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__q_object__partly
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Partly"
+msgstr "جزئيا"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Personal Training Record"
+msgstr "سجل التدريب الشخصي"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__place
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__place
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__place
+msgid "Place"
+msgstr "المكان"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Place of Training"
+msgstr "مكان التدريب"
+
+#. module: hr_training
+#: code:addons/hr_training/models/hr_exit_interview.py:0
+#, python-format
+msgid "Please Enter Correct Point Between 1 and 100"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__points
+msgid "Points"
+msgstr "النقاط"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__positive_features_ids
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Positive Features"
+msgstr "الميزات الإيجابية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__priority
+msgid "Priority"
+msgstr "أفضلية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__course_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__course_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__course_id
+msgid "Proposed Training"
+msgstr "التدريب المقترح"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Question"
+msgstr "سؤال"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__name
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__name
+msgid "Reference"
+msgstr "المتسلسل"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report_line__relevance_to_duties
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request_line__relevance_to_duties
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Relevance to Duties"
+msgstr "الصلة بالواجبات"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__remark
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__request_for
+msgid "Request For"
+msgstr "طلب ل"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Response"
+msgstr "إجابة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__activity_user_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__activity_user_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__activity_user_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__activity_user_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__activity_user_id
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__request_for__seminar
+msgid "Seminar"
+msgstr "حلقة دراسية"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__request_for__course
+msgid "Short / Professional Course"
+msgstr "دورة قصيرة / مهنية"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__state
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__state
+msgid "Status"
+msgstr "الحاله"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__activity_state
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__activity_state
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__activity_state
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__activity_state
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__activity_state
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_exit_interview_form
+msgid "Suggestions"
+msgstr "اقتراحات"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "TRAINEE’S EVALUATION OF THE TRAINING COURSE"
+msgstr "تقييم المتدرب للدورة التدريبية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "TRAINING DETAILS"
+msgstr "تفاصيل التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_negative_features__name
+msgid "Three major negative features of working with the company"
+msgstr "ثلاث سمات سلبية رئيسية للعمل مع الشركة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_positive_features__name
+msgid "Three major positive features of working with the company"
+msgstr "ثلاث سمات إيجابية رئيسية للعمل مع الشركة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__course_time
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Timing of the Course"
+msgstr "توقيت الدورة"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__to_date
+msgid "To Date"
+msgstr "حتي تاريخ"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.hr_training_course_report_form
+msgid "Trainee's Evaluation of the Training Course"
+msgstr "تقييم المتدرب للدورة التدريبية"
+
+#. module: hr_training
+#: model:ir.ui.menu,name:hr_training.training_root
+msgid "Training"
+msgstr "التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__course
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Training Course"
+msgstr "الدورات تدريبية"
+
+#. module: hr_training
+#: model:ir.actions.report,name:hr_training.hr_training_course_report
+#: model:ir.actions.report,name:hr_training.report_training_course
+msgid "Training Course Report"
+msgstr "تقرير الدورة التدريبية"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Training Course/ Seminar/ Workshop Report"
+msgstr "تقرير الدورة التدريبية / الندوة / ورشة العمل"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.training_course_report
+msgid "Training Fee"
+msgstr "رسوم التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__training_method
+msgid "Training Method"
+msgstr "طريقة التدريب"
+
+#. module: hr_training
+#: model:ir.ui.menu,name:hr_training.hr_training_plan_menu
+msgid "Training Plan"
+msgstr "خطة التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan_line__provider
+msgid "Training Provider"
+msgstr "مزود التدريب"
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__activity_exception_decoration
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__activity_exception_decoration
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__activity_exception_decoration
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__activity_exception_decoration
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__activity_exception_decoration
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_duration__weak
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_place__weak
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_time__weak
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__training_method__weak
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Weak"
+msgstr "ضعيف"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_factors__website_message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_exit_interview__website_message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course__website_message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__website_message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_request__website_message_ids
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_plan__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,help:hr_training.field_hr_exit_factors__website_message_ids
+#: model:ir.model.fields,help:hr_training.field_hr_exit_interview__website_message_ids
+#: model:ir.model.fields,help:hr_training.field_hr_training_course__website_message_ids
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_report__website_message_ids
+#: model:ir.model.fields,help:hr_training.field_hr_training_course_request__website_message_ids
+#: model:ir.model.fields,help:hr_training.field_hr_training_plan__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__q_attend
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Where you the right person to attend the course?"
+msgstr "من الشخص المناسب لحضور الدورة؟"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__q_duties
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Will the course help in your duties (please elaborate)?"
+msgstr "هل ستساعد الدورة في واجباتك (يرجى التوضيح) ؟"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_request__request_for__workshop
+msgid "Workshop"
+msgstr "ورشة عمل"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Would you recommend the course to other colleagues?"
+msgstr "هل تنصح الزملاء الآخرين بالدورة ؟"
+
+#. module: hr_training
+#: model:ir.model.fields,field_description:hr_training.field_hr_training_course_report__recommend
+msgid "Would you recommend the course to other colleagues? "
+msgstr "هل تنصح الزملاء الآخرين بالدورة ؟"
+
+#. module: hr_training
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__q_duties__yes
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__q_object__yes
+#: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__recommend__yes
+msgid "YES"
+msgstr "نعم"
+
+#. module: hr_training
+#: model_terms:ir.ui.view,arch_db:hr_training.report_training_course_report
+msgid "Yes"
+msgstr "نعم"
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_exit_factors
+msgid "hr.exit.factors"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_exit_interview
+msgid "hr.exit.interview"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_negative_features
+msgid "hr.negative.features"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_positive_features
+msgid "hr.positive.features"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_course
+msgid "hr.training.course"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_course_report
+msgid "hr.training.course.report"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_course_report_line
+msgid "hr.training.course.report.line"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_course_request
+msgid "hr.training.course.request"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_course_request_line
+msgid "hr.training.course.request.line"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_plan
+msgid "hr.training.plan"
+msgstr ""
+
+#. module: hr_training
+#: model:ir.model,name:hr_training.model_hr_training_plan_line
+msgid "hr.training.plan.line"
+msgstr ""

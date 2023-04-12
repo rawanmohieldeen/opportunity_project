@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="emp_app_req_temp">
+            <t t-call="web.basic_layout">
+                <div class="page">
+
+                    <table style="width:100%" class="table table-bordered">
+                        <t t-foreach="docs" t-as="o">
+
+                            <tr style="border: 1px solid black !important;">
+                                <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                                <td width="50%" style="border: 1px solid black !important;">
+                                    KMC/HR/Form 006
+                                </td>
+
+                            </tr>
+                            <tr style="border: 1px solid black !important;">
+                                <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                                <td width="50%" style="border: 1px solid black !important;">
+                                    Employment Application Form
+                                </td>
+
+                            </tr>
+                        </t>
+                    </table>
+                    <br/>
+                    <table width="100%" cellpadding="10" cellspacing="10"
+                           style="border: 2px  black  double !important;">
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="3">PERSONAL DETAILS</td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">First Name</td>
+                            <td width="25%">
+                                <t t-esc="o.first_name"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">Middle Name</td>
+                            <td width="25%">
+                                <t t-esc="o.middle_name"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">Last Name</td>
+                            <td width="25%">
+                                <t t-esc="o.last_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">
+                                Gender
+                            </td>
+                            <td width="25%">
+                                <t t-esc="o.gender"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;" colspan="1">Marital Status:</td>
+                            <td width="25%">
+                                <t t-esc="o.marital_status"/>
+                            </td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">
+                                Date of Birth
+                            </td>
+                            <td width="25">
+                                <t t-esc="o.date_of_birth"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">
+                                Nationality
+                            </td>
+                            <td width="25%">
+                                <t t-esc="o.nationality.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">
+                                ID/Iqama/Passport No.
+                            </td>
+                            <td width="25%">
+                                <t t-esc="o.id_iqama_passport"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">
+                                ID/Iqama/Passport Valid till
+                            </td>
+                            <td width="25%">
+                                <t t-esc="o.id_iqama_passport_valid"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="100%" cellpadding="10" cellspacing="10"
+                           style="border: 2px  black  double !important;">
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="3">Current Residence Address:</td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" style="border: 1px solid black !important;">Telephone Number</td>
+                            <td width="25%">
+                                <t t-esc="o.partner_phone"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">Mobile Telephone Number</td>
+                            <td width="25%">
+                                <t t-esc="o.partner_mobile"/>
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">Email Id</td>
+                            <td width="25%">
+                                <t t-esc="o.email_from"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="4">QUALIFICATIONS ACQUIRED
+                                (Starting From The Most Recent)
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="25%" align="center" style="border: 1px solid black !important;">#</td>
+                            <td width="25%" style="border: 1px solid black !important;">Qualification Title</td>
+                            <td width="25%" style="border: 1px solid black !important;">Institution/Training provider
+                            </td>
+                            <td width="25%" style="border: 1px solid black !important;">Years (from-to)</td>
+                        </tr>
+                        <t t-set="i" t-value="1"/>
+                        <t t-foreach="o.qualifications_acquired_line_ids" t-as="line">
+
+                            <tr style="border: 1px solid black !important;">
+                                <td width="20%" align="center" style="border: 1px solid black !important;">
+                                    <t t-esc="i"/>
+                                    <t t-set="i" t-value="i+1"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="line.qualification_title"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="line.institution_training_provider"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="line.year_from"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="6">
+                                Please specify other courses attended or special training received:
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%">1</td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%">2</td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%">3</td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%">4</td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="7">COURSES/PROGRAMMES CURRENTLY
+                                PURSUING(If any)
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="10%" align="center" style="border: 1px solid black !important;">#</td>
+                            <td width="20%" style="border: 1px solid black !important;">Course/Programme Name</td>
+                            <td width="20%" style="border: 1px solid black !important;">Institution/Training provider
+                            </td>
+                            <td width="20%" style="border: 1px solid black !important;">Full Time</td>
+                            <td width="20%" style="border: 1px solid black !important;">Distance</td>
+                            <td width="10%" style="border: 1px solid black !important;">Other</td>
+                        </tr>
+                        <t t-set="i" t-value="1"/>
+                        <t t-foreach="o.courses_programmes_line_ids" t-as="col">
+
+                            <tr style="border: 1px solid black !important;">
+                                <td width="20%" align="center" style="border: 1px solid black !important;">
+                                    <t t-esc="i"/>
+                                    <t t-set="i" t-value="i+1"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="col.course_programme_mame"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="col.institution_training_provider"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="col.full_time"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="col.distance"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="col.notes"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="3">Please list the computer
+                                software packages you are comfortable to work with:
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="10%" align="center" style="border: 1px solid black !important;">#</td>
+                            <td width="20%" style="border: 1px solid black !important;">Package</td>
+                            <td width="20%" style="border: 1px solid black !important;">Proficiency Level</td>
+                        </tr>
+                        <t t-set="dx" t-value="1"/>
+                        <t t-foreach="o.computer_software_packages_line_ids" t-as="com">
+                            <tr style="border: 1px solid black !important;">
+                                <td width="10%" align="center" style="border: 1px solid black !important;">
+                                    <t t-esc="dx"/>
+                                    <t t-set="dx" t-value="dx+1"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="com.package"/>
+                                </td>
+                                <td width="20%" style="border: 1px solid black !important;">
+                                    <t t-esc="com.proficiency_level"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="5">PREVIOUS EMPLOYMENT (MOST RECENT
+                                FIRST
+                                PLEASE)
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="20%" style="border: 1px solid black !important;">Employer Name</td>
+                            <td width="20%" style="border: 1px solid black !important;">Period</td>
+                            <td width="20%" style="border: 1px solid black !important;">Position held</td>
+                            <td width="20%" style="border: 1px solid black !important;">Reason for leaving</td>
+                            <td width="20%" style="border: 1px solid black !important;">Office use check Initial/date
+                            </td>
+                        </tr>
+                        <t t-foreach="o.previous_employment_line_ids" t-as="pline">
+                            <td width="20%" style="border: 1px solid black !important;">
+                                <t t-esc="pline.employer_name"/>
+                            </td>
+                            <td width="20%" style="border: 1px solid black !important;">
+                                <t t-esc="pline.period_from"/>
+                            </td>
+                            <td width="20%" style="border: 1px solid black !important;">
+                                <t t-esc="pline.position_held"/>
+                            </td>
+                            <td width="20%" style="border: 1px solid black !important;">
+                                <t t-esc="pline.reason_for_leaving"/>
+                            </td>
+                            <td width="20%" style="border: 1px solid black !important;">
+                                <!--                                    <t t-esc="pline.reason_for_leaving"/>-->
+                            </td>
+
+                        </t>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="4">REFERENCES(OTHER THAN RELATIVES)
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="30%" style="border: 1px solid black !important;">Name</td>
+                            <td width="35%" style="border: 1px solid black !important;">Contact number</td>
+                            <td width="35%" style="border: 1px solid black !important;">Business Profession</td>
+                        </tr>
+                        <t t-foreach="o.references_line_ids" t-as="ref">
+                            <td width="30%" style="border: 1px solid black !important;">
+                                <t t-esc="ref.name"/>
+                            </td>
+                            <td width="35%" style="border: 1px solid black !important;">
+                                <t t-esc="ref.contact_number"/>
+                            </td>
+                            <td width="35%" style="border: 1px solid black !important;">
+                                <t t-esc="ref.business_profession"/>
+                            </td>
+                        </t>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="4">
+                                Hobbies and Interests:
+                                Train safety subjects, Farming using hydroponic system.
+                                <br/>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="4">
+                                <center>DECLARATION</center>
+                                I hereby declare that all information provided by me in this form is true to the best of
+                                my knowledge. I will be solely responsible for any false information provided by me in
+                                this form.
+                                I understand that in the event of misrepresentation of data and / or fabrication of
+                                data, I will be disqualified from seeking employment with KMC.
+                                <br/>
+                                <br/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black double !important;">
+                            <td colspan="4" style="border: 1px solid black !important;">
+                                Signature
+                                <br/>
+                                <br/>
+                                Date
+                            </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

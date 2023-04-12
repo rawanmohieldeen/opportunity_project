@@ -1,0 +1,869 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* appraisal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20221109\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-12-19 15:31+0000\n"
+"PO-Revision-Date: 2022-12-19 15:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "/ HR / Form 021"
+msgstr "إستمارة الموارد البشرية 021"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+msgid "/ HR / Form 022"
+msgstr "أستمارة الموارد البشرية 022"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "1.\tActual Performance should be compared against measurable targets"
+msgstr " 1. يجب مقارنة الأداء الفعلي بأهداف قابلة للقياس"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "2.\tFull Year’s performance should be considered"
+msgstr "2. يجب النظر في أداء السنة الكاملة"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "3.\tSpecific instances to be noted"
+msgstr "3. حالات معينة يجب ملاحظتها"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "4.\tThe Appraiser should give justification for scores other than 3"
+msgstr "4. يجب على المقيم إعطاء مبررات للدرجات بخلاف 3"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_course_action__action
+msgid "Action"
+msgstr "العمل"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_needaction
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_ids
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_exception_decoration
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_state
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_type_icon
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.ui.menu,name:appraisal.appraisal_root
+msgid "Appraisal"
+msgstr "التقييم"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "Appraisal Outcome"
+msgstr "نتيجة التقييم"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__appraisal_outcome_ids
+msgid "Appraisal Outcome IDs"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.actions.act_window,name:appraisal.appraisal_performance_action
+msgid "Appraisal Performance"
+msgstr "تقييم الاداء"
+
+#. module: appraisal
+#: model:ir.actions.act_window,name:appraisal.appraisal_performance_counselling_action
+msgid "Appraisal Performance Counselling"
+msgstr "إستشاري تقييم الأداء"
+
+#. module: appraisal
+#: model:ir.actions.report,name:appraisal.report_appraisal_performance_counselling
+msgid "Appraisal Performance Counselling Report"
+msgstr "تقرير إرشاد أداء التقييم"
+
+#. module: appraisal
+#: model:ir.actions.report,name:appraisal.report_appraisal_performance
+msgid "Appraisal Performance Report"
+msgstr "تقرير أداء التقييم"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__appraisal_recommendations_ids
+msgid "Appraisal Recommendations IDs"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__appraiser_employee_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__appraiser_employee_id
+msgid "Appraiser"
+msgstr "المقيم"
+
+#. module: appraisal
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance_counselling__state__appraiser_approve
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_form
+msgid "Appraiser Approve"
+msgstr "موافقة المقيم"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__appraiser_job_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__appraiser_job_id
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Appraiser Job Title"
+msgstr "العنوان الوظيفي للمقيم"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Appraiser name"
+msgstr "أسم المقيم"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid ""
+"Appraiser’s Signature <br/><br/>\n"
+"                                    Date"
+msgstr "توقيع المقيم"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_attachment_count
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__attributes
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Attributes"
+msgstr "الصفات"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__average_score_a
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__average_score_b
+msgid "Average Score"
+msgstr "متوسط الدرجات"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Average Score for Part A:<br/>"
+msgstr "متوسط الدرجات للجزء أ:"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Average Score for Part B:"
+msgstr "متوسط الدرجات للجزء ب:"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Below Expectation"
+msgstr "أقل من التوقعات"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Comments:<br/><br/>"
+msgstr "التعليقات"
+
+#. module: appraisal
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance__state__confirm
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance_counselling__state__confirm
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_form
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_form
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+msgid "Course of Action"
+msgstr "مسار العمل"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__course_action_ids
+msgid "Course of Action IDs"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_course_action__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__create_uid
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__create_date
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__create_date
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__create_date
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__create_date
+#: model:ir.model.fields,field_description:appraisal.field_course_action__create_date
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__create_date
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__create_date
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__create_date
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Date of Joining"
+msgstr "تاريخ الالتحاق"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__deparment_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__deparment_id
+msgid "Deparment"
+msgstr "القسم"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Department/Project"
+msgstr "القسم / المشروع"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__description
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Description"
+msgstr "الوصف"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__display_name
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__display_name
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__display_name
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__display_name
+#: model:ir.model.fields,field_description:appraisal.field_course_action__display_name
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__display_name
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__display_name
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__display_name
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance__state__draft
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance_counselling__state__draft
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_form
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "EMPLOYEE DETAILS"
+msgstr "تفاصيل الموظف"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__employee_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Employee ID"
+msgstr "رقم الموظف"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Employee Name"
+msgstr "أسم الموظف"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid ""
+"Employee’s Signature <br/><br/>\n"
+"                                    Date"
+msgstr "توقيع الموظف"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Exceeds Expectations"
+msgstr "يفوق التوقعات"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_follower_ids
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_partner_ids
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__activity_type_icon
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Form No"
+msgstr "رقم الاستمارة"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Form Title"
+msgstr "عنوان الاستمارة"
+
+#. module: appraisal
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance__state__general_approve
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "General Manager Approve"
+msgstr "موافقة المدير العام"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__generic_indicators_ids
+msgid "Generic Indicators IDs"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "Generic Performance Indicators"
+msgstr "مؤشرات الأداء العامة"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "HR Line Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: appraisal
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance__state__hr_approve
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "HR Manager Approve"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__has_message
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__id
+#: model:ir.model.fields,field_description:appraisal.field_course_action__id
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__id
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__id
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__id
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__id
+msgid "ID"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_exception_icon
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__activity_exception_icon
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__message_needaction
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__message_has_error
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__indicators
+msgid "Indicators"
+msgstr "المؤشرات"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_is_follower
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__job_objective_next_ids
+msgid "Job Objective Next 12 Month IDs"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__job_objective_past_ids
+msgid "Job Objective Past 12 Month IDs"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "Job Specific Objectives for the Next 12 Months"
+msgstr "الأهداف الوظيفية المحددة للأشهر الـ 12 القادمة"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "Job Specific Objectives of Past 12 Months"
+msgstr "الأهداف المحددة للوظيفة خلال الـ 12 شهرًا الماضية"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__job_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__job_id
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Job Title"
+msgstr "عنوان الوظيفي"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome____last_update
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance____last_update
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling____last_update
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations____last_update
+#: model:ir.model.fields,field_description:appraisal.field_course_action____last_update
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators____last_update
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next____last_update
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past____last_update
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_course_action__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__write_uid
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__write_date
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__write_date
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__write_date
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__write_date
+#: model:ir.model.fields,field_description:appraisal.field_course_action__write_date
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__write_date
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__write_date
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__write_date
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields.selection,name:appraisal.selection__appraisal_performance__state__line_approve
+msgid "Line Manager Approve"
+msgstr "موافقة المدير المباشر"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_main_attachment_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__measure
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__measure
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__measure
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Measure"
+msgstr "المقياس"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Meets Expectations"
+msgstr "مطابق للتوقعات"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_has_error
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_ids
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__my_activity_date_deadline
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: appraisal
+#: code:addons/appraisal/models/appraisal_performance.py:0
+#: code:addons/appraisal/models/appraisal_performance.py:0
+#: code:addons/appraisal/models/appraisal_performance.py:0
+#: code:addons/appraisal/models/appraisal_performance.py:0
+#: code:addons/appraisal/models/appraisal_performance_counselling.py:0
+#: code:addons/appraisal/models/appraisal_performance_counselling.py:0
+#: code:addons/appraisal/models/appraisal_performance_counselling.py:0
+#: code:addons/appraisal/models/appraisal_performance_counselling.py:0
+#: code:addons/appraisal/models/models.py:0
+#: code:addons/appraisal/models/models.py:0
+#: code:addons/appraisal/models/models.py:0
+#: code:addons/appraisal/models/models.py:0
+#: code:addons/appraisal/models/models.py:0
+#: code:addons/appraisal/models/models.py:0
+#: code:addons/appraisal/models/models.py:0
+#: code:addons/appraisal/models/models.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_date_deadline
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_summary
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_type_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Note: Instructions on how to fill the form:"
+msgstr "ملاحظة: تعليمات حول كيفية تعبئة الاستمارة:"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_needaction_counter
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__message_has_error_counter
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__message_needaction_counter
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__message_has_error_counter
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Objective"
+msgstr "موضوعي"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__objectives
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__objectives
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__objectives
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Objectives"
+msgstr "الاهداف"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Outstanding Performance"
+msgstr "أداء مذهل"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+msgid "PERFROMANCE COUNSELLING"
+msgstr "استشارات الأداء"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+msgid "PERFROMANCE COUNSELLING DETAILS"
+msgstr "تفاصيل استشارات الأداء"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__parameter
+msgid "Parameter"
+msgstr "المعامل"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Part A. Job Specific Objectives of Past 12 Months"
+msgstr "الجزء أ. الأهداف المحددة للوظيفة خلال الاثني عشر شهرًا الماضية"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Part C. Job Specific Objectives for the Next 12 Months"
+msgstr "الجزء (ج): الأهداف المحددة للوظيفة للأشهر الـ 12 القادمة"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__performance_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__performance_id
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__performance_id
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__performance_id
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__performance_id
+msgid "Performance"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Performance Appraisal Form"
+msgstr "تقرير أداء التقييم"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_course_action__performance_id
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__performance_id
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_form
+msgid "Performance Counselling"
+msgstr "تقييم الاداء"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+msgid "Performance Counselling Form"
+msgstr "استمارة إرشاد الأداء"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__performance_counselling_ids
+msgid "PerformanceCounselling IDs"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Poor"
+msgstr "ردئ"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_recommendations__recommendations
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+msgid "Recommendations"
+msgstr "التوصيات"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__name
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__name
+msgid "Reference"
+msgstr "المتسلسل"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__activity_user_id
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__results
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Results"
+msgstr "النتائج"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Review Period"
+msgstr "فترة المراجعة"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__score
+msgid "Score"
+msgstr "النتيجة"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid ""
+"Score <br/>\n"
+"                                        Appraiser"
+msgstr ""
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid ""
+"Score <br/>\n"
+"                                        Employee"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__appraiser_score
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__appraiser_score
+msgid "Score by Appraiser"
+msgstr "النسبة من قبل المقيم"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_generic_indicators__employee_score
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__employee_score
+msgid "Score by Employee"
+msgstr "النسبة من قبل الموظف"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Scoring Legend:"
+msgstr "أسطورة التهديف:"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__state
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_performance_counselling__state
+msgid "Status"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__activity_state
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__timescale
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_past__timescale
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__timescale
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Timescale"
+msgstr "الجدول الزمني"
+
+#. module: appraisal
+#: model:ir.ui.menu,name:appraisal.appraisal_performance_menu
+msgid "Training Performance"
+msgstr "أداء التدريب"
+
+#. module: appraisal
+#: model:ir.ui.menu,name:appraisal.appraisal_performance_counselling_menu
+msgid "Training Performance Counselling"
+msgstr "إستشاري أداء التدريب"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_job_objective_next__training_required
+#: model:ir.model.fields,field_description:appraisal.field_performance_counselling__training_required
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_report
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_report
+msgid "Training Required"
+msgstr "متطلبات التدريب"
+
+#. module: appraisal
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance__activity_exception_decoration
+#: model:ir.model.fields,help:appraisal.field_appraisal_performance_counselling__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__weight
+msgid "Weight"
+msgstr "الوزن"
+
+#. module: appraisal
+#: model:ir.model.fields,field_description:appraisal.field_appraisal_outcome__weight_Score
+msgid "Weighted Score"
+msgstr "النتيجة المرجحة"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_tree
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_tree
+msgid "appraisal performance"
+msgstr "تقييم الاداء"
+
+#. module: appraisal
+#: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_counselling_form
+msgid "appraisal performance counselling"
+msgstr "استشارات تقييم الأداء"
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_appraisal_outcome
+msgid "appraisal.outcome"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_appraisal_performance
+msgid "appraisal.performance"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_appraisal_performance_counselling
+msgid "appraisal.performance.counselling"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_appraisal_recommendations
+msgid "appraisal.recommendations"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_course_action
+msgid "course.action"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_generic_indicators
+msgid "generic.indicators"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_job_objective_next
+msgid "job.objective.next"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_job_objective_past
+msgid "job.objective.past"
+msgstr ""
+
+#. module: appraisal
+#: model:ir.model,name:appraisal.model_performance_counselling
+msgid "performance.counselling"
+msgstr ""

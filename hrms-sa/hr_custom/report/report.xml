@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!--report Manpower Annual Departmental manpower planing form-->
+        <record id="report_manpower_department" model="ir.actions.report">
+            <field name="name">Annual Departmental Manpower</field>
+            <field name="model">annual.departmental.manpower.planning</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_custom.manpower_planing_temp</field>
+            <field name="report_file">hr_custom.manpower_planing_temp</field>
+            <field name="binding_model_id" ref="model_annual_departmental_manpower_planning"/>
+            <field name="binding_type">report</field>
+        </record>
+        <!--Manpower planing form -->
+         <record id="report_manpower_planing_form" model="ir.actions.report">
+            <field name="name">Annual Manpower Planing Form</field>
+            <field name="model">annual.manpower.planning</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">hr_custom.manpower_planing_form_temp</field>
+            <field name="report_file">hr_custom.manpower_planing_form_temp</field>
+            <field name="binding_model_id" ref="model_annual_manpower_planning"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <!--report.xml payroll authorization form-->
+        <record id="report_payroll_authorization" model="ir.actions.report">
+            <field name="name">Payroll Authorization Form</field>
+            <field name="model">payroll.authorization</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_custom.payroll_authoriz_temp</field>
+            <field name="report_file">hr_custom.payroll_authoriz_temp</field>
+            <field name="binding_model_id" ref="model_payroll_authorization"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="policy_request_report" model="ir.actions.report">
+            <field name="name">Policy Reqeust Report</field>
+            <field name="model">policy.request</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_custom.policy_req_temp</field>
+            <field name="report_file">hr_custom.policy_req_temp</field>
+            <field name="binding_model_id" ref="model_policy_request"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="emp_application_request" model="ir.actions.report">
+            <field name="name">Employee Application Reqeust</field>
+            <field name="model">hr.applicant</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">hr_custom.emp_app_req_temp</field>
+            <field name="report_file">hr_custom.emp_app_req_temp</field>
+            <field name="binding_model_id" ref="model_hr_applicant"/>
+            <field name="binding_type">report</field>
+        </record>
+        <record id="total_employee_cost" model="ir.actions.report">
+            <field name="name">Total Employee Cost</field>
+            <field name="model">total.employee.cost</field>
+            <field name="report_type">qweb-html</field>
+            <field name="report_name">hr_custom.total_emp_cost_temp</field>
+            <field name="report_file">hr_custom.total_emp_cost_temp</field>
+            <field name="binding_model_id" ref="model_total_employee_cost"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

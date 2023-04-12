@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    
+    <record id="hr_training_course_report_form" model="ir.ui.view">
+        <field name="name">hr.training.course.report.form</field>
+        <field name="model">hr.training.course.report</field>
+        <field name="arch" type="xml">
+            <form string="HR training Course Report">
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="deparment_id"/>
+                        <field name="job_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Course Details">
+                            <field name="line_ids">
+                                <tree editable="bottom">
+                                    <field name="course_id"/>
+                                    <field name="relevance_to_duties"/>
+                                    <field name="place"/>
+                                    <field name="duration"/>
+                                    <field name="duration_unit"/>
+                                    <field name="fees"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="General Evaluation of the Training Course">
+                            <div>
+                                <label for="q_object"/>
+                                <field name="q_object"/>
+                            </div>
+                            <div>
+                                <label for="q_attend"/>
+                                <field name="q_attend"/>
+                            </div>
+                            <div>
+                                <label for="q_duties"/>
+                                <field name="q_duties"/>
+                            </div>
+                            <div>
+                                <label for="problems"/>
+                                <field name="problems"/>
+                            </div>
+                        </page>
+                        <page string="Trainee's Evaluation of the Training Course">
+                            <div>
+                                <label for="course_time"/>
+                                <field name="course_time"/>
+                            </div>
+                            <div>
+                                <label for="course_duration"/>
+                                <field name="course_duration"/>
+                            </div>
+                            <div>
+                                <label for="course_place"/>
+                                <field name="course_place"/>
+                            </div>
+                            <div>
+                                <label for="training_method"/>
+                                <field name="training_method"/>
+                            </div>
+                            <div>
+                                <label for="remark"/>
+                                <field name="remark"/>
+                            </div>
+                        </page>
+                    </notebook>
+                    <group>
+                        <field name="recommend"/>
+                        <field name="other_comments"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_training_course_report_tree" model="ir.ui.view">
+        <field name="name">hr.training.course.report.tree</field>
+        <field name="model">hr.training.course.report</field>
+        <field name="arch" type="xml">
+            <tree string="HR training course">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="deparment_id"/>
+                <field name="job_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id= "hr_training_course_report_action" model="ir.actions.act_window">
+        <field name="name">HR training course Report</field>
+        <field name="res_model">hr.training.course.report</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="HR Training Course Report" sequence="2" id="hr_training_course_report_menu" parent="training_root" action="hr_training_course_report_action"/>
+
+</odoo> 

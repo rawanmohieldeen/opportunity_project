@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   <data>
+      <record id="seq_appraisal_probation" model="ir.sequence">
+         <field name="name">Probation Appraisal</field>
+         <field name="code">hr.probation.appraisal</field>
+         <field name="prefix">probation-appraisal</field>
+         <field name="padding">3</field>
+         <field eval="False" name="company_id"/>
+      </record>
+
+      <!-- confirmation template -->
+      <record id="email_template_confirmation" model="mail.template">
+            <field name="name">Confirmation Letter</field>
+            <field name="model_id" ref="hr_appraisal_custom.model_hr_probation_appraisal"/>
+            <field name="subject">Confirmation Letter</field>
+            <field name="email_from">{{ (object.create_uid.email_formatted or user.email_formatted) }}</field>
+            <field name="email_to">{{ object.employee_id.user_id.email_formatted or object.employee_id.work_email }}</field>
+            <field name="description">Confirmation Letter</field>
+            <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+     Dear   <span  t-out="object.employee_id.name"/><br/>             
+Please, find the attached Notice Termination letter.<br/>
+Thanks
+</div>
+            </field>
+         <field name="report_template" ref="hr_appraisal_custom.confirmation_letter_report"/>
+            <field name="report_name">Confirmation Letter</field>
+            <field name="lang">{{ object.create_uid.partner_id.lang }}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+
+
+   </data>
+</odoo>
