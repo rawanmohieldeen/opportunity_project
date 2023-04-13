@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_promotion_letters_promotion_letters,promotion_letter.promotion_letter,model_promotion_letter,base.group_user,1,0,0,0
+access_promotion_letters_promotion_letters_hr,promotion_letter.promotion_letter_hr,model_promotion_letter,hr.group_hr_user,1,1,1,0
+access_promotion_letters_promotion_letters_hr_manager,promotion_letter.promotion_letter_hr_manager,model_promotion_letter,hr.group_hr_manager,1,1,1,1
+
+access_promotion_details,promotion_details.promotion_details,model_promotion_details,,1,1,1,1
