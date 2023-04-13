@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="exit_checklist_form_view" model="ir.ui.view">
+            <field name="name">exit.checklist.followup</field>
+            <field name="model">exit.checklist</field>
+            <field name="arch" type="xml">
+                <form string="Exit Checklist">
+                    <header>
+                        <button string="HR Approve" name="action_to_it" type="object" states="hr" class="oe_highlight" groups="hr.group_hr_manager"/>
+                        <button string="IT Approve" name="action_to_line_manager" type="object" states="it" class="oe_highlight" groups="hr_custom.group_it_user"/>
+                        <button string="Line Manager Approve" name="action_to_finance" type="object" states="line_manager" class="oe_highlight" groups="hr_custom.group_line_manager"/>
+                        <button string=" Finance Approve" name="action_to_done" type="object" states="finance" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" statusbar_visible="hr,it,line_manager,finance,approved"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                <field name="job_id"/>
+                                <field name="parent_id"/>
+                            </group>
+                            <group>
+                                <field name="employee_no"/>
+                                <field name="department_id"/>
+                                <field name="end_date" attrs="{'readonly':[('state','!=','hr')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="HR Department">
+                                <group string="Effective Leaving Date">
+                                    <group>
+                                        <field name="resignation_signed" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                        <field name="acknowledgement_signed" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                        <field name="demobilisation" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                        <field name="timesheet" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                        <field name="bank_letter" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="visa_cancellation" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                        <field name="insurance_submitted" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                        <field name="exit_interview" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                        <field name="parking_submitted" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                    </group>
+                                </group>
+                                <separator/>
+                                <group string="HR Manager’s Signature and Comments:"/>
+                                <field name="hr_comments" attrs="{'readonly':[('state','!=','hr')]}"/>
+                                <group string="Date:"/>
+                                <field name="hr_date" attrs="{'readonly':[('state','!=','hr')]}"/>
+                            </page>
+                            <page string="IT Department" attrs="{'invisible':[('state','not in',['it','line_manager','finance','approved'])]}">
+                                <group>
+                                    <group>
+                                        <field name="laptop" attrs="{'readonly':[('state','!=','it')]}"/>
+                                        <field name="other_equipments" attrs="{'readonly':[('state','!=','it')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="email_changed" attrs="{'readonly':[('state','!=','it')]}"/>
+                                        <field name="files_backed_up" attrs="{'readonly':[('state','!=','it')]}"/>
+                                    </group>
+                                </group>
+                                <separator/>
+                                <group string="IT Manager’s Signature and Comments:"/>
+                                <field name="it_comments" attrs="{'readonly':[('state','!=','it')]}"/>
+                                <group string="Date:"/>
+                                <field name="it_date" attrs="{'readonly':[('state','!=','it')]}"/>
+                            </page>
+                            <page string=" Line Manager / Department Head" attrs="{'invisible':[('state','not in',['line_manager','finance','approved'])]}">
+                                <group string="Exiting Employee’s Line Manager / Department Head – coordinate these activities">
+                                    <group>
+                                        <field name="process_completed" attrs="{'readonly':[('state','!=','line_manager')]}"/>
+                                    </group>
+                                    <group>
+                                        <field name="clearance" attrs="{'readonly':[('state','!=','line_manager')]}"/>
+                                    </group>
+                                </group>
+                                <separator/>
+                                <group string="Line Manager’s Signature and Comments:"/>
+                                <field name="line_comments" attrs="{'readonly':[('state','!=','line_manager')]}"/>
+                                <group string="Date:"/>
+                                <field name="line_date" attrs="{'readonly':[('state','!=','line_manager')]}"/>
+                            </page>
+                            <page string="Finance Department"  attrs="{'invisible':[('state','not in',['finance','approved'])]}">
+                                <group>
+                                    <group>
+                                        <field name="payment_date" attrs="{'readonly':[('state','!=','finance')]}"/>(date)
+                                    </group>
+                                    <group>
+                                        <field name="stop_salary" attrs="{'readonly':[('state','!=','finance')]}"/>
+                                    </group>
+                                </group>
+                                <separator/>
+                                <group string="Finance Department Manager’s Signature and Comments:"/>
+                                <field name="finance_comments" attrs="{'readonly':[('state','!=','finance')]}"/>
+                                <group string="Date:"/>
+                                <field name="finance_date" attrs="{'readonly':[('state','!=','finance')]}"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="exit_checklist_tree_view" model="ir.ui.view">
+            <field name="name">exit.checklist.tree</field>
+            <field name="model">exit.checklist</field>
+            <field name="arch" type="xml">
+                <tree string="Exit Checklist">
+                    <field name="employee_id"/>
+                    <field name="employee_no"/>
+                    <field name="job_id"/>
+                    <field name="department_id"/>
+                    <field name="end_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_view_list_exit_checklist" model="ir.actions.act_window">
+            <field name="name">Exit Checklist</field>
+            <field name="res_model">exit.checklist</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create New Checklist!
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="exit_checklist_menu" name="Exit Checklist" parent="hr.menu_hr_root" action="action_view_list_exit_checklist" sequence="21"/>
+    </data>
+</odoo>
