@@ -88,7 +88,6 @@
                 </xpath>
                 <xpath expr="//field[@name='mobile_phone']" position="before">
                     <field name="emp_type"/>
-                    <field name="employee_no"/>
                     <field name="national_id" attrs="{'invisible':[('emp_type','=','no_saudi')]}"/>
                     <field name="iqama" attrs="{'invisible':[('emp_type','!=','no_saudi')]}"/>
                 </xpath>

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="custody_report_template_car">
+
+                    <h2  class="text-center">Car Asset Delivery Form</h2>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Car Asset Provided to</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Name</strong>
+                            </td>
+
+
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee.name"/>
+                            </td>
+                            
+                        </tr>   
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Designation</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.designation"/>
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Project Name</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.project_name"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Contact No</strong>
+                            </td>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee.work_phone"/>
+                            </td>
+
+                            
+                            
+                        </tr>
+                        
+
+                        <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Car Asset Details</strong>
+                            </td>  
+                        </tr>
+
+
+                         <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>#</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Asset Code</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Description</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Brand</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Model No</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Plat No</strong>
+                            </td>
+                            
+                        </tr>
+                        <t t-foreach="object.asset_delivery" t-as="line">
+                             <tr>
+                                <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.serial"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.asset_code"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.description"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.brand"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.model"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.plate"/>
+                                </td>
+
+                            </tr>
+                        </t>
+                        
+                         <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Remarks</strong>
+                            </td>  
+                        </tr>
+                         
+                        <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <span t-field="object.notes"/>
+                            </td>  
+                        </tr>
+                         
+
+
+
+                        <tr>
+                            
+
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Received by<br/>
+                                Name and Signature<br/>
+                                <span t-field="object.employee.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+
+                            </td>
+                             <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Delivered by<br/>
+                                Name and Signature<br/>
+                                <span t-field="object.delivered_employee_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                            
+                        </tr>
+                       
+
+
+
+
+</table>
+<p>
+    For Office Use Only
+    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+        <tr>
+            <td colspan="6" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Office Use Only</td>
+        </tr>
+        <tr>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;">Ref No.</td>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;"/>
+        </tr>
+        <tr>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;">File Ref.</td>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;"/>
+        </tr>
+
+    </table>
+
+</p>
+
+</template>
+<template id="custody_report_template_it">
+                   <h2  class="text-center">IT Asset Delivery Form</h2>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>IT Asset Provided to</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Name</strong>
+                            </td>
+
+
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee.name"/>
+                            </td>
+                            
+                        </tr>   
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Designation</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.designation"/>
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Company Name</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.company_id.name"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Contact No</strong>
+                            </td>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee.work_phone"/>
+                            </td>
+
+                            
+                            
+                        </tr>
+                        
+
+                        <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>IT Asset Details</strong>
+                            </td>  
+                        </tr>
+
+
+                         <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>#</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Asset Code</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Description</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Brand</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Model No</strong>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Quantity</strong>
+                            </td>
+                            
+                        </tr>
+                        <t t-foreach="object.asset_delivery" t-as="line">
+                             <tr>
+                                <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.serial"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.asset_code"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.description"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.brand"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.model"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.quantity"/>
+                                </td>
+
+                            </tr>
+                        </t>
+                        
+                         <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Remarks</strong>
+                            </td>  
+                        </tr>
+                         
+                        <tr>
+                            <td colspan="6"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <span t-field="object.notes"/>
+                            </td>  
+                        </tr>
+                         
+
+
+
+                        <tr>
+                            
+
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Received by<br/>
+                                Name and Signature<br/>
+                                <span t-field="object.employee.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+
+                            </td>
+                             <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Delivered by<br/>
+                                Name and Signature<br/>
+                                <span t-field="object.delivered_employee_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                            
+                        </tr>
+                       
+
+
+
+
+</table>
+<p>
+    For Office Use Only
+    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+        <tr>
+            <td colspan="6" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Office Use Only</td>
+        </tr>
+        <tr>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;">Ref No.</td>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;"/>
+        </tr>
+        <tr>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;">File Ref.</td>
+            <td style="border-width:1px;border-color:black;font-size:15px;width:15%;"/>
+        </tr>
+
+    </table>
+
+</p>
+
+</template>
+
+        <template id="custody_report_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="lang" t-value="o.user_id.partner_id.lang"/>
+                    <t t-call="web.external_layout">
+                        <t t-set="object" t-value="o.with_context(lang=lang)" />
+                        <div class="page">
+                            <t t-if="object.custody_name.name == 'Car'"
+                                     t-call="hr_custody.custody_report_template_car" t-lang="lang"/>
+                            <t t-if="object.custody_name.name != 'Car'"
+                                     t-call="hr_custody.custody_report_template_it" t-lang="lang"/>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+</odoo>

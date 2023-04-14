@@ -132,6 +132,7 @@ class HrEmployee(models.Model):
     sort_code = fields.Char(string='Sort Code', store=True, readonly=False)
     account_no = fields.Char(string='Account No.', store=True, readonly=False)
     serious_illness = fields.Text(string='Any other serious illness or an illness an employer should know about', store=True, readonly=False)
+    employee_no = fields.Char(string='Employee Number',required=True)
 
 
     

@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="business_request_template">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+    <t t-foreach="docs" t-as="object">
+                    <h2  class="text-center">Business Travel Request Form</h2>
+                    <p>Part – 1: To be completed by the Line Manager:</p>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="7"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>EMPLOYEE DETAILS</strong>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Employee ID</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee_no"/>
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Employee Name</strong>
+                            </td>
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.employee_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Job Title</strong>
+                            </td>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.job_id.name"/>
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Department / Project</strong>
+                            </td>
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.department_id.name"/>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td colspan="7"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Travel Details</strong>
+                            </td>
+
+                        </tr>
+
+                         <tr>
+                            
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <t t-if="object.trip == True">
+                                        <input type="checkbox" checked="true"/>Business Trip<br/>
+                                </t>
+                                <t t-if="object.trip == False">
+                                    <input type="checkbox" />Business Trip<br/>
+                                </t>
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                Destination Country
+                            </td>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="object.to_country.name"/>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <t t-if="object.training == True">
+                                        <input type="checkbox" checked="true"/>Training<br/>
+                                </t>
+                                <t t-if="object.training == False">
+                                    <input type="checkbox" />Training<br/>
+                                </t>
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                Destination City
+                            </td>
+                            <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="object.to_state.name"/>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                Departure Date
+                            </td>
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.date"/>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Duration of Travel
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.duration"/> Days
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Return Date
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.end_date"/>
+                            </td>
+
+                            
+                        </tr>
+                         <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                Travel
+                            </td>
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Own
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <t t-if="object.travel_info == 'own'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.travel_info != 'own'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                KMC To Arrange
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 <t t-if="object.travel_info == 'kmc'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.travel_info != 'kmc'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Host
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 <t t-if="object.travel_info == 'host'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.travel_info != 'host'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                Accommodation
+                            </td>
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Own
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <t t-if="object.accommodation_info == 'own'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.accommodation_info != 'own'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 KMC To Arrange
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 <t t-if="object.accommodation_info == 'kmc'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.accommodation_info != 'kmc'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Host
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 <t t-if="object.accommodation_info == 'host'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.accommodation_info != 'host'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                Visa Requirement
+                            </td>
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Required
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <t t-if="object.visa == 'required'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.visa != 'required'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 Not Required
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 <t t-if="object.visa == 'not'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.visa != 'not'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Exit Permit Required
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                 <t t-if="object.visa == 'exit'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                </t>
+                                <t t-if="object.visa != 'exit'">
+                                    <input type="checkbox"/><br/>
+                                </t>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td colspan="7"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Travel Description </strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            
+                            <td colspan="7"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.description"/>
+                            </td>
+                            
+                        </tr>
+
+                         <tr>
+                            <td colspan="7"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Comments: </strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            
+                            <td colspan="7"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.comments"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Initiated by:</strong><br/>
+                            Line Manager’s Signature<br/>
+                            </td>
+
+                            
+                             <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Approved by: Sultan Al-Amri
+                            </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="object.create_uid.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                            
+                             <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            
+                        </tr>
+
+
+
+
+</table>
+<p>Part – 2: To be completed by HRM (only if arranged by KMC):</p>
+                <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>TRAVEL ARRANGEMENTS</strong>
+                            </td>
+
+                        </tr> 
+                         <tr>
+                                <td colspan="1" rowspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>#</strong>
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Travel Class</strong>
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Destination</strong>
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Flight Time (AM/PM)</strong>
+                                </td>
+                                <td colspan="4" rowspan="1">
+                                    Date (DD/MM/YYYY)
+                                </td>
+                               
+                            </tr>
+                             <tr>
+                                
+                                <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Departure</strong>
+                                </td>
+                                <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Arrival</strong>
+                                </td>
+                                
+
+
+                            </tr>
+
+   
+                        <t t-foreach="object.travel_detail" t-as="line">
+                             <tr>
+                                <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.serial"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.travel_class"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.destination"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.flight_time"/>
+                                </td>
+                                <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.Departure"/>
+                                </td>
+                                <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.arrival"/>
+                                </td>
+                                
+
+
+                            </tr>
+                        </t>
+
+                        <!-- new line -->
+<tr>
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>ACCOMMODATION ARRANGEMENTS</strong>
+                            </td>
+
+                        </tr> 
+
+
+
+
+
+                         <tr>
+                                <td colspan="1" rowspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>#</strong>
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Hotel Name</strong>>
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Location</strong>
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Room Type</strong>
+                                </td>
+                                <td colspan="2" rowspan="1">
+                                    Date (DD/MM/YYYY)
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>No. Of Nights</strong>
+                                </td>
+                                <td colspan="1" rowspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Check Out Time</strong>
+                                </td>
+
+                               
+                            </tr>
+                             <tr>
+                                
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Check In</strong>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <strong>Check Out</strong>
+                                </td>
+                                
+
+
+                            </tr>
+
+   
+                        <t t-foreach="object.travel_line" t-as="line">
+                            <tr>
+                                <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.serial"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.hotel"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.location"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.room"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.checkin_date"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.checkout_date"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.num_night"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.time_check"/>
+                                </td>
+
+                            </tr>
+                        </t>
+                        <tr>
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Travel Cost (In SR)</strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                                <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                   Airfare
+                                </td>
+                                <td colspan="6"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.airfare"/>
+                                </td>
+                                
+
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                   Accommodation
+                                </td>
+                                <td colspan="6"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.accommodation"/>
+                                </td>
+                                
+
+                            </tr>
+                            <tr>
+                                <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                   Others
+                                </td>
+                                <td colspan="6"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.others_fees"/>
+                                </td>
+                            </tr>
+                             <tr>
+                                <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                   <strong>Total</strong>
+                                </td>
+                                <td colspan="6"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.total"/>
+                                </td>
+                                
+
+                            </tr>
+                            <tr>
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Comments: </strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.hr_comments"/>
+                            </td>
+                            
+                        </tr>
+                       <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            Reviewed by:<br/>
+                            HRM<br/>
+                            <span t-field="object.reviewer_id.name"/>
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Reviewed by:<br/>
+                            HRD<br/>
+                            <span t-field="object.reviewer_id2.name"/>
+                            </td>
+                             <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Approved by:<br/>
+                            VP<br/>
+                            <span t-field="object.gm_user.name"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.reciewer_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                             <td colspan="4"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.gm_user.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            
+                        </tr>
+
+
+                </table>
+                <p>N.B. EMPLOYEE MUST SUBMIT ON HIS RETURN BOARDING CARDS AND ORIGINAL RECEIPTS OF CLAIM TO HRM ALONG WITH THE COPY OF THE BUSINESS TRIP EXPENSE CLAIM</p>
+    </t>
+     </t>
+    </t>
+</template>
+
+</odoo>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="0">
+		<record id="module_category_travel" model="ir.module.category">
+			<field name="name">Travel and claim Approvals</field>
+            <field name="description">Helps you handle your travel request and claims.</field>
+            <field name="sequence">1</field>
+        </record>
+
+		<record id="group_reviewr_1" model="res.groups">
+            <field name="name">HR Manager</field>
+            <field name="category_id" ref="business_request.module_category_travel"/>
+        </record>
+        <record id="group_reviewr_2" model="res.groups">
+            <field name="name">HR Director</field>
+            <field name="category_id" ref="business_request.module_category_travel"/>
+        </record>
+        <record id="group_reviewr_3" model="res.groups">
+            <field name="name">VP</field>
+            <field name="category_id" ref="business_request.module_category_travel"/>
+        </record>
+        <record id="group_reviewr_4" model="res.groups">
+            <field name="name">Line Manager</field>
+            <field name="category_id" ref="business_request.module_category_travel"/>
+        </record>
+    </data>
+</odoo>
