@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Promotion -->
+        <record id="promotion_letter_form_view" model="ir.ui.view">
+            <field name="name">promotion.letters.followup</field>
+            <field name="model">promotion.letter</field>
+            <field name="arch" type="xml">
+                <form >
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="employee_no"/>
+                                <field name="department_id"/>
+                            </group>
+                            <group>
+                                <field name="promoted_date"/>
+                                <field name="designation"/>
+                                <field name="new_job_id"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Details">
+                                <field name="details_ids">
+                                    <tree editable="bottom">
+                                        <field name="particulars"/>
+                                        <field name="amount"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="promotion_letter_tree_view" model="ir.ui.view">
+            <field name="name">promotion.letters.tree</field>
+            <field name="model">promotion.letter</field>
+            <field name="arch" type="xml">
+                <tree string="Promotion Process">
+                    <field name="employee_id"/>
+                    <field name="promoted_date"/>
+                    <field name="employee_no"/>
+                    <field name="new_job_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_view_list_promotion_letter" model="ir.actions.act_window">
+            <field name="name">Promotion Process</field>
+            <field name="res_model">promotion.letter</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create New Promotion!
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="promotion_letter_menu" name="Promotion Process" parent="hr.menu_hr_root" action="action_view_list_promotion_letter" sequence="19"/>
+    </data>
+</odoo>

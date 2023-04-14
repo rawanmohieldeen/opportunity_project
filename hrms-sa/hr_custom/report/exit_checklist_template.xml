@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="exit_checklist_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <h4  class="text-center">Exit Checklist</h4><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="5">
+                                <strong>
+                                    EMPLOYEE DETAILS
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Employee ID</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.employee_no"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Employee Name</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.employee_id.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Job Title</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.job_id.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Department / Project</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.department_id.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Line Manager / </span>
+                                <br/>
+                                <span>Project Head</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.parent_id.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Last Working Day</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.end_date"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray; background-color: #8FBC8F;" colspan="5">
+                                <strong>
+                                    SEPARATION
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="5">
+                                <strong>
+                                    HR Department
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="5">
+                                <span>Effective Leaving Date</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Letter of Resignation/Termination signed</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.resignation_signed">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Termination Acknowledgement and Release Letter signed</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.acknowledgement_signed">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Demobilisation arrangements (if expat)</span><br/>
+                                <span>Departure date</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.demobilisation">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Final Timesheet submitted</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.timesheet">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Letter to the Bank sent</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.bank_letter">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Visa/GOSI cancellation</span><br/>
+                                <span>To be done before or on the last working day</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.visa_cancellation">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Insurance Card submitted</span><br/>
+                                <span>To be submitted on the last day of employment</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.insurance_submitted">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Exit Interview conducted (if Resignation)</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.exit_interview">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Parking Card submitted</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.parking_submitted">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray;height: 130px;" colspan="5">
+                                <span>HR Manager’s Signature and Comments:</span>
+                                <t t-if="object.hr_comments">
+                                    <br/>
+                                    <span t-esc="object.hr_comments"/>
+                                    <br/>
+                                </t>
+                                <t t-else="">
+                                    <br/><br/><br/><br/><br/><br/>
+                                </t>
+                                <span>Date:</span>
+                                <span style="margin-left:10px;" t-esc="object.hr_date"/>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="5">
+                                <strong>
+                                    IT Department
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Laptop / Desktop handed over</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.laptop">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Other IT equipments handed over</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.other_equipments">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>E-mail password changed</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.email_changed">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Electronic files backed up</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.files_backed_up">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray;height: 130px;" colspan="5">
+                                <span>IT Manager’s Signature and Comments:</span>
+                                <t t-if="object.it_comments">
+                                    <br/>
+                                    <span t-esc="object.it_comments"/>
+                                    <br/>
+                                </t>
+                                <t t-else="">
+                                    <br/><br/><br/><br/><br/><br/>
+                                </t>
+                                <span>Date:</span>
+                                <span style="margin-left:10px;" t-esc="object.it_date"/>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="5">
+                                <strong>
+                                    Exiting Employee’s Line Manager / Department Head – coordinate these activities
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Hand over process completed</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.process_completed">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Office desk clearance</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.clearance">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray;height: 130px;" colspan="5">
+                                <span>Line Manager’s Signature and Comments:</span>
+                                <t t-if="object.line_comments">
+                                    <br/>
+                                    <span t-esc="object.line_comments"/>
+                                    <br/>
+                                </t>
+                                <t t-else="">
+                                    <br/><br/><br/><br/><br/><br/>
+                                </t>
+                                <span>Date:</span>
+                                <span style="margin-left:10px;" t-esc="object.line_date"/>
+                            </td>                            
+                        </tr>
+                    </table>
+
+                    <br/><br/>
+                    <p>
+                        <strong>Note: Only after all the above is signed by all concerned department heads, the Final Payment can be processed into an employee account.</strong>
+                    </p>
+
+                    <br/><br/><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="5">
+                                <strong>
+                                    Finance Department
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray;height: 130px;" colspan="5">
+                                <span>Final Payment to be processed </span>
+                                    <t t-if="object.payment_date">
+                                        <span style="margin-left:10px" t-esc="object.payment_date"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span>_______________________ (date)</span>
+                                    </t>
+                                <br/><br/>
+
+                                <span>Bank Transfer<span style="margin-left:100px;"/>or Check</span>
+                                <br/><br/>
+
+                                <span>Account No.:<span style="margin-left:100px;"/>Check No.:     </span>
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Stop Salary Payments</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.stop_salary">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray;height: 130px;" colspan="5">
+                                <span>Finance Department Manager’s Signature and comments:</span>
+                                <t t-if="object.finance_comments">
+                                    <br/>
+                                    <span t-esc="object.finance_comments"/>
+                                    <br/>
+                                </t>
+                                <t t-else="">
+                                    <br/><br/><br/><br/><br/><br/>
+                                </t>
+                                <span>Date:</span>
+                                <span style="margin-left:10px;" t-esc="object.finance_date"/>
+                            </td>                            
+                        </tr>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="exit_checklist_report"
+        model="exit.checklist"
+        string="Print Exit Checklist"
+        report_type="qweb-pdf"
+        name="hr_custom.exit_checklist_template"
+        file="hr_custom.exit_checklist_template"
+    />
+</odoo>

@@ -49,3 +49,6 @@ access_interview_evaluation_sheet,interview.evaluation.sheet,model_interview_eva
 
 access_salary_alignment_sheet,salary.alignment.sheet,model_salary_alignment_sheet,,1,1,1,1
 access_compensation_offer_details_line,compensation.offer.details.line,model_compensation_offer_details_line,,1,1,1,1
+
+
+access_exit_checklist,exit_checklist.exit_checklist,model_exit_checklist,,1,1,1,1

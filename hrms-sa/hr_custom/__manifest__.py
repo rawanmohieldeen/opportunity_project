@@ -10,16 +10,19 @@
     'version': '16',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr','hr_recruitment','hr_payroll_community'],
+    'depends': ['base','hr','hr_recruitment','hr_payroll_community','warning_letter'],
 
 
     # always loaded
     'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
         'data/sequence.xml',
         # 'report/payroll_authorization_report.xml',
         'report/manpower_planing_report.xml',
         'report/policy_request_report.xml',
+        'report/exit_checklist_template.xml',
+        'views/exit_checklist_view.xml',
         'views/personnel_requisition.xml',
         'views/annual_manpower.xml',
         'views/policy_request.xml',
