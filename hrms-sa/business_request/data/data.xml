@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+       <record id="seq_business_travel_request" model="ir.sequence">
+         <field name="name">Business Travel Request</field>
+         <field name="code">business.travel.request</field>
+         <field name="prefix">BT</field>
+         <field name="padding">3</field>
+         <field eval="False" name="company_id"/>
+      </record>
+       <record id="seq_expense_claim_request" model="ir.sequence">
+         <field name="name">Expense Claim Request</field>
+         <field name="code">expense.claim</field>
+         <field name="prefix">EC</field>
+         <field name="padding">3</field>
+         <field eval="False" name="company_id"/>
+      </record>
+</data>
+</odoo>

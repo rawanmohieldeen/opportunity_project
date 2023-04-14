@@ -128,6 +128,7 @@
                                 <field name="renew_reject" invisible="1"/>
                                 <field name="mail_send" invisible="1"/>
                                 <field name="purpose"/>
+                                <field name="delivered_employee_id"/>
                             </group>
                             <group>
                                 <field name="date_request"/>
@@ -143,7 +144,23 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Notes">
+                            <page string="Asset Details">
+                                <field name="asset_delivery" widget="section_and_note_one2many" attrs="{'readonly':[('state','=','approved')]}">
+                                    <tree editable="bottom">
+                                        <field name="serial"/>
+                                        <field name="asset_code"/>
+                                        <field name="description"/>
+                                        <field name="brand"/>
+                                        <field name="model"/>
+                                        <field name="plate" />
+                                        <field name="quantity"/>
+                                    </tree>
+                                </field>
+                            
+
+                            </page>
+
+                            <page string="Remarks">
                                 <field name="notes"/>
                             </page>
                         </notebook>
@@ -242,6 +259,17 @@
         <menuitem action="action_hr_property" id="hr_property_menu" parent="hr_custody.hr_custody_main_menu"
                   name="Property" sequence="5" groups="hr.group_hr_manager"/>
     </data>
+    <!-- custody report -->
+    <report
+            id="custody_report"
+            model="hr.custody"
+            string="Custody Report"
+            report_type="qweb-pdf"
+            name="hr_custody.custody_report_template"
+            file="hr_custody.custody_report_template"
+
+
+        />
 </odoo>
 
 <!--groups="base.group_multi_company"-->

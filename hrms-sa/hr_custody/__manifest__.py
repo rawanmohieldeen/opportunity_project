@@ -41,7 +41,8 @@
         'views/hr_custody_notification.xml',
         'views/hr_employee_view.xml',
         'views/notification_mail.xml',
-        'views/asset_delivery.xml',
+        # 'views/asset_delivery.xml',
+        'reports/custody_report_template.xml',
         'reports/custody_report.xml'
     ],
     'demo': ['data/demo_data.xml'],

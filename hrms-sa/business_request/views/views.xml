@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+<!-- business_travel_request forms -->
+<record id="business_travel_request_form_view" model="ir.ui.view">
+            <field name="name">business.travel.request.form</field>
+            <field name="model">business.travel.request</field>
+            <field name="arch" type="xml">
+                <form string= "Business Travel Request">
+                    <header>
+                        <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight" groups="business_request.group_reviewr_4"/>
+
+                        <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="business_request.group_reviewr_1" />
+                        <button name="waiting_review" type="object" string="Review"
+                                states="waiting_review" class="oe_highlight" groups="business_request.group_reviewr_2" />
+                        <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="business_request.group_reviewr_3"/>
+                        
+
+                        <button name="reject" type="object" string="Reject" states="review,waiting_app"
+                                 />
+                        <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                        <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
+                    </header>
+                    <sheet>
+                        
+                        <div class="oe_title">
+                            
+                            <label for="name" string="Referance" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Referance" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </h1>
+                        </div>
+  
+                        <group>
+                            <group>
+                                <field name="employee_id" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="department_id" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </group>
+                            <group>
+                                <field name="employee_no" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="job_id" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </group>
+                            </group>
+                        <group>
+                            <group>
+                                <field name="trip" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="training" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="date" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <label for="duration" string=" Duration" />
+                                <div >
+                                    <field name="duration" class="oe_inline " attrs="{'readonly':[('state','=','approved')]}"/>Days
+                                </div>
+                            </group>
+                            <group>
+                                 <field name="to_country" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="to_state" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="end_date" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </group>
+                        </group>
+
+                        <group >
+                            <group string="Travel"> 
+                                <field name="travel_info" attrs="{'readonly':[('state','=','approved')]}" widget ="radio" options="{'horizontal': true}"/>
+                                
+                            </group>
+                            <group string="Accommodation">
+                                 <field name="accommodation_info" attrs="{'readonly':[('state','=','approved')]}" widget ="radio" options="{'horizontal': true}"/>
+                                
+                            </group>
+                        </group>
+                         <group string="Visa Requirement ">
+                            <field name="visa" attrs="{'readonly':[('state','=','approved')]}" widget ="radio" options="{'horizontal': true}"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="description" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </group>
+                            <group>
+                                <field name="comments" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="TRAVEL ARRANGEMENTS">
+                                <field name="travel_detail" widget="section_and_note_one2many" attrs="{'readonly':[('state','=','approved')]}">
+                                    <tree editable="bottom">
+                                        <field name="serial"/>
+                                        <field name="travel_class"/>
+                                        <field name="destination"/>
+                                        <field name="flight_time"/>
+                                        <field name="Departure"/>
+                                        <field name="arrival"/>
+                                     
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="ACCOMMODATION ARRANGEMENTS">
+                                <field name="travel_line" widget="section_and_note_one2many" attrs="{'readonly':[('state','=','approved')]}">
+                                    <tree editable="bottom">
+                                        <field name="serial"/>
+                                        <field name="hotel"/>
+                                        <field name="location"/>
+                                        <field name="room"/>
+                                        <field name="checkin_date"/>
+                                        <field name="checkout_date"/>
+                                        <field name="num_night"/>
+                                        <field name="time_check"/>
+                                    </tree>
+                                </field>
+                                <group name="note_group" col="6" class="mt-2 mt-md-0">
+                                    
+                                    <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total" string="Travel Cost (In SR)">
+                                        <field name="airfare" colspan="2" attrs="{'readonly':[('state','=','approved')]}"/>
+                                        <field name="accommodation" colspan="2" attrs="{'readonly':[('state','=','approved')]}"/>
+                                        <field name="others_fees" colspan="2" attrs="{'readonly':[('state','=','approved')]}"/>
+                                        <field name="total" colspan="2"/>
+                                    </group>
+                                    <div class="oe_clear"/>
+                                </group>
+                            </page>
+                            <page string="Comments">
+                                <group string="HR Comments">
+                                    <field name="hr_comments"/>
+                                </group>
+                            </page>
+                        </notebook>
+          
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                   
+                </form>
+            </field>
+        </record>
+
+        <record id="business_travel_request_tree_view" model="ir.ui.view">
+            <field name="name">business.travel.request.tree</field>
+            <field name="model">business.travel.request</field>
+            <field name="arch" type="xml">
+                <tree string="Business Travel Request">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="employee_no"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="action_view_business_travel_requestn" model="ir.actions.act_window">
+            <field name="name">Business Travel Request</field>
+            <field name="res_model">business.travel.request</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('business_travel_request_tree_view')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('business_travel_request_form_view')})]"/>
+            
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                No Travel Requests !
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="business_travel_request_menu" name="Business Travel Request" parent="hr.menu_hr_root" groups=""
+                action="action_view_business_travel_requestn" />
+<!-- Expense Claim Form -->
+<record id="expense_claim_form_view" model="ir.ui.view">
+            <field name="name">expense.claim.form</field>
+            <field name="model">expense.claim</field>
+            <field name="arch" type="xml">
+                <form string= "Expense Claim Form">
+                    <header>
+                        <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight" groups="hr.group_hr_user"/>
+
+                        <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="business_request.group_reviewr_1"/>
+
+                        <button name="waiting_review" type="object" string="Review"
+                                states="waiting_review" class="oe_highlight" groups="business_request.group_reviewr_2"/>
+
+
+                        <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="business_request.group_reviewr_3"/>
+                        
+
+                        <button name="reject" type="object" string="Reject" states="review,waiting_app"
+                                 groups="business_request.group_reviewr_1,business_request.group_reviewr_2,business_request.group_reviewr_3"/>
+                        <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                        <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
+                    </header>
+                    <sheet>
+                        
+                        <div class="oe_title">
+                            
+                            <label for="name" string="Referance" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Referance" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </h1>
+                        </div>
+  
+                        <group>
+                            <group>
+                                <field name="employee_id" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="department_id" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="date" attrs="{'readonly':[('state','=','approved')]}"/>
+
+                            </group>
+                            <group>
+                                <field name="employee_no" attrs="{'readonly':[('state','=','approved')]}"/>
+                                <field name="job_id" attrs="{'readonly':[('state','=','approved')]}"/>
+                            </group>
+                            </group>
+                            <group >
+                                <group >
+                                    <field name="from_date"  attrs="{'readonly':[('state','=','approved')]}"/>
+                                    <field name="destination" attrs="{'readonly':[('state','=','approved')]}"/>
+                                    <field name="currency_id" string="Currency of expenses" attrs="{'readonly':[('state','=','approved')]}"/>
+
+                                </group>
+                                 <group >
+                                    <field name="to_date" />
+                                    <field name="days_num"/> Days
+                                    <field name="exchange_rate" string="Exchange rate used"/>
+                                </group>
+                            </group>
+                        
+
+            
+                        <notebook>
+                            
+                            <page string="Expense Details">
+                                <field name="expense_line" widget="section_and_note_one2many" attrs="{'readonly':[('state','=','approved')]}">
+                                    <tree editable="bottom">
+                                        <field name="name" string="Details of expense (please attach supporting vouchers where applicable)"/>
+                                        <field name="sr1" string="SR/other"/>
+                                        <field name="sr2" string="SR"/>
+                                        <field name="sr3" string="SR"/>
+                                        
+                                    </tree>
+                                </field>
+                                
+                                <group name="note_group" col="6" class="mt-2 mt-md-0">
+                                    
+                                    <group class="oe_subtotal_footer oe_right" colspan="2" name="sale_total" string="Travel Cost (In SR)">
+                                        <field name="total_exp" colspan="2" string="Total expenses" attrs="{'readonly':[('state','=','approved')]}"/>
+                                        <field name="advance" colspan="2" string="Less: Advance taken" attrs="{'readonly':[('state','=','approved')]}"/>
+                                        <field name="others_fees" colspan="2" string="Total"/>
+                                        <field name="ammount_return" colspan="2" string="Add: Amount returned" attrs="{'readonly':[('state','=','approved')]}"/>
+                                        <field name="balance" colspan="2" string="Balance due from KMC"/>
+                                    </group>
+                                    <div class="oe_clear"/>
+                                </group>
+                            </page>
+                            
+                        </notebook>
+          
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                   
+                </form>
+            </field>
+        </record>
+
+        <record id="expense_claim_tree_view" model="ir.ui.view">
+            <field name="name">expense.claim.request.tree</field>
+            <field name="model">expense.claim</field>
+            <field name="arch" type="xml">
+                <tree string="Expense Claim Form">
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="employee_no"/>
+                    <field name="job_id" string="Position"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="action_view_expense_claim" model="ir.actions.act_window">
+            <field name="name">Expense Claim Form</field>
+            <field name="res_model">expense.claim</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('expense_claim_tree_view')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('expense_claim_form_view')})]"/>
+            
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                No Expense Claim Requests !
+              </p>
+            </field>
+        </record>
+
+        <menuitem id="expense_claim_menu" name="Expense Claim Form" parent="hr.menu_hr_root" groups=""
+                action="action_view_expense_claim" />
+    </data>
+</odoo>

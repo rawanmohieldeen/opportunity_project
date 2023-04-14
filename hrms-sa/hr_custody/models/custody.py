@@ -144,12 +144,12 @@ class HrCustody(models.Model):
                                    help="Property name",
                                    states={'draft': [('readonly', False)]}
                                    )
-    return_date = fields.Date(string='Return Date', required=True, track_visibility='always', readonly=True,
+    return_date = fields.Date(string='Return Date', required=False, track_visibility='always', readonly=True,
                               help="Return date",
                               states={'draft': [('readonly', False)]})
     renew_date = fields.Date(string='Renewal Return Date', track_visibility='always',
                              help="Return date for the renewal", readonly=True, copy=False)
-    notes = fields.Html(string='Notes')
+    notes = fields.Html(string='Remarks')
     renew_return_date = fields.Boolean(default=False, copy=False)
     renew_reject = fields.Boolean(default=False, copy=False)
     state = fields.Selection([('draft', 'Draft'), ('to_approve', 'Waiting For Approval'), ('approved', 'Approved'),
@@ -157,6 +157,11 @@ class HrCustody(models.Model):
                              track_visibility='always')
     mail_send = fields.Boolean(string="Mail Send")
 
+    delivered_employee_id = fields.Many2one('hr.employee',string='Delivered Employee',required=False,copy=False)
+    asset_delivery = fields.One2many('asset.delivery','custody_id')
+    designation = fields.Char()
+    project_name = fields.Char()
+    user_id = fields.Many2one('res.users', string="User",default=lambda self: self.env.user)
 
 class HrPropertyName(models.Model):
     """

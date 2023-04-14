@@ -61,7 +61,6 @@ class Employee(models.Model):
        
     ], string='Type Of Employee', index=True, tracking=True,required=True)
 
-    employee_no = fields.Char(string='Employee Number',required=True)
     national_id = fields.Char(string="National ID No")
     iqama = fields.Char('Iqama')
 

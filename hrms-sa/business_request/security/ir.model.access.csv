@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_business_travel_request,business_travel_request,model_business_travel_request,base.group_user,1,1,1,1
+access_business_travel_request_line,business_travel_request_line,model_business_travel_request_line,base.group_user,1,1,1,1
+
+
+access_business_travel_request_detail,business_travel_request_detail,model_business_travel_request_details,base.group_user,1,1,1,1
+access_expense_claim,expense_claim,model_expense_claim,base.group_user,1,1,1,1
+access_expense_claim_line,expense_claim_line,model_expense_claim_line,base.group_user,1,1,1,1

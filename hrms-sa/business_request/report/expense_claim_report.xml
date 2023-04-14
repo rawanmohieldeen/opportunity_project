@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="expense_claim_template">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+    <t t-foreach="docs" t-as="object">
+                    <h2  class="text-center">Expense Claim Form</h2>
+                   <p> To<br/>  
+                        Human Resource Manager
+                    </p>
+                    <div class="row mt32 mb32" id="informations">
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Employee Name</strong>
+                            <p t-field="object.employee_id.name"/>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Employee ID</strong>
+                            <p t-field="object.employee_no"/>
+                        </div>
+                        
+                    </div>
+                     <div class="row mt32 mb32" id="informations2">
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Date</strong>
+                            <p t-field="object.date"/>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Position</strong>
+                            <p t-field="object.job_id.name"/>
+                        </div>
+                        
+                    </div>
+                    <p>HR and Admin Department<br/>
+Please reimburse the following expenses incurred on my trip to <span t-field="object.destination"/> from <span t-field="object.from_date"/> to <span t-field="object.to_date"/> (total no. of days <span t-field="object.days_num"/>) for business*.</p>
+
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>EMPLOYEE DETAILS</strong>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td colspan="5" rowspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Details of expense (please attach supporting vouchers where applicable)</strong>
+                            </td>
+
+
+                            <td colspan="2" rowspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Cash/credit card</strong>
+                            </td>
+                            <td colspan="1" rowspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Approved amount</strong>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="1" rowspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>SR/other</strong>
+                            </td>
+                            <td colspan="1" rowspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>SR</strong>
+                            </td>
+                            <td colspan="1" rowspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>SR</strong>
+                            </td>
+                        </tr>
+                         <t t-foreach="object.expense_line" t-as="line">
+                             <tr>
+                                <td colspan="5"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.name"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.sr1"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.sr2"/>
+                                </td>
+                                <td colspan="1"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.sr3"/>
+                                </td>
+                                                              
+
+
+                            </tr>
+                        </t>
+
+                         <tr>
+                                <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    Total expenses
+                                </td>
+                                <td colspan="4"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.total_exp"/>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    Less: Advance taken
+                                </td>
+                                <td colspan="4"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.advance"/>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    Total
+                                </td>
+                                <td colspan="4"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.others_fees"/>
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    Add: Amount returned
+                                </td>
+                                <td colspan="4"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.ammount_return"/>
+                                </td>
+
+                            </tr>
+                             <tr>
+                                <td colspan="4"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    Balance due from KMC
+                                </td>
+                                <td colspan="4"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="object.balance"/>
+                                </td>
+
+                            </tr>
+
+
+
+</table>
+<div class="row mt32 mb32" id="informations3">
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Currency of expenses</strong>
+                            <p t-field="object.currency_id.name"/>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Exchange rate used</strong>
+                            <p t-field="object.exchange_rate.rate"/>
+                        </div>
+                        
+                    </div>
+                     <div class="row mt32 mb32" id="informations4">
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Employee’s signature</strong>
+                            -------------------------------
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <strong>Date</strong>
+                            <span  t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/>
+                        </div>
+                        
+                    </div>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Initiated by:</strong>
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                               <strong> Reviewed by:</strong>
+                            </td>
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Reviewed by:</strong>
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Approved by:</strong>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="object.create_uid.name"/><br/>
+                                Employee’s Signature
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.reciewer_id.name"/><br/>
+                                HR Manager’s Signature
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.reciewer_id2.name"/><br/>
+                                HR Director’s Signature (If exceeds budget)
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.gm_user.name"/><br/>
+                                VP’s Signature
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            </tr>
+
+                                   </table>
+                                   <p>Processed by Accounts:</p>
+                                   <p>Name: _______________________________</p>
+<p>Date:  ________________________________</p>
+
+    </t>
+     </t>
+    </t>
+</template>
+
+</odoo>

@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+<report
+            id="business_request_report"
+            model="business.travel.request"
+            string="Business Travel Request"
+            report_type="qweb-pdf"
+            name="business_request.business_request_template"
+            file="business_request.business_request_template"
+
+
+        />
+        <report
+            id="expense_claim_report"
+            model="expense.claim"
+            string="Expense Claim Form"
+            report_type="qweb-pdf"
+            name="business_request.expense_claim_template"
+            file="business_request.expense_claim_template"
+
+
+        />
+    </data>
+</odoo>
