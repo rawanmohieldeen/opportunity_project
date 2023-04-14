@@ -28,7 +28,7 @@
     'author': 'Cybrosys Techno solutions,Open HRMS',
     'company': 'Cybrosys Techno Solutions',
     'website': 'https://www.openhrms.com',
-    'depends': ['hr', 'hr_employee_updation', 'mail'],
+    'depends': ['hr', 'hr_employee_updation', 'mail','warning_letter'],
     'category': 'Generic Modules/Human Resources',
     'maintainer': 'Cybrosys Techno Solutions',
     'data': [
@@ -39,6 +39,7 @@
         'views/resignation_view.xml',
         'views/approved_resignation.xml',
         'views/resignation_sequence.xml',
+        'report/resignation_letter_template.xml'
     ],
     'installable': True,
     'application': False,

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="resignation_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <h4  class="text-center">Resignation Approval</h4><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray; background-color: #8FBC8F;" colspan="4">
+                                <strong>
+                                    EMPLOYEE DETAILS
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Employee ID</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.employee_id.employee_no"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Employee Name</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.employee_id.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Job Title</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.employee_id.job_id.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Department / Project</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.department_id.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="4">
+                                <strong>
+                                    Reason for Resignation
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px;border:1px solid gray;" colspan="4">
+                            	<br/>
+                            	<span t-esc="object.reason"/>
+                            	<br/><br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;">
+                                <strong>
+                                    Date of Resignation:
+                                </strong>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="3">
+                                <span t-esc="object.expected_revealing_date"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;">
+                                <strong>
+                                    Notice Period:
+                                </strong>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="3">
+                                <span t-esc="object.notice_period"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <strong>
+                                    Comments:
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px;border:1px solid gray;" colspan="4">
+                                <br/><br/><br/><br/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span>Reviewed by:</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span>Reviewed by:</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span>Approved by:</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px;border:1px solid gray;">
+                                <span>Line Manager</span>
+                                <br/><br/><br/><br/>
+                                <span>Date:</span>
+                                <span style="margin-left:10px;"/>
+                            </td>
+                            <td style="height: 50px;border:1px solid gray;">
+                                <span>HR Department</span>
+                                <br/><br/><br/><br/>
+                                <span>Date:</span>
+                                <span style="margin-left:10px;"/>
+                            </td>
+                            <td style="height: 50px;border:1px solid gray;">
+                                <span>GM</span>
+                                <br/><br/><br/><br/>
+                                <span>Date:</span>
+                                <span style="margin-left:10px;"/>
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+
+	<report
+        id="resignation_letter_report"
+        model="hr.resignation"
+        string="Print Resignation"
+        report_type="qweb-pdf"
+        name="hr_resignation.resignation_template"
+        file="hr_resignation.resignation_template"
+    />
+</odoo>
