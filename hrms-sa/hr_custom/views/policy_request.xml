@@ -5,6 +5,23 @@
       <field name="arch" type="xml">
         <form  class="o_sale_order">
             <header>
+
+                <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight" groups="hr.group_hr_manager" />
+
+                <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="hr_custom.group_vp"/>
+                <button name="waiting_review" type="object" string="Review"
+                                states="waiting_review" class="oe_highlight"  groups="hr_custom.group_hrd_manager"/>
+                <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="hr_custom.group_gm"/>
+                        
+
+                <button name="reject" type="object" string="Reject" states="review,waiting_app"
+                                 />
+                <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
             </header>
             <sheet>
                 <div class="oe_title">
@@ -14,31 +31,31 @@
                 </div>
                 <group >
                     <group >
-                        <field name="chapter_reference"/>
-                        <field  name="subject_reference"/>
-                        <field  name="issue_with"/>
-                        <field  name="description"/>
-                        <field  name="suggested_solution"/>
-                        <field  name="rationale_for_hange"/>
+                        <field name="chapter_reference" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="subject_reference" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="issue_with" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="description" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="suggested_solution" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="rationale_for_hange" attrs="{'readonly':[('state','=','approved')]}"/>
                         <field  name="comments"/>
-                        <field  name="max_salary"  widget="monetary"/>
-                        <field  name="min_salary"  widget="monetary"/>
-                        <field  name="attach_copy_of_budget_plan"/>
+                        <field  name="max_salary"  widget="monetary" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="min_salary"  widget="monetary" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="attach_copy_of_budget_plan" attrs="{'readonly':[('state','=','approved')]}"/>
                     </group>
                     <group >
-                        <field name="update_no"/>
-                        <field  name="update_date"/>
-                        <field  name="section_no"/>
-                        <field  name="policy_procedure"/>
+                        <field name="update_no" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="update_date" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="section_no" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="policy_procedure" attrs="{'readonly':[('state','=','approved')]}"/>
                     </group>
                     
                 </group>
             </sheet>
-            <!-- <div class="oe_chatter">
+            <div class="oe_chatter">
                 <field name="message_follower_ids"/>
                 <field name="activity_ids"/>
                 <field name="message_ids"/>
-            </div> -->
+            </div>
             </form>
       </field>
     </record>
@@ -47,7 +64,7 @@
       <field name="name">Policy Request tree</field>
       <field name="model">policy.request</field>
             <field name="arch" type="xml">
-                <tree string="Contract Type">
+                <tree string="Request for Policy / Procedure Amendment">
                         <field  name="name"/>
                         <field name="chapter_reference"/>
                         <field  name="subject_reference"/>
@@ -64,7 +81,7 @@
     </record>
 
     <record id="action_policy_request" model="ir.actions.act_window">
-            <field name="name">Policy Request</field>
+            <field name="name">Request for Policy / Procedure Amendment</field>
             <field name="res_model">policy.request</field>
             <field name="view_mode">tree,form</field>
     </record>

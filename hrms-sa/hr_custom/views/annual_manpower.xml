@@ -5,24 +5,42 @@
       <field name="arch" type="xml">
         <form  class="o_sale_order">
             <header>
+                <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight"/>
+
+                <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="hr.group_hr_manager" />
+                        
+                <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="hr_custom.group_vp"/>
+                        
+
+                <button name="reject" type="object" string="Reject" states="review,waiting_app"
+                                 />
+                <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
             </header>
             <sheet>
                 <div class="oe_title">
                     <h1>
                         <field name="name" readonly="1"/>
+                        <field name="state"/>
                     </h1>
                 </div>
                 <group >
                     <group >
-                        <field name="department"/>
-                        <field  name="date"/>
+                        <field name="department" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="date" attrs="{'readonly':[('state','=','approved')]}"/>
+                    </group>
+                    <group>
+                        <field name="comments" attrs="{'readonly':[('state','=','approved')]}"/>
                     </group>
                     
                 </group>
                 <notebook>
                     <page string="Lines" >
-                    <group >
-                        <field name="lines_ids">
+                        <field name="lines_ids" attrs="{'readonly':[('state','=','approved')]}">
                             <tree editable="bottom">
                                 <field name="position_title" />
                                 <field name="department" />
@@ -37,16 +55,15 @@
                             </tree>
                            
                         </field>
-                    </group>
                   
                     </page>
                 </notebook>
             </sheet>
-            <!-- <div class="oe_chatter">
+            <div class="oe_chatter">
                 <field name="message_follower_ids"/>
                 <field name="activity_ids"/>
                 <field name="message_ids"/>
-            </div> -->
+            </div>
             </form>
       </field>
     </record>
@@ -87,6 +104,23 @@
       <field name="arch" type="xml">
         <form  class="o_sale_order">
             <header>
+                <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight"/>
+
+                    <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="hr_custom.group_vp" />
+                    <button name="waiting_review" type="object" string="Review"
+                                states="waiting_review" class="oe_highlight" groups="hr_custom.group_hrd_manager" />
+                    <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="hr_custom.group_gm"/>
+                        
+
+                    <button name="reject" type="object" string="Reject" states="review,waiting_app"
+                                 groups="hr_custom.group_vp,hr_custom.group_gm,hr_custom.group_hrd_manager"/>
+                    <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
+
             </header>
             <sheet>
                 <div class="oe_title">
@@ -96,14 +130,13 @@
                 </div>
                 <group >
                     <group >
-                        <field name="department"/>
+                        <field name="location"/>
                         <field  name="date"/>
                     </group>
                     
                 </group>
                 <notebook>
                     <page string="Lines" >
-                    <group >
                         <field name="lines_ids">
                             <tree editable="bottom">
                                 <field name="position_title" />
@@ -119,16 +152,15 @@
                             </tree>
                            
                         </field>
-                    </group>
                   
                     </page>
                 </notebook>
             </sheet>
-            <!-- <div class="oe_chatter">
+            <div class="oe_chatter">
                 <field name="message_follower_ids"/>
                 <field name="activity_ids"/>
                 <field name="message_ids"/>
-            </div> -->
+            </div>
             </form>
       </field>
     </record>
@@ -170,6 +202,22 @@
       <field name="arch" type="xml">
         <form  class="o_sale_order">
             <header>
+                    <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight"/>
+
+                    <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="hr_custom.group_vp" />
+                    <button name="waiting_review" type="object" string="Review"
+                                states="waiting_review" class="oe_highlight" groups="hr_custom.group_hrd_manager" />
+                    <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="hr_custom.group_gm"/>
+                        
+
+                    <button name="reject" type="object" string="Reject" states="review,waiting_app"
+                                 groups="hr_custom.group_vp,hr_custom.group_gm,hr_custom.group_hrd_manager"/>
+                    <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                    <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
             </header>
             <sheet>
                 <div class="oe_title">
@@ -179,19 +227,19 @@
                 </div>
                 <group >
                     <group >
-                        <field name="department"/>
-                        <field  name="date"/>
-                        <field  name="new_position"/>
-                        <field  name="reports_to"/>
-                        <field  name="justification_for_new_position"/>
-                        <field  name="proposed_grade"  widget="monetary"/>
-                        <field  name="proposed_min_salary"  widget="monetary"/>
-                        <field  name="proposed_max_salary"  widget="monetary"/>
-                        <field  name="comments"/>
-                        <field  name="broad_roles_responsibilities"/>
-                        <field  name="attach_envisaged_job_escription"/>
+                        <field name="department" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="date" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="new_position" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="reports_to" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="justification_for_new_position" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="proposed_grade"  widget="monetary" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="proposed_min_salary"  widget="monetary" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="proposed_max_salary"  widget="monetary" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="comments" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="broad_roles_responsibilities" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="attach_envisaged_job_escription" attrs="{'readonly':[('state','=','approved')]}"/>
                     </group>
-                    <group >
+                    <group invisible="1">
                         <field name="update_no"/>
                         <field  name="update_date"/>
                         <field  name="section_no"/>
@@ -200,11 +248,11 @@
                     
                 </group>
             </sheet>
-            <!-- <div class="oe_chatter">
+            <div class="oe_chatter">
                 <field name="message_follower_ids"/>
                 <field name="activity_ids"/>
                 <field name="message_ids"/>
-            </div> -->
+            </div>
             </form>
       </field>
     </record>
@@ -213,7 +261,7 @@
       <field name="name">Position Request tree</field>
       <field name="model">position.request</field>
             <field name="arch" type="xml">
-                <tree string="Contract Type">
+                <tree string="Position Request">
                         <field  name="name"/>
                         <field name="department"/>
                         <field  name="date"/>
@@ -231,7 +279,7 @@
     </record>
 
     <record id="action_position_request" model="ir.actions.act_window">
-            <field name="name">Position Request</field>
+            <field name="name">New Position Request</field>
             <field name="res_model">position.request</field>
             <field name="view_mode">tree,form</field>
     </record>

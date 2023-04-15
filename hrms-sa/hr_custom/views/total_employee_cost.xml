@@ -5,6 +5,22 @@
       <field name="arch" type="xml">
         <form  class="o_sale_order">
             <header>
+                 <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight" groups="hr.group_hr_manager" />
+
+                <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="hr_custom.group_vp"/>
+                <button name="waiting_review" type="object" string="Review"
+                                states="waiting_review" class="oe_highlight"  groups="hr_custom.group_hrd_manager"/>
+                <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="hr_custom.group_gm"/>
+                        
+
+                <button name="reject" type="object" string="Reject" states="review,waiting_app,waiting_review"
+                                 />
+                <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
             </header>
             <sheet>
                 <div class="oe_title">
@@ -22,7 +38,6 @@
                 </group>
                 <notebook>
                     <page string="Lines" >
-                    <group >
                         <field name="lines_ids">
                             <tree editable="bottom">
                                 <field name="item" />
@@ -32,7 +47,6 @@
                             </tree>
                            
                         </field>
-                    </group>
                   
                     </page>
                     <page string="One Off" >
@@ -53,11 +67,11 @@
                     </page>
                 </notebook>
             </sheet>
-            <!-- <div class="oe_chatter">
+            <div class="oe_chatter">
                 <field name="message_follower_ids"/>
                 <field name="activity_ids"/>
                 <field name="message_ids"/>
-            </div> -->
+            </div>
             </form>
       </field>
     </record>

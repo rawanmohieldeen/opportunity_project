@@ -12,133 +12,144 @@
             <field name="binding_type">report</field>
         </record>
         <template id="manpower_planing_temp">
-            <t t-call="web.external_layout">
-                <t t-call="web.basic_layout">
-                    <div class="page">
-
-                        <table style="width:100%" class="table table-bordered">
-                            <t t-foreach="docs" t-as="o">
-
-                                <tr>
-                                    <th>Form No</th>
-                                    <td>
-                                        <strong>/HR/Form 003</strong>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <th>Form Title</th>
-                                    <td>
-                                        <strong>Manpower Planning Form</strong>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <th></th>
-                                    <td></td>
-
-                                </tr>
-                            </t>
-                        </table>
-                        <table style="width:100%" class="table table-bordered">
-                            <caption>Annual Departmental Manpower Planning</caption>
-                            <t t-foreach="docs" t-as="o">
-
-                                <tr>
-                                    <td>Reference Number
-                                        <span t-field="o.name"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Department:
-                                        <span t-field="o.department"/>
-                                    </td>
-
-                                </tr>
-                            </t>
-                        </table>
-                        <table style="width:100%" class="table table-bordered">
-                            <caption>For New Positions, submit “New Position Request Form”, Job Descriptions and any
-                                other relevant supporting documentation
-                                # Provide relevant supporting justification
-                            </caption>
+           <t t-call="web.basic_layout">
+                <div class="page">
+                    <!-- <table style="width:100%" class="table table-bordered">
+                        <t t-foreach="docs" t-as="o">
+                            <tr style="border: 1px solid black !important;">
+                                <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                                <td width="50%" style="border: 1px solid black !important;">
+                                    /HR/Form 003
+                                </td>
+                            </tr>
+                            <tr style="border: 1px solid black !important;">
+                                <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                                <td width="50%" style="border: 1px solid black !important;">
+                                    Manpower Planning Form
+                                </td>
+                            </tr>
+                        </t>
+                    </table> -->
+                    <table style="width:100%" class="table table-bordered">
+                        <t t-foreach="docs" t-as="o">
 
                             <tr>
-
-                                <td>Position</td>
-                                <td>Start Date</td>
-                                <td>Promote</td>
-                                <td>Transfer</td>
-                                <td>Replacement</td>
-                                <td>Additional</td>
-                                <td>Retrench</td>
-                                <td>Total</td>
-
-                            </tr>
-                            <t t-foreach="o.lines_ids" t-as="lin">
-                                <tr>
-                                    <td>
-                                        <span t-field="lin.position_title"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="lin.date"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="lin.promote"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="lin.transfer"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="lin.replacement"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="lin.additional"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="lin.retrench"/>
-                                    </td>
-                                    <td>
-                                        <span t-esc="lin.total"/>
-                                    </td>
-                                </tr>
-                            </t>
-                        </table>
-                        <p>Comments:</p>
-                        <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
-                            <t t-foreach="o.lines_ids" t-as="com">
-                                <span t-field="com.comments"/>
-                                <tr>
-                                </tr>
-                                <tr></tr>
-                            </t>
-                        </table>
-                        <table class="table table-bordered">
-                            <t t-foreach="docs" t-as="o">
-                            <tr>
-                                <td>Initiated by:</td>
-
-                                <td>Reviewed by:</td>
-                                <td>Approved by:</td>
-
+                                <td>Reference Number
+                                    <span t-field="o.name"/>
+                                </td>
                             </tr>
                             <tr>
-                                <td style="padding: 30px;">Department Manager’s Signature</td>
-                                <td style="padding-top: 10px;">HR Manager’s Signature</td>
-                                <td>VP’s Signature</td>
-
+                                <td>Department:
+                                    <span t-field="o.department"/>
+                                </td>
+                                <td colspan="7" rowspan="1">Date
+                                    <span t-field="o.date"/>
+                                </td>
                             </tr>
+                        </t>
+                    </table>
+                    <table width="100%" cellpadding="10" cellspacing="10" class="table table-bordered">
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="8">
+                                Annual Departmental Manpower Planning
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="15%" style="border: 1px solid black !important;">Position</td>
+                            <td width="15%" style="border: 1px solid black !important;">Start Date</td>
+                            <td width="15%" style="border: 1px solid black !important;">Promote</td>
+                            <td width="15%" style="border: 1px solid black !important;">Transfer</td>
+                            <td width="10%" style="border: 1px solid black !important;">Replacement</td>
+                            <td width="10%" style="border: 1px solid black !important;">Additional</td>
+                            <td width="10%" style="border: 1px solid black !important;">Retrench</td>
+                            <td width="10%" style="border: 1px solid black !important;">Total</td>
+
+                        </tr>
+                        <t t-foreach="o.lines_ids" t-as="lin">
+                            <tr style="border: 1px solid black !important;">
+                                <td width="15%">
+                                    <span t-field="lin.position_title"/>
+                                </td>
+                                <td width="15%">
+                                    <span t-field="lin.date"/>
+                                </td>
+                                <td width="15%">
+                                    <span t-field="lin.promote"/>
+                                </td>
+                                <td width="15%">
+                                    <span t-field="lin.transfer"/>
+                                </td>
+                                <td width="10%">
+                                    <span t-field="lin.replacement"/>
+                                </td>
+                                <td width="10%">
+                                    <span t-field="lin.additional"/>
+                                </td>
+                                <td width="10%">
+                                    <span t-field="lin.retrench"/>
+                                </td>
+                                <td width="10%">
+                                    <span t-esc="lin.total"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+
+                    <p>* For New Positions, submit “New Position Request Form”, Job Descriptions and any
+                        other relevant supporting documentation
+                    </p>
+                    <p># Provide relevant supporting justification</p>
+                    <p>Comments:</p>
+                    <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
+                            
                             <tr>
-                                <td>Date<span t-field="o.date"/> </td>
-                                <td>Date:<span t-field="o.date"/></td>
-                                <td>Date:<span t-field="o.date"/></td>
-
+                                <span t-field="o.comments"/>
                             </tr>
-                            </t>
-                        </table>
+                            <tr></tr>
+                    </table>
+                    <table width="100%" cellpadding="2" cellspacing="4" style="border: 2px  black  double !important;">
+                        <tr style="border: 1px solid black double !important;">
+                            <td width="35%" style="border: 1px solid black !important;">Initiated by:</td>
+                            <td width="35%" style="border: 1px solid black !important;">Reviewed by:</td>
+                            <td width="30%" style="border: 1px solid black !important;">Approved by:</td>
+                        </tr>
+                        <tr style="border: 1px solid black double !important;">
+                            <td rowspan="4" style="border: 1px solid black !important;">
+                                Department Manager’s Signature
+                                <br/>
+                                <span t-field="o.create_uid.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                            <td rowspan="4" style="border: 1px solid black  !important;">
+                                HR Manager’s Signature
+                                <br/>
+                                <span t-field="o.reciewer_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                            <td rowspan="4" style="border: 1px solid black !important;">
+                                VP’s Signature
+                                <br/>
+                                <span t-field="o.gm_user.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date:
+                            </td>
+                        </tr>
 
-                    </div>
-                </t>
+                    </table>
+
+                 
+                </div>
             </t>
         </template>
     </data>

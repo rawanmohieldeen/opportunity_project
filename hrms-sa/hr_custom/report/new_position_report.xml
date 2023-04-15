@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="new_position_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <h4  class="text-center">New Position Request Form</h4><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="3">
+                                <strong>
+                                    Reference Number
+                                </strong>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="5">
+                                <span t-esc="object.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="3">
+                                <strong>
+                                    Originating Department
+                                </strong>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="5">
+                                <span t-esc="object.department.name"></span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Name for New Position</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.new_position"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Reports to</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.reports_to.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                   Justification for New Position:
+                                </strong>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="8">
+                                <span t-esc="object.justification_for_new_position"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="3">
+                                <strong>
+                                    Proposed Grade
+                                </strong>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="5">
+                                <span t-esc="object.proposed_grade"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="3">
+                                <strong>
+                                   Proposed Salary Range
+                                </strong>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="5">
+                                <span t-esc="object.proposed_min_salary"></span> -  <span t-esc="object.proposed_max_salary"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                   Broad Roles and Responsibilities for New Position:
+                                </strong>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="8">
+                                <span t-esc="object.broad_roles_responsibilities"></span>
+                                <p><small>(Attach envisaged Job Description detailing functions of the position on day to day basis, and Job Requirement including Qualification, Experience, Skill Sets)</small></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                   Comments:
+                                </strong>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="8">
+                                <span t-esc="object.comments"></span>
+                               
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            Reviewed by:
+                            
+                            </td>
+
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Reviewed by:
+                            
+                            </td>
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                Approved by:
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                VP<br/>
+                            <span t-field="object.reciewer_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                HRD<br/>
+                            <span t-field="object.reciewer_id2.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                GM<br/>
+                                <span t-field="object.gm_user.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            
+                        </tr>
+
+
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="new_position_report"
+        model="position.request"
+        string="Print New Position Request"
+        report_type="qweb-pdf"
+        name="hr_custom.new_position_template"
+        file="hr_custom.new_position_template"
+    />
+</odoo>

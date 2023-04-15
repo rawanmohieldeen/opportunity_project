@@ -4,25 +4,10 @@
 
         <template id="total_emp_cost_temp">
             <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="o">
+
                 <div class="page">
-                    <table style="width:100%" class="table table-bordered">
-                        <t t-foreach="docs" t-as="o">
-
-                            <tr style="border: 1px solid black !important;">
-                                <td width="50%" style="border: 1px solid black !important;">Form No</td>
-                                <td width="50%" style="border: 1px solid black !important;">
-                                    /HR/Form 010
-                                </td>
-
-                            </tr>
-                            <tr style="border: 1px solid black !important;">
-                                <td width="50%" style="border: 1px solid black !important;">Form Title</td>
-                                <td width="50%" style="border: 1px solid black !important;">
-                                    Total Employee Cost (TEC)
-                                </td>
-                            </tr>
-                        </t>
-                    </table>
+                    
                     <table width="100%" cellpadding="10" cellspacing="10"
                            style="border: 2px  black  double !important;">
                         <tr style="border: 1px solid black !important;">
@@ -40,12 +25,12 @@
                         </tr>
                         <tr style="border: 1px solid black !important;">
                             <td width="25%" style="border: 1px solid black !important;">Status</td>
-                            <td width="25%"></td>
+                            <td width="25%"><t t-esc="o.state"/></td>
                         </tr>
                         <tr style="border: 1px solid black !important;">
                             <td width="25%" style="border: 1px solid black !important;">Commencement Date</td>
                             <td width="25%">
-                                <t t-esc="o.comments"/>
+                                <t t-esc="o.commencement_date"/>
                             </td>
                         </tr>
                         <br/>
@@ -126,14 +111,16 @@
 
                         <tr style="border: 1px solid black double !important;">
                             <td rowspan="4" style="border: 1px solid black !important;">
-                                HR Manager’s Signature
+                                HR Manager’s Signature<br/>
+                                <span t-field="o.create_uid.name"/>
                                 <br/>
                                 <br/>
                                 <br/>
                                 Date:
                             </td>
                             <td rowspan="4" style="border: 1px solid black  !important;">
-                                VP’s Signature
+                                VP’s Signature<br/>
+                                <span t-field="o.reciewer_id.name"/>
                                 <br/>
                                 <br/>
                                 <br/>
@@ -142,14 +129,16 @@
                         </tr>
                         <tr style="border: 1px solid black double !important;">
                             <td rowspan="4" style="border: 1px solid black !important;">
-                                HRD’s Signature
+                                HRD’s Signature<br/>
+                                <span t-field="o.reciewer_id2.name"/>
                                 <br/>
                                 <br/>
                                 <br/>
                                 Date:
                             </td>
                             <td rowspan="4" style="border: 1px solid black  !important;">
-                                GM’s Signature
+                                GM’s Signature<br/>
+                                <span t-field="o.gm_user.name"/>
                                 <br/>
                                 <br/>
                                 <br/>
@@ -161,6 +150,7 @@
 
                 </div>
             </t>
+        </t>
         </template>
     </data>
 </odoo>

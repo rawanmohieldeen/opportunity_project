@@ -13,10 +13,11 @@ class AppraisalPerformance(models.Model):
     deparment_id = fields.Many2one('hr.department', string='Deparment', required=True,
                                    related='employee_id.department_id', copy=False)
     job_id = fields.Many2one('hr.job', string='Job Title', related='employee_id.job_id')
-    # join_date = fields.Char(string='Date of Join',related='employee_id.job_id',track_visibility='onchange')
+    review_period = fields.Date('Review Date')
+    join_date = fields.Date(string='Date of Join',related='employee_id.contract_id.date_start')
     appraiser_employee_id = fields.Many2one('hr.employee', string='Appraiser', required=True, copy=False,
                                             track_visibility='onchange')
-    appraiser_job_id = fields.Many2one('hr.job', string='Appraiser Job Title', related='appraiser_employee_id.job_id')
+    appraiser_job_id = fields.Many2one('hr.job', string='Appraiser Job Title', related='appraiser_employee_id.job_id',readonly=True)
     average_score_a = fields.Float('Average Score', compute='_compute_score_a', required=True, )
     average_score_b = fields.Float('Average Score', compute='_compute_score_b', required=True, )
 

@@ -10,7 +10,8 @@ class AppraisalPerformanceCounselling(models.Model):
     employee_id = fields.Many2one('hr.employee',string='Employee',required=True,copy=False,track_visibility='onchange')
     deparment_id = fields.Many2one('hr.department',string='Deparment',required=True,related='employee_id.department_id',copy=False)
     job_id = fields.Many2one('hr.job',string='Job Title',related='employee_id.job_id')
-    # join_date = fields.Char(string='Date of Join',related='employee_id.job_id',track_visibility='onchange')
+    review_period = fields.Date('Review Date')
+    join_date = fields.Date(string='Date of Join',related='employee_id.contract_id.date_start')
     appraiser_employee_id = fields.Many2one('hr.employee',string='Appraiser',required=True,copy=False,track_visibility='onchange')
     appraiser_job_id = fields.Many2one('hr.job',string='Appraiser Job Title',readonly=True,related='appraiser_employee_id.job_id')
     

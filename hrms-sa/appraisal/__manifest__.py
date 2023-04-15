@@ -5,7 +5,7 @@
     'category': 'HR',
     'version': '16',
 
-    'depends': ['base','hr'],
+    'depends': ['base','hr','hr_custom'],
 
 
    

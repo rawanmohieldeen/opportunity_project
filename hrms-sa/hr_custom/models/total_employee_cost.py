@@ -8,6 +8,8 @@ from odoo import models, fields, api,_
 
 class TotalEmployeeCost(models.Model):
     _name = 'total.employee.cost'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
     name = fields.Char(string="Reference Number", required=True,
                           readonly=True, default=lambda self: _('New'))
     company_id = fields.Many2one('res.company', store=True, copy=False,
@@ -17,7 +19,7 @@ class TotalEmployeeCost(models.Model):
                                  related='company_id.currency_id',
                                  default=lambda
                                  self: self.env.user.company_id.currency_id.id)
-    employee_name = fields.Many2one('hr.applicant',string="Employee Name",required=True)
+    employee_name = fields.Many2one('hr.employee',string="Employee Name",required=True)
     job_title = fields.Many2one('hr.job',string="Job Title",required=True)
     commencement_date = fields.Date(string="Commencement Date")
 
@@ -39,7 +41,38 @@ class TotalEmployeeCost(models.Model):
        res = super(TotalEmployeeCost, self).create(vals)
        return res
 
+    reciewer_id = fields.Many2one('res.users',string="VP")
+    reciewer_id2 = fields.Many2one('res.users',string="HRD")
+    gm_user = fields.Many2one('res.users',string='GM')
 
+    state = fields.Selection([
+            ('draft', 'Draft'),
+            ('review', 'Waiting Review'),
+            ('waiting_review','Waiting Review'),
+            ('waitin_app', 'Waiting Approve'),
+            ('approved','Approved'),
+            ('reject','Rejected'),
+        ], string='Status',default="draft", index=True, tracking=True)
+    def unlink(self):
+        if self.state == 'approved':
+            raise UserError('You cannot delete approved request')
+        else:
+            return super().unlink(self)
+    def submit(self):
+        self.state = 'review'
+    def review(self):
+        self.state = 'waiting_review'
+        self.reciewer_id = self.env.user.id
+    def waiting_review(self):
+        self.state = 'waitin_app'
+        self.reciewer_id2 = self.env.user.id
+    def waitin_app(self):
+        self.state = 'approved'
+        self.gm_user = self.env.user.id
+    def reject(self):
+        self.state = 'reject'
+    def set_draft(self):
+        self.state = 'draft'
 class TotalEmployeeCostLine(models.Model):
     _name = 'total.employee.cost.line'
     company_id = fields.Many2one('res.company', store=True, copy=False,

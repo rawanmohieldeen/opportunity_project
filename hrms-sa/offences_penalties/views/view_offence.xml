@@ -63,7 +63,7 @@
     </record>
 
     <menuitem id="menu_offence_main" name="Offences and Penalties" parent="hr.menu_hr_root" sequence="3"/>
-    <menuitem id="offence_sub_menu" action="action_view_offence" name=" "
+    <menuitem id="offence_sub_menu" action="action_view_offence" name="Offence Action"
               parent="offences_penalties.menu_offence_main"/>
 
 
