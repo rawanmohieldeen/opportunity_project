@@ -41,15 +41,7 @@
             <field name="binding_model_id" ref="model_policy_request"/>
             <field name="binding_type">report</field>
         </record>
-        <record id="emp_application_request" model="ir.actions.report">
-            <field name="name">Employee Application Reqeust</field>
-            <field name="model">hr.applicant</field>
-            <field name="report_type">qweb-html</field>
-            <field name="report_name">hr_custom.emp_app_req_temp</field>
-            <field name="report_file">hr_custom.emp_app_req_temp</field>
-            <field name="binding_model_id" ref="model_hr_applicant"/>
-            <field name="binding_type">report</field>
-        </record>
+        
         <record id="total_employee_cost" model="ir.actions.report">
             <field name="name">Total Employee Cost</field>
             <field name="model">total.employee.cost</field>

@@ -19,6 +19,7 @@
         'security/ir.model.access.csv',
         'data/sequence.xml',
         # 'report/payroll_authorization_report.xml',
+        'report/employee_application_report.xml',
         'report/manpower_planing_report.xml',
         'report/policy_request_report.xml',
         'report/exit_checklist_template.xml',
