@@ -12,8 +12,9 @@
     <template id="policy_req_temp">
         <t t-call="web.external_layout">
             <t t-call="web.basic_layout">
+                <t t-foreach="docs" t-as="o">
                 <div class="page">
-                    <table style="width:100%" class="table table-bordered">
+                    <!-- <table style="width:100%" class="table table-bordered">
                         <t t-foreach="docs" t-as="o">
                             <tr>
                                 <th>Form No</th>
@@ -34,64 +35,252 @@
 
                             </tr>
                         </t>
-                    </table>
+                    </table> -->
                     <table style="width:100%" class="table table-bordered">
-                        <caption>Description of the issue:</caption>
-                        <t t-foreach="docs" t-as="o">
+                        
+                        
                             <tr>
-                                <td>Reference Number</td>
-                                <td>
+                                <td colspan="2">Reference Number</td>
+                                <td colspan="4">
                                     <span t-field="o.name"/>
                                 </td>
 
                             </tr>
                             <tr>
-                                <td>
+                                <td colspan="2">
                                     Chapter reference
                                 </td>
-                                <td>
+                                <td colspan="4">
                                     <span t-field="o.chapter_reference"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Subject reference</td>
-                                <td>
+                                <td colspan="2">Subject reference</td>
+                                <td colspan="4">
                                     <span t-field="o.subject_reference"/>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Issue with</td>
-                                <td>
-                                    <span t-field="o.issue_with"/>
+                                <td colspan="2">Issue with</td>
+                                <td colspan="2">
+                                    <t t-if="o.issue_with == 'policy'">
+                                        <input type="checkbox" checked="true"/>Policy<br/>
+                                    </t>
+                                    <t t-if="o.issue_with != 'policy'">
+                                        <input type="checkbox"/>Policy<br/>
+                                    </t>
+                                </td>
+                                <td colspan="2">
+                                    <t t-if="o.issue_with == 'procedure'">
+                                        <input type="checkbox" checked="true"/>Procedure<br/>
+                                    </t>
+                                    <t t-if="o.issue_with != 'procedure'">
+                                        <input type="checkbox"/>Procedure<br/>
+                                    </t>
                                 </td>
                             </tr>
-                        </t>
+                            <tr>
+                                <td colspan="6">
+                                    <span>Description of the issue:</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6">
+                                    <span t-field="o.description"/>
+                                </td>
+                            </tr>
                     </table>
                     <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
-                        <caption>Suggested solution:</caption>
-                        <t t-foreach="docs" t-as="o">
+                        <tr >   
                             <td>
+                                <span>Suggested solution:</span>
+                            </td>
+                        </tr>
+                        <tr >   
+                            <td>
+                                <span t-field="o.suggested_solution"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
+                        <tr >   
+                            <td colspan="6">
+                                <span>Rationale for Change:</span>
+                            </td>
+                        </tr>
+                        <tr >   
+                            <td colspan="6">
+                                <span t-field="o.rationale_for_hange"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table cellpadding="2" cellspacing="4" class="table table-bordered" width="100%">
+                        <tr >   
+                            <td colspan="6">
+                                <span>Comments</span>
+                            </td>
+                        </tr>
+                        <tr >   
+                            <td colspan="6">
                                 <span t-field="o.comments"/>
                             </td>
-                            <tr>
-                            </tr>
-                            <tr></tr>
-                        </t>
-                    </table>
-                    <table class="table table-bordered" width="100%">
-                        <t t-foreach="docs" t-as="o">
-
-                        <td></td>
-
-                        <center><span t-field="o.suggested_solution"/></center>
-                        <tr>
-                            <td></td>
-
-
                         </tr>
-                        </t>
+                        <tr>
+
+
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Initiated by:</strong><br/>
+                            HR Manager’s Signature<br/>
+                            </td>
+
+                            
+                             <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Reviewed by:</strong><br/>
+                                VP’s Signature
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Reviewed by:</strong><br/>
+                                HRD’s Signature
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Reviewed by:</strong><br/>
+                                GM’s Signature
+
+                            </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td colspan="1"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="o.create_uid.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                            
+                             <td colspan="1"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="o.reciewer_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="o.reciewer_id2.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="o.gm_user.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            
+                        </tr>
+                        <tr >   
+                            <td colspan="6">
+                                <span>UPDATE CONTROL</span>
+                            </td>
+                        </tr>
+                        <tr >   
+                            <td colspan="1">
+                                <span>Update No</span>
+                            </td>
+                            <td colspan="1">
+                               <span t-field="o.update_no"/>
+                            </td>
+                            <td colspan="1">
+                                <span>Update Date</span>
+                            </td>
+                            <td colspan="1">
+                               <span t-field="o.update_date"/>
+                            </td>
+                            <td colspan="1">
+                                <span>Section No.</span>
+                            </td>
+                            <td colspan="1">
+                                <span t-field="o.section_no"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <span>Added</span>
+                            </td>
+                            <td colspan="1">
+                               <t t-if="o.policy_procedure == 'added'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                    </t>
+                                    <t t-if="o.policy_procedure != 'added'">
+                                        <input type="checkbox"/><br/>
+                                    </t>
+                            </td>
+                            <td colspan="1">
+                                <span>Amended</span>
+                            </td>
+                            <td colspan="1">
+                               <t t-if="o.policy_procedure == 'amended'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                    </t>
+                                    <t t-if="o.policy_procedure != 'amended'">
+                                        <input type="checkbox"/><br/>
+                                    </t>
+                            </td>
+                            <td colspan="1">
+                                <span>Deleted</span>
+                            </td>
+                            <td colspan="1">
+                                <t t-if="o.policy_procedure == 'deleted'">
+                                        <input type="checkbox" checked="true"/><br/>
+                                    </t>
+                                    <t t-if="o.policy_procedure != 'deleted'">
+                                        <input type="checkbox"/><br/>
+                                    </t>
+                            </td> 
+                               
+                            </tr>
+                            <tr >   
+                                <td colspan="6">
+                                    <span>Human Resource Manager Signature</span>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    <br/>
+                                    Date:
+                                </td>
+                            </tr>
+
+
                     </table>
+
+                    
                 </div>
+            </t>
             </t>
         </t>
     </template>

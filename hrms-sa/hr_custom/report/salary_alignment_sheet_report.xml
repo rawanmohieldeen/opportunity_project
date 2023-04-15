@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="salary_alignment_sheet_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <h4  class="text-center">Salary Alignment Sheet</h4><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    SELECTED CANDIDATE DETAILS
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Candidate Name</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.candidate_name.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Age</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.age"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Highest Qualification</span>
+                            </td>
+                           
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <t t-if="object.highest_qualification == 'bachelor_degree'">
+                                    <span>Bachelor Degree</span>
+                                </t>
+                                <t t-if="object.highest_qualification == 'master_degree'">
+                                    <span>Master Degree</span>
+                                </t>
+                                <t t-if="object.highest_qualification == 'doctorate_degree'">
+                                    <span>Doctorate Degree</span>
+                                </t>
+                                
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Year of Passing</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.year_of_passing"></span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Current Designation</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.current_designation"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Reporting To</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.reporting_to"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Current Employer</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.current_employer"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Total Experience</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.total_experience"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Proposed Position</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.proposed_position.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2">
+                                <span>Proposed Grade</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.proposed_grade.name"></span>
+                            </td>
+                        </tr>         
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    COMPENSATION OFFER DETAILS (All figures in SR)
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="2" rowspan="2">
+                                Package
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                A
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                B
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                C
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                (C-A)/A
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                (C-B)/B
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                (B-A)/A
+                            </td>
+
+                        </tr>   
+                        <tr>
+
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                Current
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                Expected
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                Proposed
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                % Diff.
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                % Diff.
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                % Diff.
+                            </td>
+
+                        </tr>
+                        <t t-foreach="object.compensation_offer_details_lines_ids" t-as="line">
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="2" >
+                                    <span t-esc="line.package.name"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                    <span t-esc="line.current"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                    <span t-esc="line.expected"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                    <span t-esc="line.proposed"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                    <span t-esc="line.proposed_to_current"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                    <span t-esc="line.proposed_to_expected"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                    <span t-esc="line.expected_to_current"></span>
+                                </td>
+
+                            </tr>  
+                        </t>  
+                        <tr>
+                             <td style="height: 10px;border:1px solid gray;width:20%" colspan="7" >
+                                  <strong>  Total Gross Salary (per month) D</strong>
+                                </td>
+                                 <td style="height: 10px;border:1px solid gray;width:20%" colspan="1" >
+                                    <span t-esc="object.total_gross_salary"></span>
+                                </td>
+
+                        </tr>
+                        <tr>
+                             <td style="height: 10px;border:1px solid gray;width:20%" colspan="2" >
+                                   Comparable incumbent in KMC Saudi
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                   Grade
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                    E "Gross (pm)"
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                    (D_E)/E "% Diff."
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                   Comments
+                                </td>
+                        </tr>
+                         <t t-foreach="object.salary_line" t-as="line">
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="2" >
+                                    <span t-esc="line.name"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                    <span t-esc="line.grade.name"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="1">
+                                    <span t-esc="line.gross"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="1">
+                                    <span t-esc="line.different"></span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                    <span t-esc="line.comments"></span>
+                                </td>
+                                
+
+                            </tr>  
+                        </t> 
+                        <tr>
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <strong>Comments: </strong>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            
+                            <td colspan="8"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.comments"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>Initiated by:</strong><br/>
+                            HR Manager’s Signature<br/>
+                            </td>
+
+                            
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Reviewed by:</strong><br/>
+                                VP’s Signature
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Reviewed by:</strong><br/>
+                                HRD’s Signature
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>Reviewed by:</strong><br/>
+                                GM’s Signature
+
+                            </td>
+                            
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                <span t-field="object.create_uid.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+
+                            
+                             <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.reciewer_id.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.reciewer_id2.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <span t-field="object.gm_user.name"/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                Date: 
+                            </td>
+                            
+                        </tr>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="salary_alignment_sheet_report"
+        model="salary.alignment.sheet"
+        string="Salary Alignment Sheet"
+        report_type="qweb-pdf"
+        name="hr_custom.salary_alignment_sheet_template"
+        file="hr_custom.salary_alignment_sheet_template"
+    />
+</odoo>

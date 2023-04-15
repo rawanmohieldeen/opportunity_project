@@ -8,11 +8,14 @@ from odoo import models, fields, api,_
 
 class AnnualDepartmentalManpowerPlanning(models.Model):
     _name = 'annual.departmental.manpower.planning'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
     name = fields.Char(string="Reference Number", required=True,
                           readonly=True, default=lambda self: _('New'))
     department = fields.Many2one('hr.department',string="Department",required=True)
     date = fields.Date(string="Date")
     lines_ids = fields.One2many('annual.departmental.manpower.planning.line','plan_id')
+    comments = fields.Char(string="Comments")
 
     @api.model
     def create(self, vals):
@@ -22,12 +25,43 @@ class AnnualDepartmentalManpowerPlanning(models.Model):
        res = super(AnnualDepartmentalManpowerPlanning, self).create(vals)
        return res
 
+    reciewer_id = fields.Many2one('res.users',string="HR Manager")
+    reciewer_id2 = fields.Many2one('res.users',string="HRD")
+    gm_user = fields.Many2one('res.users',string='VP')
+
+    state = fields.Selection([
+            ('draft', 'Draft'),
+            ('review', 'Waiting Review'),
+            ('waitin_app', 'Waiting Approve'),
+            ('approved','Approved'),
+            ('reject','Rejected'),
+        ], string='Status',default="draft", index=True, tracking=True)
+    def unlink(self):
+        if self.state == 'approved':
+            raise UserError('You cannot delete approved request')
+        else:
+            return super().unlink(self)
+    def submit(self):
+        self.state = 'review'
+    def review(self):
+        self.state = 'waitin_app'
+        self.reciewer_id = self.env.user.id
+    # def waiting_review(self):
+    #     self.state = 'waitin_app'
+    #     self.reciewer_id2 = self.env.user.id
+    def waitin_app(self):
+        self.state = 'approved'
+        self.gm_user = self.env.user.id
+    def reject(self):
+        self.state = 'reject'
+    def set_draft(self):
+        self.state = 'draft'
 
 class AnnualDepartmentalManpowerPlanningLine(models.Model):
     _name = 'annual.departmental.manpower.planning.line'
     plan_id = fields.Many2one('annual.departmental.manpower.planning')
     position_title = fields.Many2one('hr.job',string="Position Title",required=True)
-    department = fields.Many2one('hr.department',string="Department",required=True)
+    department = fields.Many2one('hr.department',string="Department",required=True,related="plan_id.department")
     date = fields.Date(string="Date")
     promote = fields.Integer(string="Promote",required=True)
     transfer = fields.Integer(string="Transfer")
@@ -55,11 +89,15 @@ class AnnualDepartmentalManpowerPlanningLine(models.Model):
 
 class AnnualManpowerPlanning(models.Model):
     _name = 'annual.manpower.planning'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
     name = fields.Char(string="Reference Number", required=True,
                           readonly=True, default=lambda self: _('New'))
     department = fields.Many2one('hr.department',string="Department",required=True)
     date = fields.Date(string="Date")
     lines_ids = fields.One2many('annual.manpower.planning.line','plan_id')
+    comments = fields.Char(string="Comments")
+    location = fields.Char('Location')
 
     @api.model
     def create(self, vals):
@@ -68,7 +106,37 @@ class AnnualManpowerPlanning(models.Model):
                'annual.manpower.planning') or _('New')
        res = super(AnnualManpowerPlanning, self).create(vals)
        return res
+    reciewer_id = fields.Many2one('res.users',string="VP")
+    reciewer_id2 = fields.Many2one('res.users',string="HRD")
+    gm_user = fields.Many2one('res.users',string='GM')
 
+    state = fields.Selection([
+            ('draft', 'Draft'),
+            ('review', 'Waiting Review'),
+            ('waitin_app', 'Waiting Approve'),
+            ('approved','Approved'),
+            ('reject','Rejected'),
+        ], string='Status',default="draft", index=True, tracking=True)
+    def unlink(self):
+        if self.state == 'approved':
+            raise UserError('You cannot delete approved request')
+        else:
+            return super().unlink(self)
+    def submit(self):
+        self.state = 'review'
+    def review(self):
+        self.state = 'waiting_review'
+        self.reciewer_id = self.env.user.id
+    def waiting_review(self):
+        self.state = 'waitin_app'
+        self.reciewer_id2 = self.env.user.id
+    def waitin_app(self):
+        self.state = 'approved'
+        self.gm_user = self.env.user.id
+    def reject(self):
+        self.state = 'reject'
+    def set_draft(self):
+        self.state = 'draft'
 
 class AnnualManpowerPlanningLine(models.Model):
     _name = 'annual.manpower.planning.line'
@@ -102,6 +170,8 @@ class AnnualManpowerPlanningLine(models.Model):
 
 class PositionRequest(models.Model):
     _name = 'position.request'
+    _inherit = ['mail.thread', 'mail.activity.mixin']
+
     name = fields.Char(string="Reference Number", required=True,
                           readonly=True, default=lambda self: _('New'))
     company_id = fields.Many2one('res.company', store=True, copy=False,
@@ -136,4 +206,34 @@ class PositionRequest(models.Model):
        res = super(PositionRequest, self).create(vals)
        return res
 
+    reciewer_id = fields.Many2one('res.users',string="VP")
+    reciewer_id2 = fields.Many2one('res.users',string="HRD")
+    gm_user = fields.Many2one('res.users',string='GM')
 
+    state = fields.Selection([
+            ('draft', 'Draft'),
+            ('review', 'Waiting Review'),
+            ('waitin_app', 'Waiting Approve'),
+            ('approved','Approved'),
+            ('reject','Rejected'),
+        ], string='Status',default="draft", index=True, tracking=True)
+    def unlink(self):
+        if self.state == 'approved':
+            raise UserError('You cannot delete approved request')
+        else:
+            return super().unlink(self)
+    def submit(self):
+        self.state = 'review'
+    def review(self):
+        self.state = 'waiting_review'
+        self.reciewer_id = self.env.user.id
+    def waiting_review(self):
+        self.state = 'waitin_app'
+        self.reciewer_id2 = self.env.user.id
+    def waitin_app(self):
+        self.state = 'approved'
+        self.gm_user = self.env.user.id
+    def reject(self):
+        self.state = 'reject'
+    def set_draft(self):
+        self.state = 'draft'

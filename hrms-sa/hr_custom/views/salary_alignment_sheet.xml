@@ -5,6 +5,23 @@
       <field name="arch" type="xml">
         <form  class="o_sale_order">
             <header>
+                 <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight" groups="hr.group_hr_manager" />
+
+                <button name="review" type="object" string="Review"
+                                states="review" class="oe_highlight" groups="hr_custom.group_vp"/>
+                <button name="waiting_review" type="object" string="Review"
+                                states="waiting_review" class="oe_highlight"  groups="hr_custom.group_hrd_manager"/>
+                <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="hr_custom.group_gm"/>
+                        
+
+                <button name="reject" type="object" string="Reject" states="review,waiting_app"
+                                 />
+                <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                         
+                <field name="state" widget="statusbar" statusbar_visible="draft,waiting_app,approved"/>
+
             </header>
             <sheet>
                 <div class="oe_title">
@@ -14,24 +31,24 @@
                 </div>
                 <group >
                     <group >
-                        <field name="candidate_name"/>
-                        <field  name="age"/>
-                        <field  name="highest_qualification"/>
-                        <field  name="year_of_passing"/>
-                        <field  name="current_designation"/>
-                        <field  name="reporting_to"/>
-                        <field  name="current_employer"/>
-                        <field  name="total_experience"/>
-                        <field  name="proposed_position"/>
-                        <field  name="proposed_grade"/>
-                        <field  name="current_designation"/>
+                        <field name="candidate_name" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="age" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="highest_qualification" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="year_of_passing" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="current_designation" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="reporting_to" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="current_employer" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="total_experience" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="proposed_position" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="proposed_grade" attrs="{'readonly':[('state','=','approved')]}"/>
+                        <field  name="current_designation" attrs="{'readonly':[('state','=','approved')]}"/>
                     </group>
                     
                 </group>
                 <notebook>
 
                     <page string="Compensation Offer Details" >
-                        <field name="compensation_offer_details_lines_ids">
+                        <field name="compensation_offer_details_lines_ids" attrs="{'readonly':[('state','=','approved')]}">
                             <tree editable="bottom">
                                 <field name="package" />
                                 <field name="current" />
@@ -44,25 +61,39 @@
                             </tree>
                            
                         </field>
+                        <group>
+                            <field name="total_gross_salary"/>
+                        </group>
                     </page>
 
-                    <page string="Comparable incumben" >
-                        <field name="incumbent"/>
-                        <field name="grade"/>
-                        <field name="gross"/>
-                        <field name="gross_to_incumbent"/>
-                        <field name="comments1"/>
-                    </page>
 
+                    <page string="Comparable incumben" attrs="{'readonly':[('state','=','approved')]}">
+                        <field name="salary_line" attrs="{'readonly':[('state','=','approved')]}">
+                            <tree editable="bottom">
+                                <field name="name" />
+                                <field name="grade" />
+                                <field name="gross" />
+                                <field name="different" />
+                                <field name="comments" />
+                                
+                            </tree>
+                           
+                        </field>
+                    </page>
+                    <page string="Comments" attrs="{'readonly':[('state','=','approved')]}">
+                        <group>
+                            <field name="comments"/>
+                        </group>
+                    </page>
                    
                 </notebook>
-                <field name="comments"/>
+                
             </sheet>
-            <!-- <div class="oe_chatter">
+            <div class="oe_chatter">
                 <field name="message_follower_ids"/>
                 <field name="activity_ids"/>
                 <field name="message_ids"/>
-            </div> -->
+            </div>
             </form>
       </field>
     </record>
@@ -103,7 +134,7 @@
 
 
 
-        <menuitem id="menu_salary_alignment_main" name="Salary Alignment" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2">
+        <menuitem id="menu_salary_alignment_main" name="Salary Alignment" parent="hr_recruitment.menu_hr_recruitment_root" sequence="2" >
             <menuitem id="hr_menu_action_salary_alignment_sheet" action="action_salary_alignment_sheet" sequence="1"/>
         </menuitem>
 

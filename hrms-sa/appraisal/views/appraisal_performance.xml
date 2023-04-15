@@ -20,11 +20,19 @@
                         </h1>
                     </div>
                     <group>
-                        <field name="employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
-                        <field name="deparment_id" options="{'no_open': True, 'no_create': True}"/>
-                        <field name="job_id"  options="{'no_open': True, 'no_create': True}"/>
-                        <field name="appraiser_employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
-                        <field name="appraiser_job_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                        <group>
+                            <field name="employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="deparment_id" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="job_id"  options="{'no_open': True, 'no_create': True}"/>
+                            <field name="join_date" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        <group>
+                            
+                            <field name="appraiser_employee_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="appraiser_job_id" attrs="{'readonly': [('state', '!=', 'draft')]}" options="{'no_open': True, 'no_create': True}"/>
+                            <field name="review_period" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                        
                     </group>
                     <notebook>
                         <page string="Job Specific Objectives of Past 12 Months">
@@ -130,7 +138,7 @@
     </record>
 
     <menuitem name="Appraisal" sequence="7" id="appraisal_root" parent="hr.menu_hr_root"/>
-    <menuitem name="Training Performance" sequence="0" id="appraisal_performance_menu" parent="appraisal_root" action="appraisal_performance_action"/>
+    <menuitem name="Performance Appraisal" sequence="0" id="appraisal_performance_menu" parent="appraisal_root" action="appraisal_performance_action"/>
 
 
 </odoo>

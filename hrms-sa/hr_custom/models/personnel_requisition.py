@@ -17,7 +17,7 @@ class PersonnelRequisition(models.Model):
                                  related='company_id.currency_id',
                                  default=lambda
                                  self: self.env.user.company_id.currency_id.id)
-    company = fields.Many2one('res.partner',string="Comapny",required=True)
+    company = fields.Many2one('res.partner',string="Partner",required=True)
     position_title = fields.Many2one('hr.job',string="Position Title",required=True)
     date_of_request = fields.Date(string="Date of Request",required=True)
     department = fields.Many2one('hr.department',string="Department",required=True)

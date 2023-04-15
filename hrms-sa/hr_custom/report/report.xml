@@ -2,7 +2,7 @@
 <odoo>
     <data>
         <!--report Manpower Annual Departmental manpower planing form-->
-        <record id="report_manpower_department" model="ir.actions.report">
+        <!-- <record id="report_manpower_department" model="ir.actions.report">
             <field name="name">Annual Departmental Manpower</field>
             <field name="model">annual.departmental.manpower.planning</field>
             <field name="report_type">qweb-pdf</field>
@@ -10,17 +10,17 @@
             <field name="report_file">hr_custom.manpower_planing_temp</field>
             <field name="binding_model_id" ref="model_annual_departmental_manpower_planning"/>
             <field name="binding_type">report</field>
-        </record>
+        </record> -->
         <!--Manpower planing form -->
-         <record id="report_manpower_planing_form" model="ir.actions.report">
+        <!--  <record id="report_manpower_planing_annual" model="ir.actions.report">
             <field name="name">Annual Manpower Planing Form</field>
             <field name="model">annual.manpower.planning</field>
             <field name="report_type">qweb-html</field>
-            <field name="report_name">hr_custom.manpower_planing_form_temp</field>
-            <field name="report_file">hr_custom.manpower_planing_form_temp</field>
+            <field name="report_name">hr_custom.annual_manpower_planing_form_temp</field>
+            <field name="report_file">hr_custom.annual_manpower_planing_form_temp</field>
             <field name="binding_model_id" ref="model_annual_manpower_planning"/>
             <field name="binding_type">report</field>
-        </record>
+        </record> -->
 
         <!--report.xml payroll authorization form-->
         <record id="report_payroll_authorization" model="ir.actions.report">

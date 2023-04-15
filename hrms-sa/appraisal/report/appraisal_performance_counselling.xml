@@ -26,9 +26,9 @@
                                 </tr>
                                 <tr  style="border: 1px solid black !important;">
                                     <td width="25%" style="border: 1px solid black !important;">Employee ID</td>
-                                    <td width="25%"></td>
+                                    <td width="25%"><span t-field="o.employee_id.employee_no"/></td>
                                     <td width="25%" style="border: 1px solid black !important;">Review Period</td>
-                                    <td width="25%"></td>
+                                    <td width="25%"><span t-field="o.review_period"/></td>
                                     
                                 </tr>
                                 <tr  style="border: 1px solid black !important;">
