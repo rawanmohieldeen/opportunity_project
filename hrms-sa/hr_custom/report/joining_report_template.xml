@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="joining_report_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                KMC / HR / Form 013
+                            </td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                <strong>Joining Report</strong>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <br/>
+
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;background-color: #dcf1dc;width:30%;">
+                                <strong>Employee Name</strong>
+                            </td>
+                            <td style="border: 1px solid black !important;width:70%;">
+                                <t t-esc="object.employee_id.name"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;background-color: #dcf1dc;width:30%;">
+                                <strong>Employee Code</strong>
+                            </td>
+                            <td style="border: 1px solid black !important;width:70%;">
+                                <t t-esc="object.employee_no"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;background-color: #dcf1dc;width:30%;">
+                                <strong>Date of Joining</strong>
+                            </td>
+                            <td style="border: 1px solid black !important;width:70%;">
+                                <t t-esc="object.date"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;">
+                                <strong>Employee’s Signature</strong>
+                            </td>
+                            <td style="border: 1px solid black !important;">
+                                <strong>Line Manager’s Signature</strong>
+                            </td>
+                            <td style="border: 1px solid black !important;">
+                                <strong>HR Manager’s Signature</strong>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;height:60px;">
+                            </td>
+                            <td style="border: 1px solid black !important;height:60px;">
+                            </td>
+                            <td style="border: 1px solid black !important;height:60px;">
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="joining_report_act" model="ir.actions.report">
+        <field name="name">Joining Report Reqeust</field>
+        <field name="model">joining.report</field>
+        <field name="report_type">qweb-html</field>
+        <field name="report_name">hr_custom.joining_report_template</field>
+        <field name="report_file">hr_custom.joining_report_template</field>
+        <field name="binding_model_id" ref="model_joining_report"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>
