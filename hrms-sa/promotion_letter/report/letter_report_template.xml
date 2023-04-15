@@ -4,7 +4,22 @@
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
                 <t t-foreach="docs" t-as="object">
-                    <h4  class="text-center">Promotion Letter</h4><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                KMC / HR / Form 023
+                            </td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                <strong>Promotion Letter</strong>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
                     <div style="float:right;margin-right:60px;">Date : <span  t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/></div><br/>
                     <p style="margin-left:10px; font-size: 16px;">
                     To<br/>
