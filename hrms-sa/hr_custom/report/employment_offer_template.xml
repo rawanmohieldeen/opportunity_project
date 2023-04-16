@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="employment_offer_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                KMC / HR / Form 012
+                            </td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                <strong>Employment Offer</strong>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <br/>
+
+                    <div style="float:right;margin-right:60px;">
+                        Date : <span  t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/>
+                    </div><br/>
+                    <p style="margin-left:10px; font-size: 16px;">
+                        Ms:<span style="margin-left:40px;" t-esc="object.employee_id.name"/><br/><br/>
+                        CPR No:<span style="margin-left:20px;" t-esc="object.employee_id.cpr_no"/><br/>
+                    </p>
+                    <center><u><strong>Employment Offer</strong></u></center><br/>
+
+                    <p>
+                        This has reference to your C.V. and the interview conducted and we are pleased to offer you employment with Khaleeji Manager Company. The details of your employment are:
+                    </p>
+
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="width:50%">
+                                Employment Commencement Date
+                            </td>
+                            <td style="width:50%">
+                                <t t-esc="object.date_start"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Position
+                            </td>
+                            <td style="width:50%">
+                                <t t-esc="object.job_id.name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Monthly Salary Package
+                            </td>
+                            <td style="width:50%">
+                                <t t-esc="object.probation_wage"/><t style="margin-left:5px;"/>  per month during probation period.
+                                <br/>
+                                <t t-esc="object.wage"/><t style="margin-left:5px;"/>per month after successful completion of probation period.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Your monthly Salary Package includes
+                            </td>
+                            <td style="width:50%">
+                                Basic Salary
+                                <br/>
+                                Overseas Allowance
+                                <br/>
+                                Accommodation Allowance
+                                <br/>
+                                Transport Allowance
+                                <br/>
+                                Airfares Allowance
+                                <br/>
+                                Business Telephone Call Allowance
+                                <br/>
+                                Business Fuel Allowance
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Annual Leave Entitlement
+                            </td>
+                            <td style="width:50%">
+                                26 working days per annum
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Probation Period    
+                            </td>
+                            <td style="width:50%">
+                                3 months
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Notice Period after Probation   
+                            </td>
+                            <td style="width:50%">
+                                1 (one) month
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Visa Status
+                            </td>
+                            <td style="width:50%">
+                                N/A
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Medical Insurance   
+                            </td>
+                            <td style="width:50%">
+                                Private Medical Insurance for yourself
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width:50%">
+                                Working Hours   
+                            </td>
+                            <td style="width:50%">
+                                8.00am - 5.00pm Saturday to Wednesday
+                                <br/>
+                                9.00am - 1.30pm Thursday
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <p>
+                        We trust you shall find the above in order. We request for your acceptance of this offer by signing below.
+                    </p>
+                    <br/><br/>
+                    <span>Yours sincerely,</span>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="joining_report_act" model="ir.actions.report">
+        <field name="name">Employment Offer</field>
+        <field name="model">hr.contract</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_custom.employment_offer_template</field>
+        <field name="report_file">hr_custom.employment_offer_template</field>
+        <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

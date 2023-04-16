@@ -10,7 +10,7 @@
     'version': '16',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr','hr_recruitment','hr_payroll_community','warning_letter'],
+    'depends': ['base','hr','hr_contract','hr_recruitment','hr_payroll_community','warning_letter'],
 
 
     # always loaded
@@ -29,6 +29,7 @@
         'report/total_emp_cost_report.xml',
         'report/employee_application_report.xml',
         'report/joining_report_template.xml',
+        'report/employment_offer_template.xml',
         'report/report.xml',
         'views/exit_checklist_view.xml',
         'views/joining_report_view.xml',
