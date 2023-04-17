@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="interview_evaluation_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                KMC / HR / Form 007
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                <strong>Interview Evaluation Sheet</strong>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="10">
+                                <strong>
+                                    INTERVIEW DETAILS
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;" colspan="2">
+                                <span>Candidate Name</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="4">
+                                <span t-esc="object.candidate_name.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="2">
+                                <span>Date of Interview</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="2">
+                                <span t-esc="object.date_of_interview"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;" colspan="2">
+                                <span>Position Applied for</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="4">
+                                <span t-esc="object.position_applied_for.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="2">
+                                <span>Department</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;" colspan="2">
+                                <span t-esc="object.department.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;" colspan="10">
+                                <strong>
+                                    Scoring Legend
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.scoring_legend == 'excellent' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                                <span>10 – 9</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;"> Excellent</td>
+
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.scoring_legend == 'good' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                                <span>8 – 7</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;"> Good</td>
+
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.scoring_legend == 'average' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                                <span>6 – 5</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;"> Average</td>
+
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.scoring_legend == 'below_average' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                                <span>4 – 3</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;"> Below Average</td>
+
+                            <td style="height: 10px;border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.scoring_legend == 'poor' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                                <span>2 – 1</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;"> Poor</td>
+                        </tr>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="5">
+                                <strong>
+                                    EVALUATION
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;background-color:#dcf1dc;">
+                            <td style="border: 1px solid black !important;width:10%;" >
+                                <center>#</center>
+                            </td>
+                            <td style="border: 1px solid black !important;width:15%;" >
+                                Attributes
+                            </td>
+                            <td style="border: 1px solid black !important;width:40%;" >
+                                Description
+                            </td>
+                            <td style="border: 1px solid black !important;width:20%;" >
+                                <center>Score</center>
+                            </td>
+                            <td style="border: 1px solid black !important;width:15%;" >
+                                <center>Max</center>
+                            </td>
+                        </tr>
+                        <t t-set="counter" t-value="0"/>
+                        <t t-set="total" t-value="0"/>
+                        <t t-set="total_score" t-value="0"/>
+                        <t t-foreach="object.evaluation_lines_ids" t-as="line">
+                            <tr style="border: 1px solid black !important;">
+                                <td style="border: 1px solid black !important;width:10%;" >
+                                    <center><t t-esc="counter+1"/></center>
+                                    <t t-set="counter" t-value="counter+1"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:15%;" >
+                                    <t t-esc="line.attributes.name"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:40%;" >
+                                    <t t-esc="line.description"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:20%;" >
+                                    <center><t t-esc="line.score"/></center>
+                                    <t t-set="total_score" t-value="total_score + line.score"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:15%;" >
+                                    <center><t t-esc="line.max_points"/></center>
+                                    <t t-set="total" t-value="total + line.max_points"/>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;" colspan="3">
+                                Total
+                            </td>
+                            <td style="border: 1px solid black !important;">
+                                <center><t t-esc="total_score"/></center>
+                            </td>
+                            <td style="border: 1px solid black !important;" >
+                                <center><t t-esc="total"/></center>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="4">
+                                <strong>
+                                    INTERVIEWEE’S STRNGTHS AND LIMITATIONS
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <table class="table" style="height: 10px;">
+                                    <tr style="border: 1px solid black !important;background-color:#dcf1dc;">
+                                        <td style="border: 1px solid black !important;" colspan="2">
+                                            Strengths
+                                        </td>
+                                    </tr>
+                                    <t t-set="counter1" t-value="0"/>
+                                    <t t-foreach="object.interviewees_strength_lines_ids" t-as="line">
+                                        <tr>
+                                            <td style="border: 1px solid black !important;" >
+                                                <t t-esc="counter1+1"/>
+                                                <t t-set="counter1" t-value="counter1+1"/>
+                                            </td>
+                                            <td style="border: 1px solid black !important;" >
+                                                <t t-esc="line.strength"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </td>
+                            <td>
+                                <table class="table" style="height: 10px;">
+                                    <t t-set="counter2" t-value="0"/>
+                                    <tr style="border: 1px solid black !important;background-color:#dcf1dc;">
+                                        <td style="border: 1px solid black !important;" colspan="2">
+                                            Limitations
+                                        </td>
+                                    </tr>
+                                    <t t-foreach="object.interviewees_limitations_lines_ids" t-as="line">
+                                        <tr>
+                                            <td style="border: 1px solid black !important;" >
+                                                <t t-esc="counter2+1"/>
+                                                <t t-set="counter2" t-value="counter2+1"/>
+                                            </td>
+                                            <td style="border: 1px solid black !important;" >
+                                                <t t-esc="line.limitation"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="5">
+                                <strong>
+                                    COMPENSATION AND JOINING DETAILS
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;" rowspan="2">
+                                <strong>
+                                    Package
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;" colspan="2">
+                                <center><strong>
+                                    Current
+                                </strong></center>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;" colspan="2">
+                                <center><strong>
+                                    Expected
+                                </strong></center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;">
+                                <strong>
+                                    Currency
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;">
+                                <strong>
+                                    Value
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;">
+                                <strong>
+                                    Currency
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;">
+                                <strong>
+                                    Value
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Basic Salary (per month)
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.currency_id.name"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.current_basic_salary"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.expected_currency_id.name"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.expected_basic_salary"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Other Allowances (per month)
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.currency_id.name"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.current_other_allowances"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.expected_currency_id.name"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.expected_other_allowances"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Annual Incentives
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.currency_id.name"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.current_annual_incentives"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.expected_currency_id.name"/>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <t t-esc="object.expected_annual_incentives"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Expected Joining Date
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;" colspan="4">
+                                <t t-esc="object.expected_joining_date"/>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Employment Type
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Permanent
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                               <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.employment_type == 'permanent' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Contract
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                               <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.employment_type == 'contract' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="8">
+                                <strong>
+                                    INTERVIEW OUTCOME
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Select
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.interview_outcome == 'select' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Shortlist
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.interview_outcome == 'shortlist' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Hold
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.interview_outcome == 'hold' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <strong>
+                                    Reject
+                                </strong>
+                            </td>
+                            <td style="border:1px solid gray;">
+                                <span style="border:1px solid gray;height:19px;width:27px;display:inline-block;">
+                                    <t t-if="object.interview_outcome == 'reject' ">
+                                        <img 
+                                         src="/hr_custom/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.5cm; max-width:8cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray;" colspan="4">
+                                <strong style="margin-left:20px;">
+                                    Name and Signature of the Interviewer
+                                </strong>
+                                <br/><br/><br/><br/><br/>
+                            </td>
+                            <td style="border:1px solid gray;" colspan="4">
+                                <br/><br/><br/><br/><br/>
+                                <strong style="margin-left:20px;">Date</strong>
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

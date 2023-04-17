@@ -30,6 +30,7 @@
         'report/employee_application_report.xml',
         'report/joining_report_template.xml',
         'report/employment_offer_template.xml',
+        'report/interview_evaluation_template.xml',
         'report/report.xml',
         'views/exit_checklist_view.xml',
         'views/joining_report_view.xml',

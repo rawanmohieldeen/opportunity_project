@@ -51,5 +51,15 @@
             <field name="binding_model_id" ref="model_total_employee_cost"/>
             <field name="binding_type">report</field>
         </record>
+
+        <record id="interview_evaluation_report" model="ir.actions.report">
+            <field name="name">Interview Evaluation Sheet</field>
+            <field name="model">interview.evaluation.sheet</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_custom.interview_evaluation_template</field>
+            <field name="report_file">hr_custom.interview_evaluation_template</field>
+            <field name="binding_model_id" ref="model_interview_evaluation_sheet"/>
+            <field name="binding_type">report</field>
+        </record>
     </data>
 </odoo>
