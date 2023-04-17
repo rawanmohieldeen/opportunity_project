@@ -13,9 +13,10 @@ class HrTrainingPlan(models.Model):
     overall_budget = fields.Monetary('Overall Budget',compute='_compute_budget',required=True,currency_field='currency_id',)  
     state = fields.Selection([
             ('draft', 'Draft'),
-            ('confirm', 'Confirm'),
             ('hr_approve', 'HR Manager Approve'),
+            ('vp_approve', 'VP Approve'),
             ('general_approve', 'General Manager Approve'),
+            ('approve', 'Approved'),
         ], string='Status', default='draft')
     line_ids = fields.One2many('hr.training.plan.line', 'training_plan_id',string="Line IDs",)
   
@@ -27,13 +28,16 @@ class HrTrainingPlan(models.Model):
             if rec.overall_budget == 0.0 :
                     print(">>>>>>>>>>>>>>>>>>>>>>>>>>>rrr",)
                     raise ValidationError(_("Overall Budget Must Be Not Zero!"))
-            self.state='confirm'
+            self.state='hr_approve'
+
+    def action_confirm2(self):
+        self.state='vp_approve'
 
     def action_hr_approve(self):
-        self.state='hr_approve'
+        self.state='general_approve'
 
     def action_general_approve(self):
-        self.state='general_approve'
+        self.state='approve'
 
     @api.model
     def create(self, vals):
@@ -51,13 +55,14 @@ class HrTrainingPlan(models.Model):
             for line in rec.line_ids:
                 total += line.budget
             rec.overall_budget = total
-        
+
 
 class HrTrainingPlanLine(models.Model):
     _name = 'hr.training.plan.line'
 
     employee_id = fields.Many2one('hr.employee',string='Employee',required=True,copy=False)
     deparment_id = fields.Many2one('hr.department',string='Deparment',required=True,related='employee_id.department_id',copy=False)
+    employee_no = fields.Char('Empl. ID',related='employee_id.employee_no')
     course_id = fields.Many2one('hr.training.course',string='Proposed Training',required=True,copy=False)
     priority = fields.Selection([
         ('0', 'Low'),
@@ -74,3 +79,10 @@ class HrTrainingPlanLine(models.Model):
     budget = fields.Monetary('Budget',required=True,currency_field='currency_id',)
     training_plan_id = fields.Many2one('hr.training.plan',string="Plans",required=True,track_visibility='onchange')
 
+    @api.onchange('course_id')
+    def _get_data(self):
+        if self.course_id:
+            self.duration = self.course_id.duration
+            self.duration_unit = self.course_id.duration_unit
+            self.provider = self.course_id.place
+            self.budget = self.course_id.fees

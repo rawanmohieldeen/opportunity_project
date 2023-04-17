@@ -8,3 +8,5 @@ access_appraisal_recommendations,appraisal.recommendations,model_appraisal_recom
 access_appraisal_performance_counselling,appraisal.performance.counselling,model_appraisal_performance_counselling,,1,1,1,1
 access_performance_counselling,performance.counselling,model_performance_counselling,,1,1,1,1
 access_course_action,course.action,model_course_action,,1,1,1,1
+
+access_leave_application_form,leave_application_form.leave_application_form,model_leave_application_form,,1,1,1,1

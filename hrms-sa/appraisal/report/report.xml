@@ -18,5 +18,14 @@
             file="appraisal.appraisal_performance_counselling_report"
         /> 
         
+        <record id="leave_application_report" model="ir.actions.report">
+            <field name="name">Leave Application Form</field>
+            <field name="model">leave.application.form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">appraisal.leave_app_temp</field>
+            <field name="report_file">appraisal.leave_app_temp</field>
+            <field name="binding_model_id" ref="model_leave_application_form"/>
+            <field name="binding_type">report</field>
+        </record>
     </data>
 </odoo>

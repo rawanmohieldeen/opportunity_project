@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="training_plan_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                KMC / HR / Form 024
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                <strong>Training Plan and Budget</strong>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:10%;" >
+                                <span>
+                                    Empl. ID
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:15%;" >
+                                <span>
+                                    Employee Name
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:10%;" >
+                                <span>
+                                    Department
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:15%;" >
+                                <span>
+                                    Proposed Training<br/>
+                                    What Training Is Needed?
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:10%;" >
+                                <span>
+                                    Priority<br/>
+                                    Link to Business<br/>
+                                    Strategic Plan <br/>
+                                    (H/M/L)
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:10%;" >
+                                <span>
+                                    Time Line<br/>
+                                    When is the Training<br/>
+                                     Planned for?
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:10%;" >
+                                <span>
+                                    Duration
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:10%;" >
+                                <span>
+                                    Training Provider
+                                </span>
+                            </td>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;width:10%;" >
+                                <span>
+                                    Budget
+                                </span>
+                            </td>
+                        </tr>
+                        <t t-foreach="object.line_ids" t-as="line">
+                            <tr style="border: 1px solid black !important;">
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-esc="line.employee_no"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:15%;">
+                                    <t t-esc="line.employee_id.name"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-esc="line.deparment_id.name"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-esc="line.course_id.course"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-if="line.priority == '0' ">
+                                        <span>L</span>
+                                    </t>
+                                    <t t-if="line.priority == '1' ">
+                                        <span>M</span>
+                                    </t>
+                                    <t t-if="line.priority == '2' ">
+                                        <span>H</span>
+                                    </t>
+                                </td>
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-esc="line.duration_unit"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-esc="line.duration"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-esc="line.provider"/>
+                                </td>
+                                <td style="border: 1px solid black !important;width:10%;">
+                                    <t t-esc="line.budget"/>
+                                </td>
+                            </tr>
+                        </t>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;height:34%;">
+                                Initiated by:
+                            </td>
+                            <td style="border: 1px solid black !important;height:33%;">
+                                Reviewed by:
+                            </td>
+                            <td style="border: 1px solid black !important;height:33%;">
+                                Approved by:
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td style="border: 1px solid black !important;height:34%;">
+                                HR Manager’s Signature:
+                                <br/><br/><br/><br/><br/>
+                                Date:
+                            </td>
+                            <td style="border: 1px solid black !important;height:33%;">
+                                VP’s Signature
+                                <br/><br/><br/><br/><br/>
+                                Date:
+                            </td>
+                            <td style="border: 1px solid black !important;height:33%;">
+                                GM’s Signature:
+                                <br/><br/><br/><br/><br/>
+                                Date:
+                            </td>
+                        </tr>
+                    </table>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

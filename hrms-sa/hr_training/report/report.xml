@@ -17,5 +17,21 @@
             name="hr_training.report_training_course_report"
             file="hr_training.report_training_course_report"
         /> 
+
+        <record id="paperformat_reports" model="report.paperformat">
+            <field name="name">Reports</field>
+            <field name="default" eval="True"/>
+            <field name="format">custom</field>
+            <field name="orientation">Landscape</field>
+        </record>
+
+        <record id="hr_training_plan_report" model="ir.actions.report">
+            <field name="name">Training Plan Report</field>
+            <field name="model">hr.training.plan</field>
+            <field name="report_type">qweb-html</field>
+            <field name="paperformat_id" ref="hr_training.paperformat_reports" />
+            <field name="report_name">hr_training.training_plan_template</field>
+        </record>
+      
     </data>
 </odoo>
