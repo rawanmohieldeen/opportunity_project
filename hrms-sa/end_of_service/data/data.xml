@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+        <record id="email_template_service_certificate" model="mail.template">
+            <field name="name">Service Certificate</field>
+            <field name="model_id" ref="end_of_service.model_service_certificate"/>
+            <field name="subject">Service Certificate</field>
+            <field name="email_from">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
+            <field name="email_to">{{ object.employee_user.email_formatted or object.employee_id.work_email }}</field>
+            <field name="description">Service Certificate</field>
+            <field name="body_html" type="html">
+<div style="margin: 0px; padding: 0px;">
+    <p style="margin: 0px; padding: 0px; font-size: 13px;">
+       
+        Date   <span  t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/><br/><br/><br/><br/>             
+TO WHOM IT MAY CONCERN<br/><br/>
+Subject: Reference for <span  t-field="object.employee_id.name"/><br/><br/>
+
+
+This is to certify that Mr./ Ms. <span  t-field="object.employee_id.name"/>, Passport N.: <span  t-field="object.employee_id.passport_id"/>, has been employed by Khaleeji Manager Company from the <span  t-field="object.employee_id.contract_id.date_start"/> to <span  t-field="object.employee_id.contract_id.date_end"/> in the capacity of <span  t-field="object.capacity"/> at <span  t-field="object.department_id.name"/> project.<br/>
+
+During his/ her time with Khaleeji Manager Company <span  t-field="object.employee_id.name"/> has performed his/ her assigned duties to our satisfaction. Unfortunately, due to company re-structuring <span  t-field="object.employee_id.name"/> employment has been terminated.<br/>
+
+Should you require any further recommendation please do not hesitate to contact Khaleeji Manager Company on +966 3 8951550.<br/><br/><br/>
+
+Yours sincerely,<br/>
+For and on behalf of<br/>
+Khaleeji Manager Company<br/>
+
+</p>
+</div>
+            </field>
+            <field name="report_name">{{ (object.employee_id.name or '').replace('/','_') }}</field>
+            <field name="lang">{{ object.user_id.partner_id.lang }}</field>
+            <field name="auto_delete" eval="True"/>
+        </record>
+    <record id="seq_final_settelment" model="ir.sequence">
+         <field name="name">final settelment</field>
+         <field name="code">hr.final.settelment</field>
+         <field name="prefix">FS</field>
+         <field name="padding">3</field>
+         <field eval="False" name="company_id"/>
+      </record>
+
+
+
+
+  </data>
+</odoo>

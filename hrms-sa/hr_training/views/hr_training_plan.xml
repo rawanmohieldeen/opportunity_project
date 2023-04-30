@@ -72,6 +72,7 @@
         <field name="res_model">hr.training.plan</field>
         <field name="view_mode">tree,form</field>
     </record>
+    <menuitem name="Training" sequence="7" id="training_root" parent="hr.menu_hr_root"/>
 
     <menuitem name="Training Plan" sequence="0" id="hr_training_plan_menu" parent="training_root" action="hr_training_plan_action"/>
 

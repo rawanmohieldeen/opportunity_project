@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hr_final_settlement_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <h4  class="text-center">Final Settlement Form</h4><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    SUMMARY OF PAYMENT DUE TO
+                                </strong>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                <span>A- Salary up to</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                <span t-esc="object.wage"></span>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>B- Annual Leave Encashment</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.annual_leave"></span>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>C- Indemnity</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.indemnity"></span>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Total Payment due</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.payment_due"></span>
+                                </td>
+                                
+                            </tr>
+
+
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    Employment Information
+                                </strong>
+                            </td>
+                        </tr>
+          
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                <span>Start Date</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                <span t-esc="object.start_date"></span>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Last working day</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.last_day"></span>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Indemnity/Annual Leave Encashment up to</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.leave_up"></span>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Annual Leave Entitlement for</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.annual_leave_ent"></span>
+                                </td>
+                                
+                            </tr>
+                            
+
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    Monthly Salary Package
+                                </strong>
+                            </td>
+                        </tr>
+          
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                <span>Basic Salary</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                <span t-esc="object.wage"></span>
+                            </td>
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Transportation Allowance</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.transportation"></span>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Housing Allowance</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.house"></span>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Car Allowance</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.car"></span>
+                                </td>
+                                
+                            </tr>
+                            
+                             <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Tickets Allowance</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.tickets"></span>
+                                </td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Mobile Phone Allowance</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.mobile"></span>
+                                </td>
+                                
+                            </tr>
+
+                             <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Fuel Allowance</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.fuel"></span>
+                                </td>
+                                
+                            </tr>
+
+                             <tr>
+                                <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                    <span>Total Salary</span>
+                                </td>
+                                <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                    <span t-esc="object.wage"></span>
+                                </td>
+                                
+                            </tr>
+
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    A- Salary up to
+                                </strong>
+                            </td>
+                        </tr>
+          
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                <span t-esc="object.salry_up"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                SR <br/>(to be paid by ______ )
+                            </td>
+                            </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                Total Salary
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                 <span t-esc="object.total_salary"></span>
+                            </td>
+                            </tr>
+
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    B- Annual Leave Encashment
+                                </strong>
+                            </td>
+                        </tr>
+          
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                <span>Pro-rata balance up to</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                <span t-esc="object.pro_rate_balance">Working Days Remaining</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%" colspan="4">
+                                <span>Leave Encashment for</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="4">
+                                <span t-esc="object.leave_inhancement">Working Days</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                   SR
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                <strong>
+                                    C- Indemnity Calculation
+                                </strong>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="8">
+                                From <span t-esc="object.from_date"/> until <span t-esc="object.to_date"/> (<span t-esc="object.months"/> months and <span t-esc="object.days"/> days)
+                            </td>
+                        </tr>
+                        <t t-foreach="object.line_ids" t-as="line">
+                            <tr>
+                                    <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="4">
+                                        <span t-esc="object.from_num"/> TO <span t-esc="object.to_num"/>
+                                    </td>
+                                    <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="2">
+                                        <span t-esc="object.balance"/> DAYS  
+                                    </td>
+                                    <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="2">
+                                        SR  
+                                    </td>
+                                </tr>
+                        </t>
+                         <tr>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="4">
+                                Total Indemnity
+                            </td>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="2">
+                                <span t-esc="object.total_indemnity"/>   
+                            </td>
+                            <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="2">
+                                SR<br/>
+(to be paid by ____________________ )  
+                            </td>
+                        </tr>
+                    </table>
+                     
+                    <div class="row mt32 mb32" id="informations">
+                         <div  class="col-auto col-6 mw-100 mb-2">
+                            <p>Signature of Accounts In-Charge</p>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <p>Date</p>
+                        </div>
+                        
+                        
+                    </div>  
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="hr_final_settlement_report"
+        model="hr.final.settlement"
+        string="Print Final Settelment"
+        report_type="qweb-pdf"
+        name="end_of_service.hr_final_settlement_template"
+        file="end_of_service.hr_final_settlement_template"
+    />
+</odoo>

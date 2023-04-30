@@ -1,9 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hr_exit_factors,hr.exit.factors,model_hr_exit_factors,,1,1,1,1
-access_hr_exit_interview,hr.exit.interview,model_hr_exit_interview,,1,1,1,1
-access_hr_positive_features,hr.positive.features,model_hr_positive_features,,1,1,1,1
-access_hr_negative_features,hr.negative.features,model_hr_negative_features,,1,1,1,1
 access_hr_training_course,hr.training.course,model_hr_training_course,,1,1,1,1
+access_hr_training_course_line,hr.training.course.line,model_hr_training_course_line,,1,1,1,1
+
 access_hr_training_plan,hr.training.plan,model_hr_training_plan,,1,1,1,1
 access_hr_training_plan_line,hr.training.plan.line,model_hr_training_plan_line,,1,1,1,1
 access_hr_training_course_report,hr.training.course.report,model_hr_training_course_report,,1,1,1,1

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hr_final_payment_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <h4  class="text-center">Final Payment Confirmation</h4><br/>
+                    <p>I, <span t-field="object.employee_id.name"/>, a/ an 
+                        <t t-if="object.employee_id.emp_type == 'saudi'">SAUDI National ID / IQAMA No.<span t-field="object.employee_id.national_id"/>
+                        </t>
+                        <t t-if="object.employee_id.emp_type != 'saudi'"> <span t-field="object.employee_id.country_id.name"/> National holder of Passport No. <span t-field="object.employee_id.passport_id"/>
+                        </t>, hereby acknowledge and declare the following: <br/><br/><br/>
+1)  My employment with Khaleeji Manager Company under the employment contract signed between Company and me (the “Employment Contract”) has been terminated effective as of <span t-field="object.effective_date"/> with a notice period of one month. <br/>
+2)  I confirm that my Final Payment in the amount of SR <span t-field="object.total_indemnity"/> (Saudi Riyals only) is correct. I consider this Final Payment a full discharge and final settlement of all dues, compensations, claims, indemnities including end of services indemnity, back pay, leave pay, payment in lieu of notice, and/or other benefits arising on termination of my employment which I may be entitled to under Saudi law (collectively the “Entitlements”) in relation to my employment with Company and/or any of its affiliates, subsidiaries or local Saudi sponsor(s). I also acknowledge that same constitutes a full and final settlement of any rights and/or claims that I may be entitled to under the above noted Employment Contract and/or law.<br/>
+3)  I hereby irrevocably release, fully indemnify and forever discharge Company, and all of its officers, directors, employees, affiliates, subsidiaries, parent company(ies), sponsors and assigns from and against any and all actions, claims, liability, costs or damages which I at any time may have against any of them in relation to the Entitlements or the Employment Contract or its termination, whether present, contingent or which may arise in the future. I acknowledge that I neither have a right of recourse in the future against the Company for any claims or lawsuits nor the right to commence or continue any procedures of whatever type with respect to any of the matters mentioned in this document.<br/>
+
+This Final Payment Confirmation has been executed of my own free will, and with my full consent and understanding and without any coercion or duress. <br/><br/><br/>
+
+By: <span t-field="object.employee_id.name"/><br/>
+
+Date: <span  t-esc="datetime.datetime.now().strftime('%Y-%m-%d')"/>
+</p>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report
+        id="hr_final_payment_report"
+        model="hr.final.settlement"
+        string="Print Final Payment Confirmation"
+        report_type="qweb-pdf"
+        name="end_of_service.hr_final_payment_template"
+        file="end_of_service.hr_final_payment_template"
+    />
+</odoo>

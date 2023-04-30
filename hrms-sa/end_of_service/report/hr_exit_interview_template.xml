@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="hr_exit_interview_template">
+    <t t-call="web.html_container">
+    <t t-call="web.external_layout">
+    <t t-foreach="docs" t-as="object">
+                    <h2  class="text-center">Exit Interview Form</h2>
+                    <p>The information you give here would be helpful to us to create a better working environment for Khaleeji Manager Company KMC.</p>
+                    <p><strong><u>SECTION A</u></strong></p>
+                    <p>
+                        <ul>    <li> Please indicate below the reasons for your decision by distributing 100 points over the factors given below indicating % contribution to your decision. </li>
+                        <li>Also cite critical incidents/examples to support your rating.</li>
+                        </ul>
+                    </p>
+                    <p>For example, if only one major factor lead to your decision write 100 against that factor, if two equally important factors give 50 each, if one major factor and one minor factor give 70 or 30 depending on their importance.</p>
+                    
+
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        
+                        <tr>
+                            <td colspan="3"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>FACTORS</strong>
+                            </td>
+
+
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>CRITICAL INCIDENTS/EXAMPLES</strong>
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            <strong>POINTS</strong>
+                            </td>
+                            <td colspan="2"
+                                style="border-width:1px;border-color:black;width:20%;">
+                                <strong>HR’S COMMENT</strong>
+                            </td>
+                        </tr>
+                         <t t-foreach="object.fator_line" t-as="line">
+                             <tr>
+                                <td colspan="3"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.factor_id"/>
+                                </td>
+                                <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.critical_incidents_examples"/>
+                                </td>
+                                <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.points"/>
+                                </td>
+                                <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    <span t-field="line.hr_comments"/>
+                                </td>
+                            </tr>
+                        </t>
+                        
+                    </table>
+                    <p><strong><u>SECTION B</u></strong><br/>
+                    To be filled by the resignee:</p>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        
+                        <tr>
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                            In my opinion:
+                            </td>
+                        </tr>
+                        
+
+                         <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    1- Three major positive features of working with KMC<br/>
+                                    <ul>
+                                        <t t-foreach="object.positive_features_ids" t-as="line">
+                                            <li><span t-field="line.name"/></li>
+                                        </t>
+                                     </ul>
+
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    2- Three negative features of working with KMC<br/>
+                                    <ul>
+                                        <t t-foreach="object.negative_features_ids" t-as="line">
+                                            <li><span t-field="line.name"/></li>
+                                        </t>
+                                     </ul>
+
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    3- I have the following suggestions to make KMC a better place:<br/>
+                                    <span t-field="object.suggestions"/>
+
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    4- Other Comments:<br/>
+                                    <span t-field="object.other_comments"/>
+
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    5- If an opportunity ever arises, I will/will not consider joining KMC again because:<br/>
+                                    <span t-field="object.future_opportunity"/>
+
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    6- My contact address for all further correspondence is:<br/>
+                                    <span t-field="object.contact_address"/>
+
+                            </td>
+                                
+                        </tr>
+                       
+                        
+                    </table>
+                     <div class="row mt32 mb32" id="informations">
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <p>SIGNATURE: ____________</p>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                           <p>DATE: ___________</p>
+                        </div>
+                        
+                    </div>
+                     <div class="row mt32 mb32" id="informations2">
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <p>NAME: _________________ </p>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <p>EMPLOYEE PERSONAL CODE: _______________</p>
+                        </div>
+                        
+                    </div>
+                    <p><strong><u>SECTION C</u></strong></p>
+                    <p><center><u>To be filled by the HRM 10 days before the last working day</u></center></p><br/><br/>
+                    <table style="width:100%;border-width:1px;border-color:black;font-size:12px;"
+                                       class="table table-sm table-bordered oe_inline">
+                        
+                         <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;"> 
+                                    1- Details of any mentionable incident during the notice period of the person.<br/>
+                                    <span t-field="object.details"/>
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    2- Can a good character certificate be issued to the person?<br/>
+                                    <span t-field="object.character_certificate"/>
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    3- Can the person be reconsidered for re-employment?<br/>
+                                    <span t-field="object.employment_reconsideration"/>
+
+                            </td>
+                                
+                        </tr>
+                        <tr>
+                                
+                            <td colspan="9"
+                                style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    
+                                    4- Any other comments?<br/>
+                                    <span t-field="object.hr_other_comments"/>
+
+                            </td>
+                                
+                        </tr>
+                        
+                       
+                        
+                    </table>
+                  <div class="row mt32 mb32" id="informations">
+                         <div  class="col-auto col-6 mw-100 mb-2">
+                            <p>Name: ____________</p>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                            <p>SIGNATURE: ____________</p>
+                        </div>
+                        <div  class="col-auto col-6 mw-100 mb-2">
+                           <p>DATE: ___________</p>
+                        </div>
+                        
+                    </div>        
+
+    
+    </t>
+    </t>
+    </t>
+</template>
+
+</odoo>

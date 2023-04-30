@@ -89,6 +89,31 @@
                         <field name="medical_allowance" nolabel="1"/>
                         <span>/ month</span>
                     </div>
+                    <label for="house"/>
+                    <div class="o_row">
+
+                        <field name="house" nolabel="1"/>
+                        <span>/ month</span>
+                    </div>
+                    <label for="car"/>
+                    <div class="o_row">
+
+                        <field name="car" nolabel="1"/>
+                        <span>/ month</span>
+                    </div>
+                    <label for="tickets"/>
+                    <div class="o_row">
+
+                        <field name="tickets" nolabel="1"/>
+                        <span>/ month</span>
+                    </div>
+                    <label for="mobile"/>
+                    <div class="o_row">
+
+                        <field name="mobile" nolabel="1"/>
+                        <span>/ month</span>
+                    </div>
+
                     <label for="other_allowance"/>
                     <div class="o_row">
 

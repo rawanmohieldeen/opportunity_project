@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+<report
+            id="hr_exit_interview_report"
+            model="hr.exit.interview"
+            string="Print Exit Interview"
+            report_type="qweb-pdf"
+            name="end_of_service.hr_exit_interview_template"
+            file="end_of_service.hr_exit_interview_template"
+
+
+        />
+    </data>
+</odoo>

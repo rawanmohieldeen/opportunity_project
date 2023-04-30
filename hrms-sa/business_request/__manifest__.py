@@ -19,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['hr','hr_employee_updation'],
+    'depends': ['hr','hr_employee_updation','hr_custom'],
 
     # always loaded
     'data': [

@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_service_certificatee,end_of_service.service_certificate,model_service_certificate,base.group_user,1,1,1,1
+access_hr_exit_factors,end_of_service.hr_exit_factors,model_hr_exit_factors,base.group_user,1,1,1,1
+access_hr_exit_interview,end_of_service.hr_exit_interview,model_hr_exit_interview,base.group_user,1,1,1,1
+
+access_hr_factor_line,end_of_service.hr_factor_line,model_hr_factor_line,base.group_user,1,1,1,1
+access_hr_positive_features,end_of_service.hr_positive_features,model_hr_positive_features,base.group_user,1,1,1,1
+
+access_hr_negative_features,end_of_service.hr_negative_features,model_hr_negative_features,base.group_user,1,1,1,1
+
+access_hr_final_settlement,end_of_service.hr_final_settlement,model_hr_final_settlement,hr.group_hr_user,1,1,1,1
+access_hr_final_settlement_line,end_of_service.hr_final_settlement_line,model_hr_final_settlement_line,hr.group_hr_user,1,1,1,1

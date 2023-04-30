@@ -17,5 +17,13 @@
             name="hr_training.report_training_course_report"
             file="hr_training.report_training_course_report"
         /> 
+        <report
+            id="report_training_course_request"
+            model="hr.training.course.request"
+            string="Training Course Request"
+            report_type="qweb-html"
+            name="hr_training.training_course_request_report"
+            file="hr_training.training_course_request_report"
+        /> 
     </data>
 </odoo>

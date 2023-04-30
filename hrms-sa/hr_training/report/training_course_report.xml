@@ -2,11 +2,10 @@
 <odoo>
     <template id="report_training_course_report"> 
          <t t-call="web.basic_layout">
-            <!-- <t t-call="web.external_layout"> -->
+            <t t-call="web.external_layout">
                 <div class="page" style="font-size: 14;font-family:KacstOffice,KacstOne;">
-                    <!-- <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 26px;"> -->
                         <t t-foreach="docs" t-as="o">        
-                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
+                            <!-- <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
                                 <tr style="border: 1px solid black !important;">
                                     <td width="45%" style="border: 1px solid black !important;">Form No</td>
                                     <td width="45%" style="border: 1px solid black !important;">KMC / HR / Form 026</td>
@@ -17,45 +16,77 @@
                                     <td width="45%" style="border: 1px solid black !important;">Training Course/ Seminar/ Workshop Report</td>
                                 </tr>
                                 
-                            </table>
-                            <br/> 
-                            <br/> 
+                            </table> -->
+                            <!-- <br/> 
+                            <br/>  -->
                             <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
                                 <tr  style="border: 1px solid black !important;">
-                                    <td style="border: 1px solid black !important;" colspan="5">EMPLOYEE DETAILS</td>
+                                    <td style="border: 1px solid black !important;" colspan="8">EMPLOYEE DETAILS</td>
                                 </tr>
                                 <tr  style="border: 1px solid black !important;">
-                                    <td width="25%" style="border: 1px solid black !important;">Employee ID</td>
-                                    <td width="25%"></td>
-                                    <td width="25%" style="border: 1px solid black !important;">Employee Name</td>
-                                    <td width="25%"><t t-esc="o.employee_id.name"/></td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Employee ID</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="o.employee_id.name"/></td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Employee Name</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="o.employee_id.employee_no"/></td>
                                 </tr>
                                 <tr  style="border: 1px solid black !important;">
-                                    <td width="25%" style="border: 1px solid black !important;">Job Title</td>
-                                    <td width="25%"><t t-esc="o.job_id.name"/></td>
-                                    <td width="25%" style="border: 1px solid black !important;">Department/Project</td>
-                                    <td width="25%"><t t-esc="o.deparment_id.name"/></td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Job Title</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="o.job_id.name"/></td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Department/Project</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="o.deparment_id.name"/></td>
                                 </tr>
+                                
                                 <tr  style="border: 1px solid black !important;">
-                                    <td style="border: 1px solid black !important;" colspan="5">Course DETAILS</td>
+                                    <td style="border: 1px solid black !important;" colspan="8">Course Details</td>
                                 </tr>
 
-                                <tr style="border: 1px solid black !important;">
-                                    <td width="20%" style="border: 1px solid black !important;">Course Name</td>
-                                    <td width="20%" style="border: 1px solid black !important;">Relevance to Duties</td>
-                                    <td width="20%" style="border: 1px solid black !important;">Place of Training</td>
-                                    <td width="20%" style="border: 1px solid black !important;">Duration</td>
-                                    <td width="20%" style="border: 1px solid black !important;">Course Fee</td>
+                                <tr>
+                                    <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Course Name</strong>
+                                    </td>
+                                    <td colspan="2" 
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Relevance to Duties</strong>
+                                    </td>
+                                    <td colspan="2" 
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Place of Training</strong>
+                                    </td>
+                                    <td colspan="1" 
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Duration</strong>
+                                    </td>
+                                    <td colspan="1" >
+                                        Course Fee
+                                    </td>
+                                   
                                 </tr>
-                                <t t-foreach="o.line_ids" t-as="line">
-                                    
-                                    
-                                    <tr style="border: 1px solid black !important;">
-                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.course_id.course"/></td>
-                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.relevance_to_duties"/></td>
-                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.place"/></td>
-                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.duration"/></td>
-                                        <td width="20%" style="border: 1px solid black !important;"><t t-esc="line.fees"/></td>
+                                 <t t-foreach="o.line_ids" t-as="line">
+                                     <tr>
+                                        <td colspan="2"
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.course_id.course"/>
+                                        </td>
+                                        <td colspan="2"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.relevance_to_duties"/>
+                                        </td>
+                                        <td colspan="2"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.place"/>
+                                        </td>
+                                        <td colspan="1"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.duration"/> <span t-field="line.duration_unit"/>
+                                        </td>
+                                        <td colspan="1"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.fees"/>
+                                        </td>
+                                       
+
+
                                     </tr>
                                 </t>
                                  
@@ -340,5 +371,6 @@
                         </t>
                 </div>
         </t>
+    </t>
     </template>
 </odoo>

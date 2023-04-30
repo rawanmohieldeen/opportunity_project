@@ -66,14 +66,14 @@ class HrTrainingCourseReport(models.Model):
 class HrTrainingCourseReportLine(models.Model):
     _name = 'hr.training.course.report.line'
 
-    course_id = fields.Many2one('hr.training.course',string='Proposed Training',required=True,copy=False)
+    course_id = fields.Many2one('hr.training.course.line',string='Proposed Training',required=True,copy=False)
     relevance_to_duties = fields.Text(string='Relevance to Duties',track_visibility='onchange')
     place = fields.Char(string='Place',required=True,track_visibility='onchange')
-    duration = fields.Integer(string='Duration',required=True,)
+    duration = fields.Integer(string='Duration',related="course_id.duration")
     duration_unit = fields.Selection([
         ('day', 'Day(s)'),
         ('month', 'Month(s)'),
-       ], string="Duration Unit",required=True,)
-    currency_id = fields.Many2one('res.currency', string='Currency', readonly=True, default=lambda self: self.env.company.currency_id)
-    fees = fields.Monetary('Fees',required=True,currency_field='currency_id',)
+       ], string="Duration Unit",related="course_id.duration_unit")
+    currency_id = fields.Many2one('res.currency', string='Currency', readonly=True, related="course_id.currency_id")
+    fees = fields.Monetary('Fees',related="course_id.fees")
     training_course_report_id = fields.Many2one('hr.training.course.report',string="Course Report",required=True,)

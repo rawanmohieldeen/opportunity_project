@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="training_course_request_report"> 
+         <t t-call="web.basic_layout">
+            <t t-call="web.external_layout">
+                <div class="page" style="font-size: 14;font-family:KacstOffice,KacstOne;">
+                        <t t-foreach="docs" t-as="object">        
+                            
+                    <h2  class="text-center">Training Course/ Seminar/ Workshop Request</h2>
+
+                            <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="8">EMPLOYEE DETAILS</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Employee ID</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="object.employee_id.name"/></td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Employee Name</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="object.employee_id.employee_no"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Job Title</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="object.job_id.name"/></td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Department/Project</td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;"><span t-field="object.deparment_id.name"/></td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="8">Request For</td>
+                                </tr>
+                                 <tr  style="border: 1px solid black !important;">
+                                    <td colspan="1" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Seminar</td>
+                                    <td colspan="1" style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <t t-if="object.request_for == 'seminar'">
+                                           <input type="checkbox" checked="true"/>
+                                        </t>
+                                        <t t-if="object.request_for != 'seminar'">
+                                           <input type="checkbox" />
+                                        </t>
+                                    </td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Workshop</td>
+                                    <td colspan="1" style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <t t-if="object.request_for == 'workshop'">
+                                           <input type="checkbox" checked="true"/>
+                                        </t>
+                                        <t t-if="object.request_for != 'workshop'">
+                                           <input type="checkbox" />
+                                        </t>
+                                    </td>
+                                    <td colspan="2" style="border-width:1px;border-color:black;font-size:15px;width:15%;">Short / Professional Course</td>
+                                    <td colspan="1" style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <t t-if="object.request_for == 'course'">
+                                           <input type="checkbox" checked="true"/>
+                                        </t>
+                                        <t t-if="object.request_for != 'course'">
+                                           <input type="checkbox" />
+                                        </t>
+                                    </td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="8">Course Details</td>
+                                </tr>
+
+
+
+
+
+
+                                <tr>
+                                    <td colspan="2"
+                                    style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Course Name</strong>
+                                    </td>
+                                    <td colspan="2" 
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Relevance to Duties</strong>
+                                    </td>
+                                    <td colspan="2" 
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Place of Training</strong>
+                                    </td>
+                                    <td colspan="1" 
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <strong>Duration</strong>
+                                    </td>
+                                    <td colspan="1" >
+                                        Course Fee
+                                    </td>
+                                   
+                                </tr>
+                                 <t t-foreach="object.line_ids" t-as="line">
+                                     <tr>
+                                        <td colspan="2"
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.course_id.course"/>
+                                        </td>
+                                        <td colspan="2"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.relevance_to_duties"/>
+                                        </td>
+                                        <td colspan="2"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.place"/>
+                                        </td>
+                                        <td colspan="1"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.duration"/> <span t-field="line.duration_unit"/>
+                                        </td>
+                                        <td colspan="1"
+                                            style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                            <span t-field="line.fees"/>
+                                        </td>
+                                       
+
+
+                                    </tr>
+                                </t>
+
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="8">Comments by Line Manager</td>
+                                </tr>
+                                <tr  style="border: 1px solid black !important;">
+                                    <td style="border: 1px solid black !important;" colspan="8"><span t-field="object.line_manager_comments"/></td>
+                                </tr>
+                                 <tr>
+                                    <td colspan="2"
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                    Initiated by:<br/>
+                                    Line Manager’s Signature<br/>
+                                    </td>
+
+                                    <td colspan="2"
+                                        style="border-width:1px;border-color:black;width:20%;">
+                                        Reviewed by:<br/>
+                                    HR Manager’s Signature<br/>
+                                    </td>
+                                     <td colspan="4"
+                                        style="border-width:1px;border-color:black;width:20%;">
+                                        Approved by:<br/>
+                                    VP’s Signature<br/>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td colspan="2"
+                                        style="border-width:1px;border-color:black;font-size:15px;width:15%;">
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        Date: 
+                                    </td>
+
+                                    <td colspan="2"
+                                        style="border-width:1px;border-color:black;width:20%;">
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        Date: 
+                                    </td>
+                                     <td colspan="4"
+                                        style="border-width:1px;border-color:black;width:20%;">
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        <br/>
+                                        Date: 
+                                    </td>
+                                    
+                                </tr>
+                               
+                            </table>
+                        </t>
+                </div>
+        </t>
+    </t>
+    </template>
+</odoo>

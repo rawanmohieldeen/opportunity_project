@@ -23,7 +23,8 @@ class HrTrainingCourseRequest(models.Model):
             ('general_approve', 'General Manager Approve'),
         ], string='Status', default='draft')
     line_ids = fields.One2many('hr.training.course.request.line', 'training_course_request_id',string="Line IDs",)
-    
+    line_manager_comments = fields.Text(string='Line Manager Comments',track_visibility='onchange')
+
     def action_draft(self):
         self.state='draft'
         
@@ -52,15 +53,15 @@ class HrTrainingCourseRequest(models.Model):
 class HrTrainingCourserequestLine(models.Model):
     _name = 'hr.training.course.request.line'
 
-    course_id = fields.Many2one('hr.training.course',string='Proposed Training',required=True,copy=False)
+    course_id = fields.Many2one('hr.training.course.line',string='Proposed Training',required=True,copy=False)
     relevance_to_duties = fields.Text(string='Relevance to Duties',track_visibility='onchange')
     place = fields.Char(string='Place',required=True,track_visibility='onchange')
-    duration = fields.Integer(string='Duration',required=True,)
+    duration = fields.Integer(string='Duration',required=True,related="course_id.duration")
     duration_unit = fields.Selection([
         ('day', 'Day(s)'),
         ('month', 'Month(s)'),
-       ], string="Duration Unit",required=True,)
-    currency_id = fields.Many2one('res.currency', string='Currency', readonly=True, default=lambda self: self.env.company.currency_id)
-    fees = fields.Monetary('Fees',required=True,currency_field='currency_id',)
+       ], string="Duration Unit",required=True,related="course_id.duration_unit")
+    currency_id = fields.Many2one('res.currency', string='Currency', readonly=True, related="course_id.currency_id")
+    fees = fields.Monetary('Fees',related="course_id.fees")
     line_manager_comments = fields.Text(string='Line Manager Comments',track_visibility='onchange')
     training_course_request_id = fields.Many2one('hr.training.course.request',string="Course request",required=True,)

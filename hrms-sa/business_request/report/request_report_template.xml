@@ -603,7 +603,6 @@
                                 style="border-width:1px;border-color:black;font-size:15px;width:15%;">
                             Reviewed by:<br/>
                             HRM<br/>
-                            <span t-field="object.reciewer_id.name"/>
                             </td>
 
                             <td colspan="2"
@@ -616,7 +615,6 @@
                                 style="border-width:1px;border-color:black;width:20%;">
                                 Approved by:<br/>
                             VP<br/>
-                            <span t-field="object.gm_user.name"/>
                             </td>
                             
                         </tr>

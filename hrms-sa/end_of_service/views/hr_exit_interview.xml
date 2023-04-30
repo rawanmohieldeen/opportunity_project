@@ -15,12 +15,24 @@
                     </div>
                     <group>
                         <field name="employee"/>
-                        <field name="factor_id"/>
+                        <!-- <field name="factor_id"/>
                         <field name="critical_incidents_examples"/>
                         <field name="points"/>
-                        <field name="hr_comments"/>
+                        <field name="hr_comments"/> -->
                     </group>
+
                     <notebook>
+                        <page string="Factor Lines">
+                            <field name="fator_line">
+                                <tree editable="bottom">
+                                    <field name="factor_id"/>
+                                    <field name="critical_incidents_examples"/>
+                                    <field name="points"/>
+                                    <field name="hr_comments"/>
+                                </tree>
+                            </field>
+                        </page>
+
                         <page string="Positive Features">
                             <field name="positive_features_ids">
                                 <tree editable="bottom">
@@ -55,14 +67,21 @@
                             <label for="character_certificate"/>
                             <field name="character_certificate"/>
                         </page>
-                        <page string=" Employment Reconsideration" groups='hr.group_hr_user,hr.group_hr_manager'>
-                            <label for="employment_reconsideration"/>
-                            <field name="employment_reconsideration"/>
+                        <page string=" Employment Reconsideration and Comments" groups='hr.group_hr_user,hr.group_hr_manager'>
+                                <group>
+                                    <!-- <label for="employment_reconsideration"/> -->
+                                    <field name="employment_reconsideration"/>
+                                </group>
+
+                                 <group>
+                                    <!-- <label for="hr_other_comments"/> -->
+                                        <field name="hr_other_comments"/>
+                                    </group>
                         </page>
-                        <page string="Other Comments" groups='hr.group_hr_user,hr.group_hr_manager'>
-                            <label for="hr_other_comments"/>
-                            <field name="hr_other_comments"/>
-                        </page>
+                        
+                       <!--  <page string="Other Comments" groups='hr.group_hr_user,hr.group_hr_manager'>
+                            
+                        </page> -->
                     </notebook>
                 </sheet>
                 <div class="oe_chatter">
@@ -78,11 +97,10 @@
         <field name="model">hr.exit.interview</field>
         <field name="arch" type="xml">
             <tree string="HR Exit Interview">
+                <field name="name"/>
                 <field name="employee"/>
-                <field name="factor_id"/>
-                <field name="critical_incidents_examples"/>
-                <field name="points"/>
-                <field name="hr_comments"/>
+                
+
             </tree>
         </field>
     </record>
@@ -93,8 +111,7 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="Training" sequence="7" id="training_root" parent="hr.menu_hr_root"/>
-    <menuitem name="Exit Interview" sequence="0" id="hr_exit_interview_menu" parent="training_root" action="hr_exit_interview_action"/>
+    <menuitem name="Exit Interview" id="hr_exit_interview_menu" parent="end_of_service.end_of_service_menu" action="hr_exit_interview_action"/>
 
 
 </odoo>

@@ -30,15 +30,20 @@
                         <page string="Course Details">
                             <field name="line_ids" attrs="{'readonly': [('state', '!=', 'draft')]}">
                                 <tree editable="bottom">
-                                    <field name="course_id"/>
+                                    <field name="course_id" domain="[('employee_id','=',parent.employee_id)]" no_create="1"/>
                                     <field name="relevance_to_duties"/>
                                     <field name="place"/>
                                     <field name="duration"/>
                                     <field name="duration_unit"/>
+                                    <field name="currency_id" invisible="1"/>
                                     <field name="fees"/>
-                                    <field name="line_manager_comments"/>
                                 </tree>
                             </field>
+                        </page>
+                        <page string="Comments">
+                            <group>
+                                <field name="line_manager_comments"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
@@ -70,6 +75,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="HR Training Course request" sequence="2" id="hr_training_course_request_menu" parent="training_root" action="hr_training_course_request_action"/>
+    <menuitem name="HR Training Course Request" sequence="2" id="hr_training_course_request_menu" parent="training_root" action="hr_training_course_request_action"/>
 
 </odoo> 

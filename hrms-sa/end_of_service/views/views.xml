@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="end_of_service.list">
+      <field name="name">end_of_service list</field>
+      <field name="model">end_of_service.end_of_service</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="end_of_service.action_window">
+      <field name="name">end_of_service window</field>
+      <field name="res_model">end_of_service.end_of_service</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="end_of_service.action_server">
+      <field name="name">end_of_service server</field>
+      <field name="model_id" ref="model_end_of_service_end_of_service"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="end_of_service" id="end_of_service.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="end_of_service.menu_1" parent="end_of_service.menu_root"/>
+    <menuitem name="Menu 2" id="end_of_service.menu_2" parent="end_of_service.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="end_of_service.menu_1_list" parent="end_of_service.menu_1"
+              action="end_of_service.action_window"/>
+    <menuitem name="Server to list" id="end_of_service" parent="end_of_service.menu_2"
+              action="end_of_service.action_server"/>
+-->
+  </data>
+</odoo>

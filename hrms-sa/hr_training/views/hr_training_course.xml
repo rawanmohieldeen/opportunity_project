@@ -7,16 +7,48 @@
         <field name="arch" type="xml">
             <form string="HR training course">
                 <header>
+                   <button name="submit" type="object" string="Submit" states="draft" class="oe_highlight" />
+
+                       
+                        <button name="waitin_app" type="object" string="Approve"
+                                states="waitin_app"  class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        
+
+                        <button name="reject" type="object" string="Reject" states="waitin_app"
+                                 />
+                        <button name="set_draft" type="object" string="Set To draft" states="reject"
+                                class="oe_highlight" groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                     <field name="state" widget="statusbar"/>
+
                 </header>
                 <sheet>
-                    <group>
-                        <field name="course"/>
-                        <field name="place"/>
-                        <field name="duration"/>
-                        <field name="duration_unit"/>
-                        <field name="fees" widget='monetary'/>
-                        <field name="comments"/>
+                    <group string="Employee Details">
+                        <group>
+                         <field name="employee_id"/>
+                            <field name="employee_no"/>
+                        </group>
+                        <group>
+                            <field name="job_id"/>
+                            <field name="department_id"/>
+                        </group>
                     </group>
+                    <notebook>
+                        <page string="TRAINING DETAILS">
+                            <field name="course_line" widget="section_and_note_one2many" attrs="{'readonly':[('state','=','approved')]}">
+                                <tree editable="bottom">
+                                    <field name="course"/>
+                                    <field name="place"/>
+                                    <field name="duration"/>
+                                    <field name="duration_unit"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="fees" widget='monetary'/>
+                                    <field name="comments"/>
+                                </tree>
+                            </field>
+
+                        </page>
+                    </notebook>
                 </sheet>
                 <div class="oe_chatter">
                     <field name="message_follower_ids" widget="mail_followers"/>
@@ -32,12 +64,11 @@
         <field name="model">hr.training.course</field>
         <field name="arch" type="xml">
             <tree string="HR training course">
-                <field name="course"/>
-                <field name="place"/>
-                <field name="duration"/>
-                <field name="duration_unit"/>
-                <field name="fees"/>
-                <field name="comments"/>
+                <field name="employee_id"/>
+                <field name="employee_no"/>
+                <field name="job_id"/>
+                <field name="department_id"/>
+                <field name="state"/>
             </tree>
         </field>
     </record>
@@ -48,6 +79,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="HR training course" sequence="2" id="hr_training_course_menu" parent="training_root" action="hr_training_course_action"/>
+    <menuitem name="Personal Training Course" sequence="2" id="hr_training_course_menu" parent="training_root" action="hr_training_course_action"/>
 
 </odoo> 

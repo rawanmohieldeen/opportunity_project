@@ -29,7 +29,11 @@ class HrContract(models.Model):
     meal_allowance = fields.Monetary(string="Meal Allowance", help="Meal allowance")
     medical_allowance = fields.Monetary(string="Medical Allowance", help="Medical allowance")
     other_allowance = fields.Monetary(string="Other Allowance", help="Other allowances")
-
+    house = fields.Monetary('Housing Allowance')
+    car = fields.Monetary('Car Allowance')
+    tickets = fields.Monetary('Tickets Allowance')
+    mobile = fields.Monetary('Mobile Phone  Allowance')
+    fuel = fields.Monetary('Fuel Allowance')
     def get_all_structures(self):
 
         """
