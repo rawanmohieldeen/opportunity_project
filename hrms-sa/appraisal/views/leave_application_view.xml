@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="leave_application_form" model="ir.ui.view">
+        <field name="name">Leave Application form</field>
+        <field name="model">leave.application.form</field>
+        <field name="arch" type="xml">
+            <form string="Leave Application Form">
+                <header>
+                    
+                    <button name="action_submit" string="Submit" type="object" states="draft" class="oe_highlight"/>
+                    <button name="action_approval" string="Approve" type="object" states="emp_submit"
+                            class="oe_highlight"/>
+                    <button name="action_approved" string="HR Approve" type="object" states="hr_approve"
+                            class="oe_highlight" groups="hr.group_hr_manager"/>
+                    <button name="action_draft" string="Set to Draft" type="object" states="emp_submit,hr_approve"
+                    />
+                    <field name="state" widget="statusbar" />
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="employee_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="employee_no"/>
+                            <field name="contact_number"/>
+                            <field name="email"/>
+                        </group>
+                        <group>
+                            <field name="job_title"/>
+                            <field name="department_id"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="LEAVE DETAILS ">
+                            <group string="Type of Leave" col="4">
+                                <group>
+                                    <field name="annual" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="paternity" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="bereavement" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="unauthorised" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                                <group>
+                                    <field name="hajj" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="accompanying" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="academic" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="other" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                                <group>
+                                    <field name="maternity" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="sick" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="unpaid_leave" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                                <group>
+                                    <field name="marriage" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="quarantine" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="extended_leave_without_pay" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                            </group>
+                            <group string="Number of Leaves">
+                                <group>
+                                    <field name="leave_days" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="first_day" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="first_day_office" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                                <group>
+                                    <field name="official_holidays" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="last_day" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="net_leave_days" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="LEAVE ENTITELMENT DETAILS ">
+                            <group>
+                                <field name="available_days" attrs="{'readonly':[('state','!=','hr_approve')]}"/>
+                                <field name="requested_days" attrs="{'readonly':[('state','!=','hr_approve')]}"/>
+                                <field name="remaining_days" attrs="{'readonly':[('state','!=','hr_approve')]}"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="leave_application_view_tree" model="ir.ui.view">
+        <field name="name">Leave Application tree</field>
+        <field name="model">leave.application.form</field>
+        <field name="arch" type="xml">
+            <tree string="Leave Application Form">
+                <field name="name"/>
+                <field name="employee_no"/>
+                <field name="employee_id"/>
+                <field name="job_title"/>
+                <field name="department_id"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_leave_application" model="ir.actions.act_window">
+        <field name="name">Leave Application Form</field>
+        <field name="res_model">leave.application.form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="hr_menu_action_leave_application" action="action_leave_application" sequence="3" parent="appraisal_root"/>
+</odoo>

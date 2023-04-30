@@ -36,9 +36,17 @@ class HrTrainingCourseLine(models.Model):
     course = fields.Char(string='Training Course',required=True,track_visibility='onchange')
     employee_id = fields.Many2one('hr.employee', string="Employee",related="course_id.employee_id")
     place = fields.Char(string='Place',required=True,track_visibility='onchange')
+<<<<<<< HEAD
     duration = fields.Integer(string='Duration',required=True,track_visibility='onchange')
     duration_unit = fields.Selection(selection=[('day', 'Days'),
                                         ('month','Months'),('year','Years')], default='day', track_visibility='onchange')
+=======
+    duration = fields.Char(string='Duration',required=True,track_visibility='onchange')
+    duration_unit = fields.Selection([
+        ('day', 'Day(s)'),
+        ('month', 'Month(s)'),
+       ], string="Duration Unit",required=True,track_visibility='onchange')
+>>>>>>> bd76736a3eaf4c02202b61f19d1e7ec72835c511
     currency_id = fields.Many2one('res.currency', string='Currency', readonly=True, default=lambda self: self.env.company.currency_id)
     fees = fields.Monetary('Fees',required=True,currency_field='currency_id',)
     comments = fields.Char(string='Comments',required=True,track_visibility='onchange')

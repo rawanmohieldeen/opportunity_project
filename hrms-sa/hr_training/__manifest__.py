@@ -5,7 +5,8 @@
     'license': 'LGPL-3',
     'category': 'HR',
     'depends': [
-        'hr','hr_custom',
+        'hr','hr_custom','warning_letter',
+
     ],
     'data': [
         'security/ir.model.access.csv',
@@ -15,10 +16,12 @@
         'views/hr_training_plan.xml',
         'views/hr_training_course_report.xml',
         'views/hr_training_course_request.xml',
+        'report/training_plan_report.xml',
         'report/report.xml',
         'report/training_course.xml',
         'report/training_course_report.xml',
         'report/training_course_request_report.xml',
+
     ],
     
     'auto_install': False,

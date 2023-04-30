@@ -9,3 +9,5 @@ from . import recruitment_application
 from . import interview_evaluation_sheet
 from . import salary_alignment_sheet
 from . import exit_checklist
+from . import joining_report
+from . import hr_employee

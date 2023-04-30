@@ -1,78 +1,423 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-    <record id="leave_application_report" model="ir.actions.report">
-        <field name="name">Leave Application Form</field>
-        <field name="model">leave.application.form</field>
-        <field name="report_type">qweb-pdf</field>
-        <field name="report_name">appraisal.leave_app_temp</field>
-        <field name="report_file">appraisal.leave_app_temp</field>
-        <field name="binding_model_id" ref="model_leave_application_form"/>
-        <field name="binding_type">report</field>
-    </record>
     <template id="leave_app_temp">
-        <t t-call="web.external_layout">
-            <t t-call="web.html_container">
-                <div class="page">
-                    <table style="width:100%" class="table table-bordered">
-                        <caption>EMPLOYEE DETAILS</caption>
-                        <t t-foreach="docs" t-as="o">
-                            <tr>
-                                <th>Form No</th>
-                                <td>
-                                    <strong>/HR/Form 020</strong>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <th>Form Title</th>
-                                <td>
-                                    <strong>Leave Application Form</strong>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <th></th>
-                                <td></td>
-
-                            </tr>
-                        </t>
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="object">
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                KMC / HR / Form 020
+                            </td>
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                <strong>Leave Application Form</strong>
+                            </td>
+                        </tr>
                     </table>
-                    <table style="width:100%" class="table table-bordered">
-                        <caption>Part 1: LEAVE DETAILS – To be filled by employee</caption>
-                        <t t-foreach="docs" t-as="o">
-                            <tr>
-                                <td>Employee ID</td>
-                                <td>
-                                    <span t-field="o.name"/>
-                                </td>
-                                <!--                                <td></td>-->
-
-                            </tr>
-                            <tr>
-                                <td>
-                                    Employee Name
-                                </td>
-                                <td>
-                                    <span t-field="o.employee_name"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Department/Project</td>
-                                <td>
-                                    <span t-field="o.department"/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Job Title</td>
-                                <td>
-                                    <span t-field="o.job_title"/>
-                                </td>
-                            </tr>
-                        </t>
+                    <br/>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="4">
+                                <strong>
+                                    EMPLOYEE DETAILS
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Employee ID</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.employee_no"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Employee Name</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%" colspan="2">
+                                <span t-esc="object.employee_id.name"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Job Title</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.job_title.name"></span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:20%">
+                                <span>Department / Project</span>
+                            </td>
+                            <td style="height: 10px;border:1px solid gray;width:30%">
+                                <span t-esc="object.department_id.name"></span>
+                            </td>
+                        </tr>
                     </table>
-                    <p>Type of Leave</p>
-                </div>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="8">
+                                <strong>
+                                    Part 1: LEAVE DETAILS – To be filled by employee
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;" colspan="8">
+                                <strong>
+                                    Type of Leave
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray">
+                                <span>Annual</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.annual">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Hajj</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.hajj">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Maternity</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.maternity">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Marriage</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.marriage">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray">
+                                <span>Paternity</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.paternity">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Accompanying</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.accompanying">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Sick</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.sick">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Quarantine</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.quarantine">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray">
+                                <span>Bereavement</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.bereavement">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Academic</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.academic">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Unpaid Leave</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.unpaid_leave">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Extended Leave without Pay</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.extended_leave_without_pay">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray">
+                                <span>Unauthorised</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.unauthorised">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span>Other</span>
+                            </td>
+                            <td style="border:1px solid gray">
+                                <span style="margin-left:40px;border:1px solid gray;height:22px;width:30px;display:inline-block;">
+                                    <t t-if="object.other">
+                                        <img 
+                                         src="/appraisal/static/description/img/true_icon4.jpeg"
+                                         style="max-height:0.7cm; max-width:1cm;margin-bottom:10px;"/>
+                                     </t>
+                                 </span>
+                            </td>
+                            <td style="border:1px solid gray">
+                            </td>
+                            <td style="border:1px solid gray">
+                            </td>
+                            <td style="border:1px solid gray">
+                            </td>
+                            <td style="border:1px solid gray">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;" colspan="8">
+                                <strong>
+                                    Number of Leaves
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span>Required Leave Days</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span t-esc="object.leave_days"></span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span>Official Holidays</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span t-esc="object.official_holidays"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span>First Day of Leave</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span t-esc="object.first_day"></span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span>Last Day of Leave</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span t-esc="object.last_day"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span>First Day in Office</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span t-esc="object.first_day_office"></span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span>Net Leave Days</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="2">
+                                <span t-esc="object.net_leave_days"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #dcf1dc;" colspan="8">
+                                <strong>
+                                    Contact Details During Leaves
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Contact Number:</span>
+                                <span style="margin-left:10px;" t-esc="object.contact_number"/>
+                            </td>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Email:</span>
+                                <span style="margin-left:10px;" t-esc="object.email"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px;border:1px solid gray" colspan="4">
+                                <span>Employee’s Signature</span>
+                            </td>
+                            <td style="height:30px;border:1px solid gray" colspan="4">
+                                <span>Date:</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="8">
+                                <strong>
+                                    Part 2: LEAVE ENTITELMENT DETAILS – To be filled by HR Department
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Available Entitled Leave Days</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span t-esc="object.available_days"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Requested Leave Days</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span t-esc="object.requested_days"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span>Remaining Entitled Leave Days</span>
+                            </td>
+                            <td style="border:1px solid gray" colspan="4">
+                                <span t-esc="object.remaining_days"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px;border:1px solid gray" colspan="4">
+                                <span>HR Manager ‘s Signature</span>
+                            </td>
+                            <td style="height:30px;border:1px solid gray" colspan="4">
+                                <span>Date:</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="table" style="height: 10px;">
+                        <tr>
+                            <td style="border:1px solid gray; background-color: #8FBC8F;" colspan="3">
+                                <strong>
+                                    Part 3: To be completed by Line Manager / Project Manager / VP
+                                </strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:1px solid gray;width:34%;">
+                                <span>Reviewed by (for employees not reporting directly to VP):</span>
+                            </td>
+                            <td style="border:1px solid gray;width:33%;">
+                                <span>Reviewed by (for employees not reporting directly to VP): </span>
+                            </td>
+                            <td style="border:1px solid gray;width:33%;">
+                                <span>Approved by</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height:30px;border:1px solid gray">
+                                <span>Line Manager</span>
+                                <br/><br/><br/><br/><br/>
+                                <span>Date:</span>
+                            </td>
+                           <td style="height:30px;border:1px solid gray">
+                                <span>Department or Project Manager’s Signature</span>
+                                <br/><br/><br/><br/><br/>
+                                <span>Date:</span>
+                            </td>
+                            <td style="height:30px;border:1px solid gray">
+                                <span>General Manager’s Signature</span>
+                                <br/><br/><br/><br/><br/>
+                                <span>Date:</span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <br/><br/>
+                    <p>
+                        * The employee completes Part 1 and submits the Application to the HR department.<br/>
+                        * The HR department will check if the employee has sufficient leave entitlement and forwards the application to Line Manager / Department Head or Project Manager / VP.<br/>
+                        * Applications for leave that are longer than 5 days should be approved at least 1 month in advance.<br/>
+                        * Please refrain from booking any tickets until the leave application form is approved by all authorized managers.
+                    </p>
+
+                </t>
             </t>
         </t>
     </template>
+
 </odoo>

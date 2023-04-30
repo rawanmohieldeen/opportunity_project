@@ -4,7 +4,23 @@
         <t t-call="web.html_container">
             <t t-call="web.external_layout">
                 <t t-foreach="docs" t-as="object">
-                    <h4  class="text-center">Exit Checklist</h4><br/>
+                    <table class="table" style="height: 10px;">
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form No</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                KMC / HR / Form 034
+                            </td>
+
+                        </tr>
+                        <tr style="border: 1px solid black !important;">
+                            <td width="50%" style="border: 1px solid black !important;">Form Title</td>
+                            <td width="50%" style="border: 1px solid black !important;">
+                                <strong>Exit Checklist</strong>
+                            </td>
+
+                        </tr>
+                    </table>
+                    <br/>
                     <table class="table" style="height: 10px;">
                         <tr>
                             <td style="height: 40px;border:1px solid gray; background-color: rgba(128,128,128,.2);" colspan="5">

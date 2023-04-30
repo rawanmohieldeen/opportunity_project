@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="tree_joining_report_view" model="ir.ui.view">
+        <field name="name">joining.report.tree</field>
+        <field name="model">joining.report</field>
+        <field name="arch" type="xml">
+            <tree string="Joining Report">
+                <field name="employee_id" />
+                <field name="employee_no"/>
+                <field name="state" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_joining_report_form" model="ir.ui.view">
+        <field name="name">joining.report.form</field>
+        <field name="model">joining.report</field>
+        <field name="arch" type="xml">
+            <form string="Joining Report">
+                <header>
+                    <button string="Submit" name="action_draft" type="object" states="draft"/>
+                    <button string="Approve" name="action_line_manager" type="object" states="line_manager" groups="hr_custom.group_line_manager"/>
+                    <button string="HR Approve" name="action_hr" type="object" states="hr" groups="hr_custom.group_hrd_manager"/>
+                    <field name="state" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1 class="mt0" >
+                            <field name="employee_id"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="employee_no"/>
+                        <field name="date"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers" />
+                    <field name="message_ids" widget="mail_thread" />
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_joining_report" model="ir.actions.act_window">
+        <field name="name">Joining Report</field>
+        <field name="res_model">joining.report</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Joining Report" parent="hr_recruitment.menu_crm_case_categ0_act_job" id="menu_joining_report" action="action_joining_report"/>
+
+</odoo>
