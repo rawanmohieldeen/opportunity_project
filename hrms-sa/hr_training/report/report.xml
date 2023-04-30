@@ -17,7 +17,6 @@
             name="hr_training.report_training_course_report"
             file="hr_training.report_training_course_report"
         /> 
-<<<<<<< HEAD
         <report
             id="report_training_course_request"
             model="hr.training.course.request"
@@ -26,7 +25,6 @@
             name="hr_training.training_course_request_report"
             file="hr_training.training_course_request_report"
         /> 
-=======
 
         <record id="paperformat_reports" model="report.paperformat">
             <field name="name">Reports</field>
@@ -43,6 +41,5 @@
             <field name="report_name">hr_training.training_plan_template</field>
         </record>
       
->>>>>>> bd76736a3eaf4c02202b61f19d1e7ec72835c511
     </data>
 </odoo>
