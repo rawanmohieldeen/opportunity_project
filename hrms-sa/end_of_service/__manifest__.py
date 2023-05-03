@@ -30,9 +30,10 @@
         'report/final_settelment_report.xml',
         'report/final_payment_report.xml',
         'views/reports.xml',
+        'views/service_certificate.xml',
         'views/hr_exit_factors.xml',
         'views/hr_exit_interview.xml',
-        'views/service_certificate.xml',
+        
         'views/final_settelment.xml',
     ],
     # only loaded in demonstration mode
