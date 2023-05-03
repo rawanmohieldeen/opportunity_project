@@ -16,7 +16,7 @@
                 <t t-call="web.html_container">
                     <div class="page">
                     </div>
-                    <table style="width:100%" class="table table-bordered">
+                   <!--  <table style="width:100%" class="table table-bordered">
                         <t t-foreach="docs" t-as="o">
                             <caption>
                                 <strong>PERFROMANCE MANAGEMENT DETAILS</strong>
@@ -41,7 +41,7 @@
 
                             </tr>
                         </t>
-                    </table>
+                    </table> -->
                     <table style="width:100%" class="table table-bordered">
                         <t t-foreach="docs" t-as="o">
                             <caption>Part A. Job Specific Objectives of Past 12 Months</caption>
@@ -223,7 +223,7 @@
                             <t t-set="index_raw" t-value="index_raw+1"/>
                         </t>
                     </table>
-                    <table style="width:100%" class="table table-bordered">
+                    <!-- <table style="width:100%" class="table table-bordered">
                         <tr>
                             <th>
                                 <small>Form No</small>
@@ -247,7 +247,7 @@
                             <td></td>
 
                         </tr>
-                    </table>
+                    </table> -->
                     <table style="width:100%" class="table table-bordered">
                         <caption>Average Score for Part B:</caption>
                         <t t-foreach="docs" t-as="o">

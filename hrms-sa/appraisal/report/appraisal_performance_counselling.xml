@@ -6,19 +6,7 @@
                 <div class="page" style="font-size: 14;font-family:KacstOffice,KacstOne;">
                     <!-- <table cellpadding="5" border="0" width="100%" align="center" dir="rtl" style="font-size: 26px;"> -->
                         <t t-foreach="docs" t-as="o">        
-                            <table width="100%" cellpadding="10" cellspacing="10" style="border: 2px  black;">
-                                <tr style="border: 1px solid black !important;">
-                                    <td width="45%" style="border: 1px solid black !important;">Form No</td>
-                                    <td width="45%" style="border: 1px solid black !important;">/ HR / Form 022</td>
-                                    <td width="10%" rowspan="2"></td>
-                                </tr>
-                                <tr style="border: 1px solid black !important;">
-                                    <td width="45%" style="border: 1px solid black !important;">Form Title</td>
-                                    <td width="45%" style="border: 1px solid black !important;">Performance Counselling Form</td>
-                                </tr>
-                                
-                            </table>
-                            <br/> 
+                            
                             <br/> 
                             <table width="100%"  cellpadding="10" cellspacing="10" style="border: 2px  black  double !important;">
                                <tr  style="border: 1px solid black !important;">
@@ -97,6 +85,25 @@
                                 </tr>
                                 
                             </table>
+                             <table style="width:100%" class="table table-bordered">
+
+                                <tr colspan="2" style="border: 1px solid black !important;">
+                                  <td style="border: 1px solid black !important;">  Employee’s Signature 
+                                        <br/>
+                                        <br/>
+                                        Date:
+                                        <br/>
+                                    </td>
+                                    <td style="border: 1px solid black !important;">
+                                        Appraiser’s Signature
+                                        <br/>
+                                        <br/>
+                                        Date:
+                                        <br/>
+                                    </td>
+                                </tr>
+
+                        </table>
                            
                             
                         </t>
