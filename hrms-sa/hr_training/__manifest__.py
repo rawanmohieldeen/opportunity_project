@@ -12,11 +12,10 @@
         'security/ir.model.access.csv',
         'data/sequence.xml',
         # 'views/hr_exit_interview.xml',
-        
         'views/hr_training_course.xml',
+        'views/hr_training_plan.xml',
         'views/hr_training_course_report.xml',
         'views/hr_training_course_request.xml',
-        'views/hr_training_plan.xml',
         'report/training_plan_report.xml',
         'report/report.xml',
         'report/training_course.xml',
