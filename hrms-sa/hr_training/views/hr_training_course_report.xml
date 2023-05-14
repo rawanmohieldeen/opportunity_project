@@ -106,6 +106,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="HR Training Course Report" sequence="3" id="hr_training_course_report_menu" parent="training_root" action="hr_training_course_report_action"/>
+    <menuitem name="HR Training Course Report" sequence="3" id="hr_training_course_report_menu" parent="hr_training.training_root" action="hr_training_course_report_action"/>
 
 </odoo> 

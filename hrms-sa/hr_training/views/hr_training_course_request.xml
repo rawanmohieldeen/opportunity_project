@@ -75,6 +75,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem name="HR Training Course Request" sequence="2" id="hr_training_course_request_menu" parent="training_root" action="hr_training_course_request_action"/>
+    <menuitem name="HR Training Course Request" sequence="2" id="hr_training_course_request_menu" parent="hr_training.training_root" action="hr_training_course_request_action"/>
 
 </odoo> 
