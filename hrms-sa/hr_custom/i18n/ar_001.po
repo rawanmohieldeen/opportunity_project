@@ -694,13 +694,6 @@ msgstr ""
 msgid "Fluent"
 msgstr ""
 
-#. module: hr_custom
-#: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
-msgid ""
-"For New Positions, submit “New Position Request Form”, Job Descriptions and any\n"
-"                                other relevant supporting documentation\n"
-"                                # Provide relevant supporting justification"
-msgstr "بالنسبة للوظائف الجديدة ، أرسل "نموذج طلب الوظيفة الجديدة" ووصف الوظائف وأي مستندات داعمة أخرى ذات صلة. # تقديم مبرر داعم ذي صلة"
 
 #. module: hr_custom
 #: model_terms:ir.ui.view,arch_db:hr_custom.manpower_planing_temp
