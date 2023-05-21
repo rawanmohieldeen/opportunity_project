@@ -362,8 +362,8 @@ msgstr "(تاريخ)"
 #. module: business_request
 #: model_terms:ir.ui.view,arch_db:business_request.expense_claim_template
 msgid "(total no. of days"
-msgstr "Save translation
-(إجمالي عدد الأيام"
+msgstr ""
+"(إجمالي عدد الأيام"
 
 #. module: hr_holidays
 #. odoo-javascript
