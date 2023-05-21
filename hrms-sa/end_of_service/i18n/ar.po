@@ -17558,7 +17558,7 @@ msgstr "ريال 2"
 #. module: business_request
 #: model:ir.model.fields,field_description:business_request.field_expense_claim_line__sr3
 msgid "Sr3"
-msgstr ""ريال 3""
+msgstr "ريال 3"
 
 #. module: hr_recruitment
 #: model:ir.model.fields,field_description:hr_recruitment.field_hr_applicant__stage_id
