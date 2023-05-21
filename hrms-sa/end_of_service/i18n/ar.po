@@ -20882,10 +20882,7 @@ msgstr "ثائمة التدقيق لمن"
 msgid "expense.claim"
 msgstr "حساب. مطالبة"
 
-#. module: business_request
-#: model:ir.model,name:business_request.model_expense_claim_line
-msgid "expense.claim.line"
-msgstr"مصاريف. مطالبة. سطر"
+
 
 #. module: business_request
 #: model_terms:ir.ui.view,arch_db:business_request.expense_claim_template
