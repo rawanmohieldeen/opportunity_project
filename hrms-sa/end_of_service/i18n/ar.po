@@ -20104,7 +20104,7 @@ msgstr "الوقت المقضي في العمل "
 
 #. module: end_of_service
 #: model_terms:ir.ui.view,arch_db:end_of_service.hr_final_settlement_template
-msgid ""أيام العمل"
+msgid "أيام العمل"
 
 #. module: end_of_service
 #: model_terms:ir.ui.view,arch_db:end_of_service.hr_final_settlement_template
