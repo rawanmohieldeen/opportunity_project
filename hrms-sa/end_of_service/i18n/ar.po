@@ -525,7 +525,7 @@ msgstr ""
 msgid ""
 ". Your remuneration and / or grade / level will be revised with effect from"
 msgstr ""
-. ستتم مراجعة مكافأتك و / أو الدرجة / المستوى اعتبارًا من"
+". ستتم مراجعة مكافأتك و / أو الدرجة / المستوى اعتبارًا من"
 #. module: promotion_letter
 #: model_terms:ir.ui.view,arch_db:promotion_letter.promotion_letter_template
 msgid ".The details of your revised salary are given below:"
