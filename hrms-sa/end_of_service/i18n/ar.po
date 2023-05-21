@@ -8844,7 +8844,7 @@ msgstr "مدة السفر"
 #. module: hr_custom
 #: model_terms:ir.ui.view,arch_db:hr_custom.salary_alignment_sheet_template
 msgid "E \"Gross (pm)\""
-msgstr "E \" الإجمالي (م) \ ""
+msgstr " الإجمالي (م) \ "
 
 #. module: hr_custom
 #: model:ir.model.fields,field_description:hr_custom.field_exit_checklist__email_changed
