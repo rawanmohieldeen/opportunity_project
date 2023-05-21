@@ -13611,7 +13611,7 @@ msgstr "رقم الهوية الوطني"
 #. module: end_of_service
 #: model_terms:ir.ui.view,arch_db:end_of_service.hr_final_payment_template
 msgid "National holder of Passport No."
-msgstr "رقم جواز السفر المواطن".
+msgstr "رقم جواز السفر المواطن."
 
 #. module: hr_custom
 #: model:ir.model.fields,field_description:hr_custom.field_hr_applicant__nationality
