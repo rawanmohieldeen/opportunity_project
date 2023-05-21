@@ -111,7 +111,7 @@ msgid ""
 "\n"
 "    3. Confidential and Proprietary Information.  You acknowledge your continuing obligation not to use or disclose any confidential or proprietary information of the Company at any time, both before and after"
 msgstr ""
-"\" سيتم تضمين "\" في الدفعة النهائية. < br / > \ n"
+"\" سيتم تضمين في الدفعة النهائية. < br / > \ n"
 "\n"
 "    3. معلومات سرية وملكية.  أنت تقر بالتزامك المستمر بعدم استخدام أو الكشف عن أي معلومات سرية أو ملكية للشركة في أي وقت ، قبل وبعد"
 
@@ -124,7 +124,7 @@ msgid ""
 msgstr ""
 \". إذا كنت ترغب في البقاء في المملكة العربية السعودية ، يتم فقدان هذه الميزة. < br / > \ n"
 "\n"
-"    4. العطل.  أي عطلات مستحقة ولكن غير مأخوذة حتى “"
+"    4. العطل.  أي عطلات مستحقة ولكن غير مأخوذة حتى "
 
 #. module: hr_contract
 #: model:ir.model.fields,field_description:hr_contract.field_hr_contract_history__contract_count
