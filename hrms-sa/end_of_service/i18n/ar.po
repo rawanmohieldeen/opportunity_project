@@ -21322,7 +21322,7 @@ msgstr ""
 #. module: hr_custody
 #: model:ir.model,name:hr_custody.model_wizard_reason
 msgid "wizard.reason"
-msgstr ""سبب المعالج""
+msgstr "سبب المعالج"
 
 #. module: hr_holidays
 #: model:ir.model.fields.selection,name:hr_holidays.selection__hr_leave_accrual_level__start_type__year
