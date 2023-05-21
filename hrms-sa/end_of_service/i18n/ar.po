@@ -6945,7 +6945,7 @@ msgstr "قابلة للمقارنة"
 #. module: hr_custom
 #: model:ir.model.fields,field_description:hr_custom.field_salary_details_line__name
 #: model_terms:ir.ui.view,arch_db:hr_custom.salary_alignment_sheet_template
-msgid ""Comparable incumbent in Saudi""
+msgid "Comparable incumbent in Saudi"
 msgstr "حامل قابل للمقارنة في السعودية"
 
 #. module: hr_custom
