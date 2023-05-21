@@ -17553,7 +17553,7 @@ msgstr "ريال 1"
 #. module: business_request
 #: model:ir.model.fields,field_description:business_request.field_expense_claim_line__sr2
 msgid "Sr2"
-msgstr ""ريال 2""
+msgstr "ريال 2"
 
 #. module: business_request
 #: model:ir.model.fields,field_description:business_request.field_expense_claim_line__sr3
