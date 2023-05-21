@@ -18262,7 +18262,7 @@ msgid ""
 "working environment for Khaleeji Manager Company ."
 msgstr ""
 "المعلومات التي تقدمها هنا ستكون مفيدة لنا لخلق أفضل"
-"بيئة العمل لشركة المدير الخليجي".
+"بيئة العمل لشركة المدير الخليجي."
 
 #. module: hr
 #. odoo-python
