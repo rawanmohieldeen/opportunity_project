@@ -42,13 +42,16 @@ msgid ""
 "                          ${(object.company_id.name)}\n"
 "            "
 msgstr ""
- <p>عزيزي ${(object.employee.name)},<br/><br/>\n"
+"\n"
+"                    \n"
+"                       <p>عزيزي ${(object.employee.name)},<br/><br/>\n"
 "                          أنت تمتلك أصول الشركة\n"
 "                          <strong>\"${(object.custody_name.name)}\"</strong>\n"
 "                          since <strong>${(object.return_date)}.</strong><br/><br/>\n"
 "                          يرجى التكرم بإعادة العقار في أقرب وقت ممكن.<br/><br/></p>\n"
 "                          تحياتي,<br/><br/>\n"
 "                          ${(object.company_id.name)}\n"
+"            "
 #. module: hr_holidays
 #. odoo-python
 #: code:addons/hr_holidays/models/hr_leave.py:0
