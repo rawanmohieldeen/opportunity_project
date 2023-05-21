@@ -20759,10 +20759,6 @@ msgstr "تحقق من الحقل"
 msgid "compensation.joining.details.line"
 msgstr "التعويض. الانضمام. التفاصيل. سطر"
 
-#. module: hr_custom
-#: model:ir.model,name:hr_custom.model_compensation_offer_details_line
-msgid "compensation.offer.details.line"
-msgstr"تعويضات. عروض. تفاصيل. سطر"
 
 #. module: hr_custom
 #: model:ir.model,name:hr_custom.model_computer_software_packages_line
