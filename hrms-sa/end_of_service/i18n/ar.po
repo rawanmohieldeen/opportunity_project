@@ -21332,13 +21332,13 @@ msgstr "سنة"
 #. module: end_of_service
 #: model:mail.template,report_name:end_of_service.email_template_service_certificate
 msgid "{{ (object.employee_id.name or '').replace('/','_') }}"
-msgstr ""{{ (object.employee_id.name or '').replace('/','_') }}"
+msgstr "{{ (object.employee_id.name or '').replace('/','_') }}"
 
 #. modules: warning_letter, hr_recruitment_terms
 #: model:mail.template,report_name:hr_recruitment_terms.email_template_terms
 #: model:mail.template,report_name:warning_letter.email_template_warning
 msgid "{{ (object.name or '').replace('/','_') }}"
-msgstr """{{ (object.name or '').replace('/','_') }}"
+msgstr "{{ (object.name or '').replace('/','_') }}"
 
 #. module: hr_recruitment_terms
 #: model:mail.template,report_name:hr_recruitment_terms.referance_form_template
@@ -21352,6 +21352,6 @@ msgid ""
 "\n"
 "    5. Confidential and Proprietary Information.  You acknowledge your continuing obligation not to use or disclose any confidential or proprietary information of the Company at any time, both before and after"
 msgstr ""
-سيتم تضمين "" في الدفعة النهائية. <br/> \ n "
+"سيتم تضمين  في الدفعة النهائية. <br/> \ n "
 "\n"
 "5. المعلومات السرية والملكية. أنت تقر بالتزامك المستمر بعدم استخدام أو الكشف عن أي معلومات سرية أو مملوكة للشركة في أي وقت ، قبل وبعد"
