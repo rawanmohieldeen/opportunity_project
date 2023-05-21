@@ -10262,7 +10262,7 @@ msgstr "إنشاء بريد إلكتروني"
 #. module: appraisal
 #: model:ir.model.fields,field_description:appraisal.field_appraisal_performance__generic_indicators_ids
 msgid "Generic Indicators IDs"
-msgstr "" معرفات المؤشرات العامة "
+msgstr " معرفات المؤشرات العامة "
 
 #. module: appraisal
 #: model_terms:ir.ui.view,arch_db:appraisal.appraisal_performance_form
