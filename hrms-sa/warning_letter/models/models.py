@@ -122,7 +122,7 @@ class TerminationApproval(models.Model):
         if self.state == 'approved':
             raise UserError('You cannot delete qpproved termination')
         else:
-            return super().unlink(self)
+            return super().unlink()
     def submit(self):
         self.state = 'review'
     def review(self):

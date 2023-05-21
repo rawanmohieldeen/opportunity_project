@@ -66,7 +66,7 @@ class FinalSettlement(models.Model):
         if self.state == 'approved':
             raise UserError('You cannot delete approved request')
         else:
-            return super().unlink(self)
+            return super().unlink()
     def action_approve(self):
         self.account_user = self.env.user.id
         self.state = 'approved'

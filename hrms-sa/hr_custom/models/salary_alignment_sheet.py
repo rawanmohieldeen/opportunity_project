@@ -72,7 +72,7 @@ class SalaryAlignmentSheet(models.Model):
         if self.state == 'approved':
             raise UserError('You cannot delete approved sheet')
         else:
-            return super().unlink(self)
+            return super().unlink()
     def submit(self):
         self.state = 'review'
     def review(self):
