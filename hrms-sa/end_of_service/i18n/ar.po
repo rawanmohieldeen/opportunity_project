@@ -19005,7 +19005,7 @@ msgid ""
 "To<br/>  \n"
 "                        Human Resource Manager"
 msgstr ""
-إلى <br/> \ n "
+"إلى <br/> \ n "
 "                        مدير الموارد البشرية"
 #. modules: hr_recruitment, hr, hr_holidays, hr_contract
 #: model_terms:ir.ui.view,arch_db:hr.view_employee_filter
