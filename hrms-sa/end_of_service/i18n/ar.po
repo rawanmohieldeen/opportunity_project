@@ -19816,7 +19816,7 @@ msgid ""
 "of this offer by signing below."
 msgstr ""
 "نحن على ثقة من أنك ستجد ما ورد أعلاه بالترتيب. نطلب موافقتك"
-"من هذا العرض بالتوقيع أدناه".
+"من هذا العرض بالتوقيع أدناه."
 
 #. module: hr_training
 #: model:ir.model.fields.selection,name:hr_training.selection__hr_training_course_report__course_duration__weak
@@ -21163,7 +21163,7 @@ msgstr "كشوف المرتبات. إذن. سمات"
 #. module: hr_custom
 #: model_terms:ir.ui.view,arch_db:hr_custom.employment_offer_template
 msgid "per month after successful completion of probation period."
-msgstr "شهريا بعد الانتهاء بنجاح من فترة الاختبار".
+msgstr "شهريا بعد الانتهاء بنجاح من فترة الاختبار."
 
 #. module: hr_custom
 #: model_terms:ir.ui.view,arch_db:hr_custom.employment_offer_template
