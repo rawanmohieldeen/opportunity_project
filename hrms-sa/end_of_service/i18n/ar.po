@@ -18117,7 +18117,7 @@ msgid ""
 msgstr ""
 "يبدأ الاستحقاق بعد فترة محددة من تاريخ بدء التخصيص."
 "يحدد هذا الحقل عدد الأيام أو الأشهر أو السنوات التي بعدها يتم الاستحقاق"
-"مستخدم".
+"مستخدم."
 
 #. module: hr_recruitment
 #: model:hr.applicant.refuse.reason,name:hr_recruitment.refuse_reason_3
